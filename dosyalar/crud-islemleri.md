@@ -2,6 +2,20 @@
 
 - [Önsöz](https://github.com/yeniceri1453/Linux)
 
+Kullanılan bazı kısaltmalar(Örnek değişken değerleri):
+
+*Kendi kullanımınıza göre düzenlemelisiniz.*
+
+| Kısaltma | Açıklaması |
+| ---- | ---- |
+| sunucuAdi     | Sunucu adını (Host name; localhost ya da 127.0.0.1 gb.)   |
+| veritabaniAdi | Veritabanı adını (Database name)                      |
+| kullaniciAdi  | Veritabanı kullanıcı adını (MySql user)               |
+| parola        | Veritabanı kullanıcı parolasını (Mysql user password) |
+| tabloAdi      | İşlem yaptığınız tablo adı (Table name)               |
+| sutunAdi      | İşlem yaptığımız sütun adı (Column name)              |
+
+
 ## Çekme (Select) İşlemi
 
 ### Tek satır çekmek
