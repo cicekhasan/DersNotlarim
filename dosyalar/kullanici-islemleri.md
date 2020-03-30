@@ -48,3 +48,12 @@ usermod -aG GrupAdı KullanıcıAdı
 ```bash
 deluser kullanıcıAdı grupAdı
 ```
+
+## Kullanıcı Yetkileri
+
+#### Kullanıcı, grup ve ziyaretçiler; okuyabilir, yazabilir ve çalıştırabilir
+
+```bash
+# -R Alt dizinlerde dahil!
+sudo chmod -R 777 dosyaAdi
+```
