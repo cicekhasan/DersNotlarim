@@ -1,5 +1,8 @@
 # TERMİNALDEN METİN İŞLEME
 
+- [Önsöz](https://github.com/yeniceri1453/Linux)
+
+
 Öncesinde veri dosyamızı her yerden kullanabilmek adına bir değişkene atıyalım. Dosyamızın adı "tablo" olsun! Dosya içeriği aşağıda kod kullanımları sırasında verilmiştir.
 
 ```bash
