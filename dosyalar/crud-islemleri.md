@@ -1,6 +1,6 @@
 # CRUD İŞLEMLERİ
 
-- [Önsöz](https://github.com/yeniceri1453/Linux)
+- [Önsöz](https://github.com/cicekhasan/Linux)
 
 Kullanılan bazı kısaltmalar(Örnek değişken değerleri):
 

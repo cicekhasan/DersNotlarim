@@ -1,6 +1,6 @@
 # GİT İŞLEMLERİ
 
-- [Önsöz](https://github.com/yeniceri1453/Linux)
+- [Önsöz](https://github.com/cicekhasan/Linux)
 
 
 ## Git Server'a Kendimizi Tanıtmak
@@ -19,7 +19,7 @@ git init
 ## Repository Klonlamak
 
 ```bash
-git clone git@github.com:yeniceri1453/sihlar.git
+git clone git@github.com:cicekhasan/sihlar.git
 ```
 
 ## Repostory'e EKLEMEK
@@ -42,7 +42,7 @@ git push -u origin master
 3. Sonrasında açılan sayfadaki bölümden; "…or push an existing repository from the command line" bölümdeki kodları terminalden çalıştırıyoruz.
 
 ```bash 
-git remote add origin git@github.com:yeniceri1453/sihlar.git
+git remote add origin git@github.com:cicekhasan/sihlar.git
 git push -u origin master
 ```
 

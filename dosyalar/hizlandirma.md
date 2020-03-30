@@ -1,6 +1,6 @@
 # HIZLANDIRMA
 
-- [Önsöz](https://github.com/yeniceri1453/Linux)
+- [Önsöz](https://github.com/cicekhasan/Linux)
 
 1. Grup yükleme süresini azaltın; GRUB_TIMEOUT =10 yazan yeri bul ve değerini 2 yap. Sadece linux işletim sistemi kullanıyorsanız değeri 0 yap. Otomatik olaral linux işletim sistemi seçilip açılacaktır.
 ```bash

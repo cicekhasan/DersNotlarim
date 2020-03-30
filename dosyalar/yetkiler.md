@@ -1,6 +1,6 @@
 # YETKİLENDİRME
 
-- [Önsöz](https://github.com/yeniceri1453/Linux)
+- [Önsöz](https://github.com/cicekhasan/Linux)
 
 **Yetkiler üzerinde işlem yapabilmek için önce kullanıcıları ve yetkilerini biliyor olmamız gerekmektedir.**
 

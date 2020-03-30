@@ -1,6 +1,6 @@
 # LİNUX LOG DOSYALARI
 
-- [Önsöz](https://github.com/yeniceri1453/Linux)
+- [Önsöz](https://github.com/cicekhasan/Linux)
 
 Linux tek satırlık log girdileri tutar ve böylece okumayı kolaylaştırır. Log dosyalarının nerede tutulduğunu bilmek ve logları okuyabilmek / anlamlandırabilmek sorun çözme sırasında yardımcı olur ve zamandan tasarruf sağlar!
 

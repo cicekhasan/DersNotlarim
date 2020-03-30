@@ -1,6 +1,6 @@
 # DOSYA YÖNETİMİ
 
-- [Önsöz](https://github.com/yeniceri1453/Linux)
+- [Önsöz](https://github.com/cicekhasan/Linux)
 
 
 ## Dosya hakkında bilgi edinme

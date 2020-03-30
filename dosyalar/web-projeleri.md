@@ -1,6 +1,6 @@
 # Web Projeleri İşlemleri
 
-- [Önsöz](https://github.com/yeniceri1453/Linux)
+- [Önsöz](https://github.com/cicekhasan/Linux)
 
 ## Proje Yetkilendirilmeleri
 ```bash

@@ -1,6 +1,6 @@
 # İNDİRME İŞLEMLERİ
 
-- [Önsöz](https://github.com/yeniceri1453/Linux)
+- [Önsöz](https://github.com/cicekhasan/Linux)
 
 
 ## WGET
