@@ -56,6 +56,7 @@ deluser kullanıcıAdı grupAdı
 
 Bireyler;
 
+| | |
 | ---- | ---- |
 | u | Dosyanın sahibi kullanıcı |
 | g | Dosyanın sahibi grup |
