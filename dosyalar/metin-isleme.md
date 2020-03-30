@@ -267,7 +267,11 @@ awk -F';' 'NR!=1 { print $3 }' $tablo | head -n 5
 
 #### Delimiter parametrelerini değiştirme
 
-Satış tablomuzdan sehir, temsilci, malinCinsi, birimler sütunlarını çekip aralarını pipe (|) ile bölelim. Burada 2,3,4 ve 5. sütunları çekip aralarındaki "noktalı virgül" yerine dikey çizgi işaretini ekliyeceğiz. 
+Satış tablomuzdan sehir, temsilci, malinCinsi, birimler sütunlarını çekip aralarını pipe (|) ile bölelim. Burada 2,3,4 ve 5. sütunları çekip aralarındaki "noktalı virgül" yerine dikey çizgi işaretini ekliyeceğiz. Bu komutu noktaları (.) virgül (,) olarak değiştirmek için de kullanabiliriz.
+
+- FS = Veride şu an kullanılan ayracı ifade eder.
+- OFS = Yerine geçmesini istediğimiz ayracı ifade eder.
+- FIELDWIDTHS = Belirttiğimiz karakter sayısı kadar veri verir.
 
 ```bash
 awk 'BEGIN{FS=";"; OFS="|"} {print $2,$3,$4,$5}' $tablo
@@ -289,6 +293,10 @@ Samsun|Recep|DefterXX|27
 Samsun|Recep|Çanta|60
 Kayseri|Necati|Kitap|75
 Samsun|Recep|Defter|20
+# Başlığı hariç tutarak
+awk 'BEGIN{FS=";"; OFS="|"} 'NR==1' {next} {print  $2,$3,$4,$5}' $tablo
+# -F ayraç. 2 ve 4 üncü sütunun 4 er karakterini, 3 üncü sütunun 2 karakterini getirir
+awk  -F';' 'BEGIN{FIELDWIDTHS="4 2 4"} 'NR==1' {next} {print $2,$3,$4}' $tablo
 ```
 
 ## NAWK
@@ -301,7 +309,32 @@ Gelecek...
 
 ## SED 
 
-Listeleme, işaretleme, sorgulama, örüntülerle metin işlemleri gerçekleştirme gibi özelliklere sahiptir.
+Listeleme, işaretleme, sorgulama, örüntülerle metin işlemleri gerçekleştirme gibi özelliklere sahiptir. grep komutuyla benzer şekilde özel karakterleri ```([] . * ^ $ ve \)``` sed ile de kullanabiliriz. sed komutuyla sağlanan değişiklikler aksi ifade edilmediği sürece orjinal dosya üzerinde herhangi bir değişikliğe neden olmaz.
+
+| Parametre | Açıklama |
+| ---- | ---- |
+| a\ | Aktif satır altına ekleme yapar. |
+| c\ | Aktif satırı verilen kelime/cümle ile değiştirir. |
+| d | Yazıyı sil. |
+| i\ |Aktif satırın yukarısına ekleme yap. |
+| p | Yazıyı dök. |
+| r | Dosyayı oku. |
+| s | Bul ve değiştir. |
+| w | Dosyaya yaz. |
+
+| Opsiyon | Açıklama |
+| ---- | ---- |
+| -e script | Birden fazla sed opsiyonu tanımla. |
+| -f | Sed komutlarının olduğu bir bash script dosyasını çalıştır. |
+
+```bash
+# İlk satırı almaz. Başlıksız çıktı verir
+sed 1,1d $tablo
+# ya da
+sed -n '1!p' $tablo
+# 7 ile başlayan satırları gösterme
+sed '/^7.*/d' $tablo
+```
 
 
 ## EK BİLGİLER
