@@ -55,6 +55,7 @@ deluser kullanıcıAdı grupAdı
 Şifreli sayılar (777) yerine anlaşılır steno (rwx) ile yetki vermek daha bilinçli olur. Ayrıca öğrenmesi de kolaydır.
 
 Bireyler;
+
 | ---- | ---- |
 | u | Dosyanın sahibi kullanıcı |
 | g | Dosyanın sahibi grup |
