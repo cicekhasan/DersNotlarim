@@ -271,6 +271,24 @@ Satış tablomuzdan sehir, temsilci, malinCinsi, birimler sütunlarını çekip 
 
 ```bash
 awk 'BEGIN{FS=";"; OFS="|"} {print $2,$3,$4,$5}' $tablo
+# Ekran çıktısı
+sehir|temsilci|malinCinsi|birimler
+Ankara|Hasan|Kalem|95
+Ankara|Hasan|Kalemlik|50
+İstanbul|Faruk|Defter|36
+Kayseri|Necati|Kalemlik|27
+Samsun|Recep|Cetvel|56
+Kayseri|Necati|Defter|60
+Samsun|Recep|Kalem|75
+Kayseri|Necati|Defter|90
+Samsun|Recep|DefterX|95
+İstanbul|Faruk|Kalem|50
+Samsun|Recep|Defter|96
+Samsun|Recep|DefterXX|27
+İstanbul|Faruk|Kalemtraş|56
+Samsun|Recep|Çanta|60
+Kayseri|Necati|Kitap|75
+Samsun|Recep|Defter|20
 ```
 
 ## NAWK
