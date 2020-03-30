@@ -339,6 +339,34 @@ sed -n '1!p' $tablo
 sed '/^7.*/d' $tablo
 ```
 
+Şimdi canlı bir dosya içerisinde sed komutunu kullanalım. Bunun için access.log dosyası içeriğini access.log.txt dosyasına aktaralım. Siz de komutta bulunan adresleri kendinize göre düzenleyin lütfen... Log dosyası olmak zorunda değil...
+
+```bash
+sudo cat /var/log/apache2/access.log.1 > /var/www/html/metin-isleme/apache2.log.txt
+```
+
+```bash
+# Sadece oduncupazari ile başlayan satırları listeler
+sed -n '/^oduncupazari*/p' /var/log/apache2/access.log
+# 5. satırdan başlayarak sonuna kadar siler
+sed '5,$d'
+# 2 den başlıyarak 20. satıra kadar olan satırları sil, geri kalanı text.txt ye yaz
+sed '2,20d' /var/log/apache2/access.log > ~/test.txt
+# Odun'u bulup defter yapar ve test.txt'ye kayıt eder.
+sed 's/odun/defter/' /var/log/apache2/access.log > ~/test.txt
+# oduncupazari yazan satırı silip, kalanı test.txt'ye yazar.
+sed '/oduncupazari/d' /var/log/apache2/access.log > ~/test.txt
+```
+
+
+
+
+Aranacak kelime ile başlayan satırları getirmek
+
+```bash
+sed -n '/^aranacakKelime*/p' kern.log.txt
+```
+
 
 ## EK BİLGİLER
 

@@ -5,6 +5,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 - Linux
 	- Genel
 		- [Dosya Yapısı](dosyalar/dosya-yapisi.md)
+		- [Sistem Hataları ve Çözümleri](dosyalar/sistem-hatalari.md)
 	- Terminal
 		- [Ağ İşlemleri](dosyalar/ag-islemleri.md)
 		- [Arama İşlemleri](dosyalar/arama-islemleri.md)
