@@ -123,7 +123,7 @@ sudo systemctl status systemd-modules-load.service
 Warning: Journal has been rotated since unit was started. Log output is incomplete or unavailable.
 ```
 
-Ve sistem ayağa kalktı...
+Ve systemd-modules-load.service ayağa kalktı...
 
 
 
