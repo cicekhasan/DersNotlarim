@@ -14,7 +14,6 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 	- [Hata Çözümleri](dosyalar/hata-cozumleri.md)
 	- [Hızlandırma](dosyalar/hizlandirma.md)
 	- [İndirme İşlemleri](dosyalar/yetkiler.md)
-	- [Yetkiler-İzinler](dosyalar/kullanici-islemleri.md)
 	- [Lamp Kurulumu](dosyalar/lamp-kurulumu.md)
 	- [Log Dosyaları](dosyalar/log-dosyalari.md)
 	- [Metin İşleme (Dosyadan veri oluşturma.)](dosyalar/metin-isleme.md)
@@ -25,7 +24,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 	- [Veri İşlemleri](dosyalar/veri-islemleri.md)
 	- [Veritabanı İşlemleri](dosyalar/veri-tabani.md)
 	- [Web Projeleri Yönetimi](dosyalar/web-projeleri.md)
-	- [Yetkilendirme İşlemleri](dosyalar/yetkilendirme.md)
+	- [Yetkiler-İzinler](dosyalar/yetkiler.md)
 	- [Zamanlanmış Görevler](dosyalar/zamanlanmis-gorevler.md)
 - PHP
 	- Genel
