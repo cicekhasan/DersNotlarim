@@ -203,7 +203,7 @@ Kaynak : https://manpages.debian.org/testing/datamash/datamash.1.en.html
 **Kullanacağımız örnek veriler:**
 
 ```bash
-siparisTarihi;sehir;temsilci;malınCinsi;birimler;birimMaliyet;toplam
+siparisTarihi;sehir;temsilci;malinCinsi;birimler;birimMaliyet;toplam
 1.6.19 ;Ankara;Hasan;Kalem;95;1.99;189.05
 1.23.19;Ankara;Hasan;Kalemlik;50;19.99;999.50
 2.9.19 ;İstanbul;Faruk;Defter;36;4.99;179.64
@@ -265,6 +265,13 @@ awk -F';' '{print $3}' $tablo
 awk -F';' 'NR!=1 { print $3 }' $tablo | head -n 5
 ```
 
+#### Delimiter parametrelerini değiştirme
+
+Satış tablomuzdan sehir, temsilci, malinCinsi, birimler sütunlarını çekip aralarını pipe (|) ile bölelim. Burada 2,3,4 ve 5. sütunları çekip aralarındaki "noktalı virgül" yerine dikey çizgi işaretini ekliyeceğiz. 
+
+```bash
+awk 'BEGIN{FS=";"; OFS="|"} {print $2,$3,$4,$5}' $tablo
+```
 
 ## NAWK
 
