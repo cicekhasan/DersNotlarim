@@ -1,6 +1,6 @@
 # PDF İŞLEMLERİ
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
 ## Pdf'e çevirmek

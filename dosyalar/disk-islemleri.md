@@ -1,6 +1,6 @@
 # DİSK İŞLEMLERİ
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
 ## Disk Ya da Usb Bağlama

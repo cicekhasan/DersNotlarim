@@ -1,6 +1,6 @@
 # Veritabanı Bağlantısı
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
 ## Direkt Bağlantı

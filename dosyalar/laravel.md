@@ -1,6 +1,6 @@
 # LARAVEL NOTLARI
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
 ## COMPOSER PAKETLERİ

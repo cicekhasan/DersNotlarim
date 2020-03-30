@@ -1,6 +1,6 @@
 # İPUÇLARI
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
 ### Kısa Echo Kullanımı

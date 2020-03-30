@@ -1,6 +1,6 @@
 # EDİTÖRLER (IDM)
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
 ## Doğru Editör Seçimi (IDE)

@@ -1,6 +1,6 @@
 # FAVORİLERİM
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
 Açılırken E ve A ya basarsanız güvenilir kipte açar.

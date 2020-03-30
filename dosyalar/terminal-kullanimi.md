@@ -1,6 +1,6 @@
 # TERMİNAL KULLANIMI
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 ## YARDIMCI PAKETLER
 ### TMUX

@@ -1,6 +1,6 @@
 # FONKSİYONLAR
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
 ### array_combine($key,$values)

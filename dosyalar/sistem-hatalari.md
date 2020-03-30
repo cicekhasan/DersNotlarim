@@ -1,6 +1,6 @@
 # KARŞILAŞTIĞIM SİSTEM HATALARI ve ÇÖZÜMLERİ
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
 ## Başlatılamayan systemd hizmetlerini bulmak

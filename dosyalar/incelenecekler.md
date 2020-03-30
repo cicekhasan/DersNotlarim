@@ -1,6 +1,6 @@
 # İNCELENECEK KOMUTLAR
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
 BU KODLAR DENENMEDİĞİ İÇİN İLGİLİ SAYFALARA EKLENMEDİ. DENENDİĞİNDE EKLENECEK!!!

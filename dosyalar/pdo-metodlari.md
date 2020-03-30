@@ -1,6 +1,6 @@
 # PDO METODLARI
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
 ## Exec Metodu

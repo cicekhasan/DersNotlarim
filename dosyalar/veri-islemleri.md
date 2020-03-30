@@ -1,6 +1,6 @@
 # VERİ İŞLEMLERİ
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 ## Bir Sitenin HTML Kodlarını Almak
 

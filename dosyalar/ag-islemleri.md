@@ -1,6 +1,6 @@
 # AĞ İŞLEMLERİ
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
 eth0     : Ethernet kartı.

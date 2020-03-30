@@ -1,6 +1,6 @@
 # PAKET İŞLEMLERİ
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 ## Kurulu paketleri listeleme
 

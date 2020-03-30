@@ -1,6 +1,6 @@
 # ZAMANLANMIŞ GÖREVLER
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 ## Zamanlanmış Görevler Oluşturmak
 

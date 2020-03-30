@@ -1,6 +1,6 @@
 # GİT İŞLEMLERİ
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
 ## Git Server'a Kendimizi Tanıtmak

@@ -1,6 +1,6 @@
 # E-POSTA İŞLEMLERİ
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
 ## E-Posta Yapılandırması

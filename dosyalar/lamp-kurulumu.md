@@ -1,6 +1,6 @@
 # LAMP KURULUMU
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
 ```bash

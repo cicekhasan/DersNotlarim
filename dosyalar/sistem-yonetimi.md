@@ -1,6 +1,6 @@
 # SİSTEM YÖNETİMİ
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
 ## Sistem Hakkında Genel Bilgi Edinme 

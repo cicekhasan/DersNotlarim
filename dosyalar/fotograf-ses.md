@@ -1,6 +1,6 @@
 # FOTOĞRAF, VİDEO SES KOMUTLARI
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
 ## Konsoldan Fotoğraf Çekmek

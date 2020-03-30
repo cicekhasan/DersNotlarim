@@ -1,6 +1,6 @@
 # TERMİNALDEN METİN İŞLEME
 
-- [Önsöz](https://github.com/cicekhasan/Linux)
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
 Öncesinde veri dosyamızı her yerden kullanabilmek adına bir değişkene atıyalım. Dosyamızın adı "tablo" olsun! Dosya içeriği aşağıda kod kullanımları sırasında verilmiştir.
