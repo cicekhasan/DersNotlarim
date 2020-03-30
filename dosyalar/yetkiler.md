@@ -20,7 +20,7 @@ finger kullanıcıadı
 ### Kullanıcıya Yönetici Yetkisi Verme
 
 ```bash
-sudo usermod -a -G sudo [kullanıcıadı]
+sudo usermod -a -G sudo kullaniciAdi
 ```
 
 ## GRUP İŞLEMLERİ
