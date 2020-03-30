@@ -1,4 +1,4 @@
-# SİSTEM HATASI ÇÖZÜMLERİ
+# KARŞILAŞTIĞIM SİSTEM HATALARI ve ÇÖZÜMLERİ
 
 - [Önsöz](https://github.com/cicekhasan/Linux)
 
