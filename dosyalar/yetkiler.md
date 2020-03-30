@@ -54,34 +54,35 @@ deluser kullanıcıAdı grupAdı
 
 Şifreli sayılar (777) yerine anlaşılır steno (rwx) ile yetki vermek daha bilinçli olur. Ayrıca öğrenmesi de kolaydır.
 
-Bireyler;
-
-| | |
+| Bireyler | Açıklama |
 | ---- | ---- |
 | u | Dosyanın sahibi kullanıcı |
 | g | Dosyanın sahibi grup |
 | o | Diğerleri (Misafirler) |
 | a | Hepsi (Kullanıcı,grup ve misafirler) |
 
-Yetkiler;
-- 	  = Yetkisiz
-- r   = Okuyabilir
-- w   = Yazabilir
-- x   = Çalıştırabilir
-- rwx = Bütün yetkilere sahiptir.
+| Yetkiler | Açıklama |
+| ---- | ---- |
+| 	  | Yetkisiz |
+| r   | Okuyabilir |
+| w   | Yazabilir |
+| x   | Çalıştırabilir |
+| rwx | Bütün yetkilere sahiptir |
 
-Yetki Operatörleri:
-- + Yetkiyi ekler
-- - Yetkiyi siler
-- = Yetkiyi ya da yetkisizliği verir.
+| Yetki Operatörleri | Açıklama |
+| ---- | ---- |
+| + | Yetkiyi ekler |
+| - | Yetkiyi siler |
+| = | Yetkiyi ya da yetkisizliği verir |
 
-Kullanım Şekilleri;
-- u=r    // Kullanıcılara okuma yetkisi ver
-- g=rw   // Gruplara okuma yazma yetkisi verir
-- o=     // Kullanıcılar ve gruplar harici (Misafirlere) ait yetkisizlik verir. Tanımlıları siler.
-- u+x    // Kullanıcılara çalıştırma yetkisi ver
-- g-w    // Gruplardan yazma yetkisini alır
-- o+r    // Misafirlere okuma yetkisi verir.
+| Kullanım Şekilleri | Açıklama |
+| ---- | ---- |
+| u=r  | Kullanıcılara okuma yetkisi verir |
+| g=rw | Gruplara okuma yazma yetkisi verir |
+| o=   | Diğerlerine (misafirlere) ait yetkileri kaldırır |
+| u+x  | Kullanıcılara çalıştırma yetkisi verir |
+| g-w  | Gruplardan yazma yetkisini kaldırır |
+| o+r  | Misafirlere okuma yetkisi verir |
 
 #### Yetki verme ve kaldırma örnekleri
 
