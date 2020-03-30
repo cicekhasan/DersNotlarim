@@ -2,10 +2,12 @@
 
 - [Önsöz](https://github.com/yeniceri1453/Linux)
 
+**Yetkiler üzerinde işlem yapabilmek için önce kullanıcıları ve yetkilerini biliyor olmamız gerekmektedir.**
+
 ## KULLANICI İŞLEMLERİ
 ### Kullanıcıları Listeleme
 
-İd'si 800 den aşağıda olanlar sistem yöneticisidir. İlk kullanıcı 1000 id sini alır.
+*Not: İd'si 800 den aşağıda olanlar sistem yöneticisidir. İlk kullanıcı 1000 id sini alır.*
 
 ```bash
 cat /etc/passwd
