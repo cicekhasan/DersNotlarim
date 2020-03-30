@@ -52,7 +52,7 @@ deluser kullanıcıAdı grupAdı
 
 ## YETKİLER
 
-Şifreli sayılar (777) yerine anlaşılır steno (rwx) ile yetki vermek daha bilinçli olur. Ayrıca öğrenmesi de kolaydır.
+Şifreli sayılar (777) yerine anlaşılır steno (ugo+rwx) ile yetki vermek daha bilinçli olur. Ayrıca öğrenmesi de kolaydır.
 
 | Bireyler | Açıklama |
 | ---- | ---- |
