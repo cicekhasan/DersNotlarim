@@ -323,15 +323,21 @@ Sed’in açılımı string editor’tür. Genelde string bazlı dosyalarımızd
 | p | Yazıyı dök. |
 | r | Dosyayı oku. |
 | s | Bul ve değiştir. |
+| g | Dosyanın tamamına bakar, tamamında arar. |
 | w | Dosyaya yaz. |
 | -i | İnline, pipe yerine kullanılır. |
+| $ | Satır sonunu ifade eder. |
 
 | Opsiyon | Açıklama |
 | ---- | ---- |
 | -e script | Birden fazla sed opsiyonu tanımla. |
 | -f | Sed komutlarının olduğu bir bash script dosyasını çalıştır. |
 
-Kelimeleri birebir vermek yerine * . $ ^ gibi gibi düzenli ifade araçlarından yararlanılabilir.
+Özel karakterler: ```.*[]^$\&``` Eğer sed komutunu bu karakterlere dikkat etmeden kullaırsak hataya sebep olur. Örneğin değiştireceğimiz metin içerisinde ```.``` varsa ```\.``` şeklinde kullanmalıyız. Örneğin; [1.8] değerini [2.5] yapalım. Dikkat burada iki adet özel karakter var!
+
+```bash
+sed 's/\[1\.8\]/\[2\.5\]/g' dosyaAdi.txt 
+```
 
 ### Genel kullanımı
 
@@ -343,34 +349,41 @@ Bu komutta sed komutunun "s" (substitute) parametresini kullanarak bul/değişti
 
 ```bash
 # Önerilen kullanım!
-cat dosya.txt | sed 's/degişecekMetin/yerineGelecekMetin/'
+cat dosya.txt | sed 's/Hasan/Ulubatlı Hasan/'
 # Ya da
-sed 's/degişecekMetin/yerineGelecekMetin/' dosya.txt
+sed 's/Hasan/Ulubatlı Hasan/' dosya.txt
 ```
-Bu komut genelde ilk bulduğunu değiştirir. Eğer bütün satırlarda da değişikliğin uygulanmasını istiyorsak "g" (global) parametresini kullanmalıyız.
+Bu komut genelde satırda ilk bulduğunu değiştirir. Satırda aynı metinden bir den fazla varsa dokunmaz. Eğer bütün dosya içerisinde uyan metinlere değişikliğin uygulanmasını istiyorsak "g" (global) parametresini kullanmalıyız.
 
 ```bash
-cat dosya.txt | sed 's/degişecekMetin/yerineGelecekMetin/g'
+cat dosya.txt | sed 's/Hasan/Ulubatlı Hasan/g'
 ```
 
 Değişiklik sonrası son haliyle kaydetmek istersek ">" ile yeni dosyaya kaydediyoruz. Terminalde bu tarz işlemler anında olur ve geri alamazsınız. Bu nedenle sağlama almak için yeni dosya ya işlem yapın!
 
 ```bash
-cat dosya.txt | sed 's/degişecekMetin/yerineGelecekMetin/g' > sonDosya.txt
+cat dosya.txt | sed 's/Hasan/Ulubatlı Hasan/g' > sonDosya.txt
 ```
 
-İki işlem yapmak...
+Aynı anda birden çok değiştirme yapabilmek için ise her argüman için -e kullanılır.
 
 ```bash
-cat $data | sed 's/Hasan/Osman/g' | sed 's/Recep/Taşkan/g' > sondata.txt
-cat 
+cat dosyaAdi | sed -e 's/Hasan/Ulubatlı Hasan/g' -e 's/Murat/IV Murat/g'
 ```
 
-Pipe yerine -i parametresini kullanarakta ikinci komutu bağlayabiliriz. KULLANIMI KONTROL EDİLECEK!!!
+"Hasan" ile başlayan satırları bulup satırbaşlarını "Ulubatlı Hasan" yapar. "g" kullanmadığımız için sadece satırbaşları değişir.
 
 ```bash
-cat $data | sed 's/Hasan/Osman/g' sed -i 's/Recep/Taşkan/g' > sondata.txt  
+cat dosya.txt | sed 's/^Hasan/Ulubatlı Hasan/'
 ```
+
+$ karakteri satır sonunu ifade eder. Satır sonundaki boşlukları silmek için...
+
+```bash
+sed 's/ $//' dosyaAdi
+```
+
+
 
 
 #### Örnek kullanımlar
