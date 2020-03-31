@@ -14,6 +14,12 @@ echo $tablo
 /var/www/html/yeni/veriler.txt
 ```
 
+#### Satır sayısını öğrenmek
+
+```bash
+cat $tablo | wc -l 
+```
+
 - set : Açık oturumdaki değişkenleri listelemek.
 - unset : Değişkeni iptal eder.
 
@@ -312,7 +318,7 @@ Gelecek...
 
 ## SED 
 
-Sed’in açılımı string editor’tür. Genelde string bazlı dosyalarımızda bul ve değiştir işlemi yapmamızı sağlar. Listeleme, işaretleme, sorgulama, örüntülerle metin işlemleri gerçekleştirme gibi özelliklere sahiptir. grep komutuyla benzer şekilde özel karakterleri ```([] . * ^ $ ve \)``` sed ile de kullanabiliriz. sed komutuyla sağlanan değişiklikler aksi ifade edilmediği sürece orjinal dosya üzerinde herhangi bir değişikliğe neden olmaz.
+Sed’in açılımı string editor’tür. Satır satır arama yapar, çalışır! Genelde string bazlı dosyalarımızda bul ve değiştir işlemi yapmamızı sağlar. Listeleme, işaretleme, sorgulama, örüntülerle metin işlemleri gerçekleştirme gibi özelliklere sahiptir. grep komutuyla benzer şekilde özel karakterleri ```([] . * ^ $ ve \)``` sed ile de kullanabiliriz. sed komutuyla sağlanan değişiklikler aksi ifade edilmediği sürece orjinal dosya üzerinde herhangi bir değişikliğe neden olmaz.
 
 | Parametre | Açıklama |
 | ---- | ---- |
@@ -350,6 +356,10 @@ Bu komutta sed komutunun "s" (substitute) parametresini kullanarak bul/değişti
 ```bash
 # Önerilen kullanım!
 cat dosya.txt | sed 's/Hasan/Ulubatlı Hasan/'
+# Ya da (Kaçış karakteri olan hallerde kullanabiliriz!)
+cat dosya.txt | sed 's:Hasan:Ulubatlı Hasan:'
+# Ya da (Kaçış karakteri olan hallerde kullanabiliriz!)
+cat dosya.txt | sed 's_Hasan_Ulubatlı Hasan_'
 # Ya da
 sed 's/Hasan/Ulubatlı Hasan/' dosya.txt
 ```
@@ -381,7 +391,40 @@ $ karakteri satır sonunu ifade eder. Satır sonundaki boşlukları silmek için
 
 ```bash
 sed 's/ $//' dosyaAdi
+# Satır sonlarına "SATIRSONU" yazmak
+sed 's/ $/SATIRSONU/' dosyaAdi
 ```
+
+#### Büyük harfleri küçük harf yapmak 
+
+```bash
+sed 's/[A-Z]//g' dosyaAdi
+```
+
+#### Dışında kalan karakterleri silmek
+
+Rakam ve küçük harflerin dışındakileri siler...
+
+```bash
+sed 's/[^1-9a-z]//g' dosyaAdi
+```
+
+#### Boşlukları silmek
+
+* karakteri, ne kadar boşluk varsa hepisini siler.
+
+```bash
+sed 's/^ *//' dosyaAdi
+```
+
+#### Satır başındaki boşlukları silmek
+
+* karakteri, ne kadar boşluk varsa hepisini siler.
+
+```bash
+sed 's/[^ ]*$//' dosyaAdi
+```
+
 
 
 
@@ -422,9 +465,3 @@ Aranacak kelime ile başlayan satırları getirmek
 sed -n '/^aranacakKelime*/p' kern.log.txt
 ```
 
-## EK BİLGİLER
-
-```bash
-# Veri kaç satırdan oluşuyor
-cat $tablo | wc -l 
-```
