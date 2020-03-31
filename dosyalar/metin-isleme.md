@@ -13,6 +13,7 @@ echo $tablo
 # Ekran çıktısı 
 /var/www/html/yeni/veriler.txt
 ```
+## ORTAK KOMUTLAR
 
 #### Satır sayısını öğrenmek
 
@@ -205,7 +206,7 @@ Kaynak : https://manpages.debian.org/testing/datamash/datamash.1.en.html
 
 ## AWK
 
-Örüntü temelli tarama ve işleme dilidir. Komut kullanımının dışında kapsamlı işlemler yapmanızı mümkün kılan bir dil olma özelliğine sahiptir. Awk komutu ile sütun olarak ifade edebileceğimiz ayrılmış alanları (space, tab space, noktalı virgül, virgül, pipe vb.) değişkenler olarak sıralı bir şekilde edinebilmekteyiz.
+Veri düenleme editörüdür. Grep ile satır satır veri düzenlerken AWK ile sütun sütun işlem yapılır. Komut kullanımının dışında kapsamlı işlemler yapmanızı mümkün kılan bir dil olma özelliğine sahiptir. Awk komutu ile sütun olarak ifade edebileceğimiz ayrılmış alanları (space, tab space, noktalı virgül, virgül, pipe vb.) değişkenler olarak sıralı bir şekilde edinebilmekteyiz.
 
 - -F: Delimiter. Ayırıcı karakter belirlemek için kullanılır.
 
@@ -331,7 +332,7 @@ Sed’in açılımı string editor’tür. Satır satır arama yapar, çalışı
 | s | Bul ve değiştir. |
 | g | Dosyanın tamamına bakar, tamamında arar. |
 | w | Dosyaya yaz. |
-| -i | İnline, pipe yerine kullanılır. |
+| -i | İnline, yaptığınız değişikliği orjinal dosyada kaydeder. |
 | $ | Satır sonunu ifade eder. |
 
 | Opsiyon | Açıklama |
@@ -360,6 +361,8 @@ cat dosya.txt | sed 's/Hasan/Ulubatlı Hasan/'
 cat dosya.txt | sed 's:Hasan:Ulubatlı Hasan:'
 # Ya da (Kaçış karakteri olan hallerde kullanabiliriz!)
 cat dosya.txt | sed 's_Hasan_Ulubatlı Hasan_'
+# Ya da (Kaçış karakteri olan hallerde kullanabiliriz!)
+sed 's|Hasan|Ulubatlı Hasan|'dosya.txt
 # Ya da
 sed 's/Hasan/Ulubatlı Hasan/' dosya.txt
 ```
