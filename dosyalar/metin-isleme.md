@@ -312,7 +312,7 @@ Gelecek...
 
 ## SED 
 
-Listeleme, işaretleme, sorgulama, örüntülerle metin işlemleri gerçekleştirme gibi özelliklere sahiptir. grep komutuyla benzer şekilde özel karakterleri ```([] . * ^ $ ve \)``` sed ile de kullanabiliriz. sed komutuyla sağlanan değişiklikler aksi ifade edilmediği sürece orjinal dosya üzerinde herhangi bir değişikliğe neden olmaz.
+Sed’in açılımı string editor’tür. Genelde string bazlı dosyalarımızda bul ve değiştir işlemi yapmamızı sağlar. Listeleme, işaretleme, sorgulama, örüntülerle metin işlemleri gerçekleştirme gibi özelliklere sahiptir. grep komutuyla benzer şekilde özel karakterleri ```([] . * ^ $ ve \)``` sed ile de kullanabiliriz. sed komutuyla sağlanan değişiklikler aksi ifade edilmediği sürece orjinal dosya üzerinde herhangi bir değişikliğe neden olmaz.
 
 | Parametre | Açıklama |
 | ---- | ---- |
@@ -324,11 +324,25 @@ Listeleme, işaretleme, sorgulama, örüntülerle metin işlemleri gerçekleşti
 | r | Dosyayı oku. |
 | s | Bul ve değiştir. |
 | w | Dosyaya yaz. |
+| /^ | Satırbaşını ifade ediyor. |
 
 | Opsiyon | Açıklama |
 | ---- | ---- |
 | -e script | Birden fazla sed opsiyonu tanımla. |
 | -f | Sed komutlarının olduğu bir bash script dosyasını çalıştır. |
+
+### Genel kullanımı
+
+#### Bul-Değiştir
+
+İlk komutta pipe operatoru kullanarak sed’e dosyayı stdin üzerinden verdik. İkinci komutta ise dosya ismi ile sed’in bu dosyayı açıp görüntülemesini sağladık. Bu komutta dosyada değişiklik olmaz sadece ekrana güncel şekliyle dosya içeriğinibasar.
+
+```bash
+cat dosya.txt | sed 's/degişecekMetin/yerineGelecekMetin/'
+sed 's/degişecekMetin/yerineGelecekMetin/' dosya.txt
+```
+
+
 
 ```bash
 # İlk satırı almaz. Başlıksız çıktı verir
@@ -358,15 +372,11 @@ sed 's/odun/defter/' /var/log/apache2/access.log > ~/test.txt
 sed '/oduncupazari/d' /var/log/apache2/access.log > ~/test.txt
 ```
 
-
-
-
 Aranacak kelime ile başlayan satırları getirmek
 
 ```bash
 sed -n '/^aranacakKelime*/p' kern.log.txt
 ```
-
 
 ## EK BİLGİLER
 
