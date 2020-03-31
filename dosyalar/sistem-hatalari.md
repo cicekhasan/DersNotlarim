@@ -124,15 +124,3 @@ Warning: Journal has been rotated since unit was started. Log output is incomple
 ```
 
 Ve systemd-modules-load.service ayağa kalktı...
-
-
-
-
-
-
-
-
-
-
-
-
