@@ -207,19 +207,19 @@ Kaynak : https://manpages.debian.org/testing/datamash/datamash.1.en.html
 
 ```bash
 siparisTarihi;sehir;temsilci;malinCinsi;birimler;birimMaliyet;toplam
-1.6.19 ;Ankara;Hasan;Kalem;95;1.99;189.05
+1.6.19;Ankara;Hasan;Kalem;95;1.99;189.05
 1.23.19;Ankara;Hasan;Kalemlik;50;19.99;999.50
-2.9.19 ;İstanbul;Faruk;Defter;36;4.99;179.64
+2.9.19;İstanbul;Faruk;Defter;36;4.99;179.64
 2.26.19;Kayseri;Necati;Kalemlik;27;19.99;539.73
 3.15.19;Samsun;Recep;Cetvel;56;2.99;167.44
-4.1.19 ;Kayseri;Necati;Defter;60;4.99;299.40
+4.1.19;Kayseri;Necati;Defter;60;4.99;299.40
 4.19.19;Samsun;Recep;Kalem;75;1.99;149.25
-5.5.19 ;Kayseri;Necati;Defter;90;4.99;449.10
-6.6.19 ;Samsun;Recep;DefterX;95;5.99;569.05
+5.5.19;Kayseri;Necati;Defter;90;4.99;449.10
+6.6.19;Samsun;Recep;DefterX;95;5.99;569.05
 6.13.19;İstanbul;Faruk;Kalem;50;1.99;99.50
 7.19.19;Samsun;Recep;Defter;96;4.99;479.64
-7.6.19 ;Samsun;Recep;DefterXX;27;9.99;269.73
-7.5.19 ;İstanbul;Faruk;Kalemtraş;56;3.99;223.44
+7.6.19;Samsun;Recep;DefterXX;27;9.99;269.73
+7.5.19;İstanbul;Faruk;Kalemtraş;56;3.99;223.44
 8.13.19;Samsun;Recep;Çanta;60;49.99;2999.40
 9.28.19;Kayseri;Necati;Kitap;75;12.99;974.25
 9.25.19;Samsun;Recep;Defter;20;4.99;99.8
@@ -324,25 +324,56 @@ Sed’in açılımı string editor’tür. Genelde string bazlı dosyalarımızd
 | r | Dosyayı oku. |
 | s | Bul ve değiştir. |
 | w | Dosyaya yaz. |
-| /^ | Satırbaşını ifade ediyor. |
+| -i | İnline, pipe yerine kullanılır. |
 
 | Opsiyon | Açıklama |
 | ---- | ---- |
 | -e script | Birden fazla sed opsiyonu tanımla. |
 | -f | Sed komutlarının olduğu bir bash script dosyasını çalıştır. |
 
+Kelimeleri birebir vermek yerine * . $ ^ gibi gibi düzenli ifade araçlarından yararlanılabilir.
+
 ### Genel kullanımı
 
 #### Bul-Değiştir
 
-İlk komutta pipe operatoru kullanarak sed’e dosyayı stdin üzerinden verdik. İkinci komutta ise dosya ismi ile sed’in bu dosyayı açıp görüntülemesini sağladık. Bu komutta dosyada değişiklik olmaz sadece ekrana güncel şekliyle dosya içeriğinibasar.
+Bu komutta sed komutunun "s" (substitute) parametresini kullanarak bul/değiştir işlemi yapıyoruz. İlk komutta pipe operatoru kullanarak sed’e dosyayı stdin üzerinden verdik. İkinci komutta ise dosya ismi ile sed’in bu dosyayı açıp görüntülemesini sağladık. Bu komutta dosyada değişiklik olmaz sadece ekrana güncel şekliyle dosya içeriğini basar.
+
+*Not: Bu tarz işlemlerde dosyadaki verileri kaybetmemek için önce "cat" ile dosyayı açıp, sonra pipe operatörü ile yapacağımız işlem komutunu yazmalıyız!*
 
 ```bash
+# Önerilen kullanım!
 cat dosya.txt | sed 's/degişecekMetin/yerineGelecekMetin/'
+# Ya da
 sed 's/degişecekMetin/yerineGelecekMetin/' dosya.txt
+```
+Bu komut genelde ilk bulduğunu değiştirir. Eğer bütün satırlarda da değişikliğin uygulanmasını istiyorsak "g" (global) parametresini kullanmalıyız.
+
+```bash
+cat dosya.txt | sed 's/degişecekMetin/yerineGelecekMetin/g'
+```
+
+Değişiklik sonrası son haliyle kaydetmek istersek ">" ile yeni dosyaya kaydediyoruz. Terminalde bu tarz işlemler anında olur ve geri alamazsınız. Bu nedenle sağlama almak için yeni dosya ya işlem yapın!
+
+```bash
+cat dosya.txt | sed 's/degişecekMetin/yerineGelecekMetin/g' > sonDosya.txt
+```
+
+İki işlem yapmak...
+
+```bash
+cat $data | sed 's/Hasan/Osman/g' | sed 's/Recep/Taşkan/g' > sondata.txt
+cat 
+```
+
+Pipe yerine -i parametresini kullanarakta ikinci komutu bağlayabiliriz. KULLANIMI KONTROL EDİLECEK!!!
+
+```bash
+cat $data | sed 's/Hasan/Osman/g' sed -i 's/Recep/Taşkan/g' > sondata.txt  
 ```
 
 
+#### Örnek kullanımlar
 
 ```bash
 # İlk satırı almaz. Başlıksız çıktı verir
