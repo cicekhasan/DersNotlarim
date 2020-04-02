@@ -81,6 +81,9 @@ Parçala. Belirli bir karakterle bir birinden ayrılmış olan ifadeleri, parça
 ### extract($arr)
 Dizideki anahtarları değişken gibi kullanmamızı sağlar.
 
+### file_get_contents($web_adres)
+Web sayfası kodlarını çeker. Bu fonksiyonu başka bir web sayfasından veri almak için kullanırız.
+
 ### implode(':', $arr)
 Birleştir. `explode();` fonksiyonunun tam tersidir. Bir diziyi istediğimiz karakterle birleştirip string ifadeye çeviriyor.
 
@@ -110,6 +113,9 @@ Dizideki ilk elemana döner. Başa döner.
 
 ### shuffle($arr)
 Diziyi karıştırarak, her bastırdığımızda elemanların sıralamasını değiştirir.
+
+### strip_tags($html_strings)
+Html etiketlerini temizler. ```file_get_contents($web_adres)``` ile çektiğimiz web sayfası html kodlarını temizleyerek sadece hame verinin kalmasını sağlar.
 
 ### unlink()
 Dosya silmek için kullanılır. Bir parametre alır; sileceğiniz dosya.

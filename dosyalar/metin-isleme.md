@@ -206,7 +206,7 @@ Kaynak : https://manpages.debian.org/testing/datamash/datamash.1.en.html
 
 ## AWK
 
-Veri düenleme editörüdür. Grep ile satır satır veri düzenlerken AWK ile sütun sütun işlem yapılır. Komut kullanımının dışında kapsamlı işlemler yapmanızı mümkün kılan bir dil olma özelliğine sahiptir. Awk komutu ile sütun olarak ifade edebileceğimiz ayrılmış alanları (space, tab space, noktalı virgül, virgül, pipe vb.) değişkenler olarak sıralı bir şekilde edinebilmekteyiz.
+Veri düzenleme editörüdür. Grep ile satır satır veri düzenlerken AWK ile sütun sütun işlem yapılır. Komut kullanımının dışında kapsamlı işlemler yapmanızı mümkün kılan bir dil olma özelliğine sahiptir. Awk komutu ile sütun olarak ifade edebileceğimiz ayrılmış alanları (space, tab space, noktalı virgül, virgül, pipe vb.) değişkenler olarak sıralı bir şekilde edinebilmekteyiz.
 
 - -F: Delimiter. Ayırıcı karakter belirlemek için kullanılır.
 
@@ -466,5 +466,81 @@ Aranacak kelime ile başlayan satırları getirmek
 
 ```bash
 sed -n '/^aranacakKelime*/p' kern.log.txt
+```
+
+
+
+# HTML SAYFADAN WERİ ÇEKME AŞAMALARI
+
+1. Sayfayı çek
+2. Boş satırları sil
+
+```bash
+# Boş satırları silmek
+sed -i '/^\s*$/d' data.txt
+# ikinci yol
+sed '/^[[:space:]]*$/d'
+```
+
+3. Birden fazla boşlukları sil
+
+```bash
+sed -i 's/  */ /g' data.txt
+```
+
+4. Satırbaşı boşluklarını sil
+
+```bash
+sed -i 's/^ *//' data.txt
+```
+
+5. Satırsonu boşluklarını sil
+
+```bash
+sed -i 's/ *$//g' data.txt 
+sed -i 's/^    *$//g' sata.txt
+```
+
+6. Satırbaşı tab karakterlerini sil
+
+```bash
+sed -i 's/^\t*//g' sata.txt
+```
+
+7. Satırsonu tab karakterlerini sil
+
+```bash
+sed -i 's/^\t*$//g' sata.txt
+```
+
+8. Tek bir satıra dönüştür
+
+```bash
+sed -i '/./{:a;N;s/\n\(.\)/ \1/;ta}' sata.txt
+```
+
+9. Sed dosyası yapıp komutları dosyadan tek seferde çalıştırmak
+
+```bash
+
+```
+
+10. Sed dosyasını çalıştırıp veileri sql dosyası yapmak. Deneniyor!
+
+```bash
+sed -f ankara.sed ankara.txt > ankara.sql
+```
+
+
+Aranacak kelime ile başlayan satırları getirmek
+
+```bash
+sed -n '/^aranacakKelime*/p' kern.log.txt
+```
+
+9999. ayar ile başlayan satırları listeler
+
+```bash
+cat data.txt | sed -n '/^ayar*/p'
 ```
 
