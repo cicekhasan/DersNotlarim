@@ -102,6 +102,23 @@ Dizideki anahtarlara göre küçükten büyüğe doğru sıralama yapar
 ### next($arr)
 Dizideki sonraki elemanı bulmak için kullanılır.
 
+### preg_match_all()
+Bu fonksiyon bir dosya içerisinden belirlediğimiz aralıktan istediğimiz veriyi çekebilmemizi sağlar. Aşağıdaki örneği inceliyecek olursak; "BAŞLANGIÇ" yazan yere aralığın nereden başlıyacağını ve "BİTİŞ" yazan yere aralığın nerede biteceğini yazarız. Bu aralığa nerede bakacağını $"dizi_değişkeni" ile belirtiriz. Bulduğu veriyi de "$yüklenici_değişken" üzerine alır. Gelen veri dizi olacağından anahtar değeri ile beraber ekrana yazdırır.
+
+```bash
+preg_match_all(@BAŞLANGIÇ(.*?)BİTİŞ@si,$dizi_değişkeni,$yüklenici_değişken);
+```
+Kullanımı; Örnekte ```https://www.cankiripostasi.com/``` sitesinin anasayfasından ```<span>``` etiketleri arasında ne varsa çekilmektedir.
+
+```bash
+$haber = file_get_contents("https://www.cankiripostasi.com/");
+preg_match_all('@<span>(.*?)</span>@si',$haber, $haber_metni);
+# Kontrol
+echo "<pre>";
+print_r($haber_metni);
+echo "</pre>";
+```
+
 ### prev($arr)
 Dizideki önceki elemanı bulmak için kullanılır.
 
