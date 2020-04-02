@@ -115,7 +115,7 @@ Dizideki ilk elemana döner. Başa döner.
 Diziyi karıştırarak, her bastırdığımızda elemanların sıralamasını değiştirir.
 
 ### strip_tags($html_strings)
-Html etiketlerini temizler. ```file_get_contents($web_adres)``` ile çektiğimiz web sayfası html kodlarını temizleyerek sadece hame verinin kalmasını sağlar.
+Html etiketlerini temizler. ```file_get_contents($web_adres)``` ile çektiğimiz web sayfası html kodlarını temizleyerek sadece ham verinin kalmasını sağlar.
 
 ### unlink()
 Dosya silmek için kullanılır. Bir parametre alır; sileceğiniz dosya.
