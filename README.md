@@ -4,8 +4,10 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 
 - Linux
 	- Genel
-		- [Dosya Yapısı](dosyalar/dosya-yapisi.md)
+		- [Log Dosyaları Yapısı](dosyalar/dosya-yapisi.md)
 		- [Sistem Hataları ve Çözümleri](dosyalar/sistem-hatalari.md)
+	- Sisyem Yönetimi
+		- [Sistem Yönetimi](dosyalar/sistem-yonetimi.md)
 	- Terminal
 		- [Ağ İşlemleri](dosyalar/ag-islemleri.md)
 		- [Arama İşlemleri](dosyalar/arama-islemleri.md)
@@ -23,7 +25,6 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [Metin İşleme (Dosyadan veri oluşturma.)](dosyalar/metin-isleme.md)
 		- [Paket İşlemleri](dosyalar/paketler.md)
 		- [PDF İşlemleri](dosyalar/pdf-islemleri.md)
-		- [Sistem Yönetimi](dosyalar/sistem-yonetimi.md)
 		- [Terminal Kullanımı](dosyalar/terminal-kullanimi.md)
 		- [Veri İşlemleri](dosyalar/veri-islemleri.md)
 		- [Veritabanı İşlemleri](dosyalar/veri-tabani.md)
