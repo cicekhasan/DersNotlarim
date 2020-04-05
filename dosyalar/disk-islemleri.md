@@ -69,18 +69,34 @@ Device     Boot Start      End  Sectors  Size Id Type
 /dev/sdc1        2048 15669247 15667200  7,5G  c W95 FAT32 (LBA)
 ```
 
-#### Disk Ya da Usb Bağlama
+#### Disk Bağlama
+
+```bash
+# Bağlıyoruz
+sudo mount /dev/sdb1 mediaAdresi
+```
+
+#### Disk Ayırma
+
+```bash
+sudo umount mediaAdresi
+```
+
+#### Usb Bağlama
 
 Aşağıdaki komut sonrası usb belleği sdb2 sabit diskine bağlamış oluruz...
 
 ```bash
-sudo mount /dev/sdb2 /media/yeniceri/sozdizimi
+# İçerisine bağlayacağımz bir dizin oluşturuyoruz
+sudo mkdir /media/USB
+# Bağlıyoruz
+sudo mount -t vfat /dev/sdc1 /media/USB -o uid=1000
 ```
 
-#### Disk Ya da Usb Ayırma
+#### Usb Ayırma
 
 ```bash
-sudo umount /dev/sdb2 /media/yeniceri/sozdizimi
+sudo umount /media/USB
 ```
 
 ## Disk Bölümünü Başlangıçta Otomatik Bağlama
