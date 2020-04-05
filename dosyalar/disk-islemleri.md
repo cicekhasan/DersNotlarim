@@ -3,6 +3,15 @@
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
+
+## Disk Sorgulama 
+
+```bash
+df -lh
+# Disk bölümlerini listeleme
+sudo fdisk -l
+```
+
 ## Disk Ya da Usb Bağlama
 
 ```bash
@@ -13,12 +22,4 @@ mount /dev/cihazIsmi yolIsmi
 
 ```bash
 umount yolIsmi
-```
-
-## Disk Sorgulama 
-
-```bash
-df -lh
-# Disk bölümlerini listeleme
-sudo fdisk -l
 ```

@@ -20,7 +20,6 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [Favorilerim](dosyalar/favorilerim.md)
 		- [Fotograf ve Ses İşlemleri](dosyalar/fotograf-ses.md)
 		- [GİT İşlemleri](dosyalar/git-islemleri.md)
-		- [Hata Çözümleri](dosyalar/hata-cozumleri.md)
 		- [Hızlandırma](dosyalar/hizlandirma.md)
 		- [İndirme İşlemleri](dosyalar/yetkiler.md)
 		- [Lamp Kurulumu](dosyalar/lamp-kurulumu.md)
@@ -48,6 +47,8 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [Veritabanı Bağlantısı](dosyalar/veri-tabani-baglantisi.md)
 - Genel	
 	- [İncelenecek Kodlar](dosyalar/incelenecekler.md)
+- Laravel
+		- [Hata Çözümleri](dosyalar/hata-cozumleri.md)
 
 ## İp Uçları
 
