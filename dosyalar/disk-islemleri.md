@@ -27,6 +27,22 @@ tmpfs           583M   40K  583M    1% /run/user/1000
 ```bash
 sudo fdisk -l
 # Örnek çıktı
+yeniceri@fetih1453:/var/www/html/DersNotlarim$ sudo fdisk -l
+Disk /dev/sda: 447,1 GiB, 480103981056 bytes, 937703088 sectors
+Disk model: HyperX Fury 3D 4
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: B53FB8BB-8C0B-4E29-AB32-EA26DC9D91FC
+
+Device        Start       End   Sectors   Size Type
+/dev/sda1      2048   1050623   1048576   512M EFI System
+/dev/sda2   1050624  59643903  58593280    28G Linux filesystem
+/dev/sda3  59643904  71946239  12302336   5,9G Linux swap
+/dev/sda4  71946240 937701375 865755136 412,8G Linux filesystem
+
+
 Disk /dev/sdb: 465,8 GiB, 500107862016 bytes, 976773168 sectors
 Disk model: WDC WD5000BEVT-5
 Units: sectors of 1 * 512 = 512 bytes
@@ -37,7 +53,7 @@ Disk identifier: 0x080a8a17
 
 Device     Boot     Start       End   Sectors   Size Id Type
 /dev/sdb1            2048 292972543 292970496 139,7G  c W95 FAT32 (LBA)
-/dev/sdb2       292972544 976773119 683800576 326,1G  c W95 FAT32 (LBA
+/dev/sdb2       292972544 976773119 683800576 326,1G  c W95 FAT32 (LBA)
 ```
 
 ## Disk Ya da Usb Bağlama
