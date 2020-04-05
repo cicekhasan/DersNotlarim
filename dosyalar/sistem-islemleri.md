@@ -101,8 +101,6 @@ ps axo %mem,comm,pid,euser | sort -nr | head -n 10
 uptime
 ```
 
-
-
 ## Sistemin Güncellenmesi
 
 ```bash
@@ -132,4 +130,24 @@ clear
 history -c 
 # Kayıt numarası ile istediğin komutu geçmişten silme.
 history -d kayitNumarasi
+```
+
+## runlevel
+
+Sistem açılışında runlevel dediğimiz sistemin sunacağı hizmetlere göre yapılandırıldığı çalışma seviyeleri mevcuttur.
+
+1. Run Level 0 : (Halt) — Sistemin kapalı olduğu durumdur.
+2. Run Level 1 : (Single user mode) — Sistemi kurtarmak için kullanılan network ayarlarının aktif olmadığı tek kullanıcılı mod.
+3. Run Level 2 : (Multiuser, without NFS) — Bu düzeyde ağ servisleri çalışmaz.
+4. Run Level 3 : (Full Multiuser Mode) — Tüm ağ servisleri çalışır, CLI ( Komut Arayüzü ) olarak sisteme erişilir.
+5. Run Level 4 : Kullanılmamaktadır.
+6. Run Level 5 : KDE, Gnome, X Window System gibi grafiksel arayüzler kullanılabilir. Grafik arabirimi de inşa eden çalışma seviyesidir.
+7. Run Level 6 : (Reboot) — Açık olan sistemi yeniden başlatır.
+
+```bash
+sudo runlevel
+# Çıktı
+N 5 // Benim ki...
+# Değiştirmek için
+telinit 6
 ```

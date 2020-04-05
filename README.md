@@ -9,6 +9,8 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 	- Sisyem Yönetimi
 		- [Sistem Genel](dosyalar/sistem-islemleri.md)
 		- [Donanım İşlemleri](dosyalar/donanim-islemleri.md)
+		- [Servis İşlemleri](dosyalar/servis-islemleri.md)
+		- [Sorun Tespiti](dosyalar/sorun-tespiti.md)
 	- Terminal
 		- [Ağ İşlemleri](dosyalar/ag-islemleri.md)
 		- [Arama İşlemleri](dosyalar/arama-islemleri.md)
