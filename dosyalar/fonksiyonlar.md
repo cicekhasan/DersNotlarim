@@ -103,10 +103,12 @@ Dizideki anahtarlara göre küçükten büyüğe doğru sıralama yapar
 Dizideki sonraki elemanı bulmak için kullanılır.
 
 ### preg_match_all()
-Bu fonksiyon bir dosya içerisinden belirlediğimiz aralıktan istediğimiz veriyi çekebilmemizi sağlar. Aşağıdaki örneği inceliyecek olursak; "BAŞLANGIÇ" yazan yere aralığın nereden başlıyacağını ve "BİTİŞ" yazan yere aralığın nerede biteceğini yazarız. Bu aralığa nerede bakacağını $"dizi_değişkeni" ile belirtiriz. Bulduğu veriyi de "$yüklenici_değişken" üzerine alır. Gelen veri dizi olacağından anahtar değeri ile beraber ekrana yazdırır.
+Bu fonksiyon bir dosya içerisinden belirlediğimiz aralıktan istediğimiz veriyi çekebilmemizi sağlar. Düzenli ifadeleri eşleştirmeye yarar. Aşağıdaki örneği inceliyecek olursak; "BAŞLANGIÇ" yazan yere aralığın nereden başlıyacağını ve "BİTİŞ" yazan yere aralığın nerede biteceğini yazarız. Bu aralığa nerede bakacağını $"veri" ile belirtiriz. Bulduğu veriyi de "$sonuç" değişkeni üzerine alır. Gelen veri dizi olacağından anahtar değeri ile beraber ekrana yazdırır.
+
+Not: Başlangıç ve bitiş değerleri içerisinde çift tırnak ya da kesme işaretleri gibi karakterler olursa kaçış karakteri mutlaka kullanın, yoksa hata alırsınız!
 
 ```bash
-preg_match_all(@BAŞLANGIÇ(.*?)BİTİŞ@si,$dizi_değişkeni,$yüklenici_değişken);
+preg_match_all(@BAŞLANGIÇ(.*?)BİTİŞ@si,$veri,$sonuç);
 ```
 Kullanımı; Örnekte ```https://www.cankiripostasi.com/``` sitesinin anasayfasından ```<span>``` etiketleri arasında ne varsa çekilmektedir.
 
