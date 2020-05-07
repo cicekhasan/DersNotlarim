@@ -35,8 +35,6 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [Zamanlanmış Görevler](dosyalar/zamanlanmis-gorevler.md)
 - PHP
 	- Genel
-		- [PDO Nedir?](dosyalar/pdo-nedir.md)
-		- [PDO Metodları Nelerdir?](dosyalar/pdo-metodlari.md)
 		- [Editörler (IDM)](dosyalar/editorler.md)
 		- [Fonksiyonlar](dosyalar/fonksiyonlar.md)
 		- [İp Uçları](dosyalar/ip-uclari.md)
@@ -45,6 +43,11 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 	- Genel Kodlar
 		- [CRUD İşlemleri](dosyalar/crud-islemleri.md)
 		- [Veritabanı Bağlantısı](dosyalar/veri-tabani-baglantisi.md)
+- PDO
+		- [PDO Nedir?](dosyalar/pdo-nedir.md)
+		- [PDO Metodları Nelerdir?](dosyalar/pdo-metodlari.md)
+	- PDO Ders Notları (Nesne Tabanlı Php)
+		- [Kütüphane Sayfalarını Oluşturma](dosyalar/pdo-sayfalar.md)
 - Genel	
 	- [İncelenecek Kodlar](dosyalar/incelenecekler.md)
 - Laravel
