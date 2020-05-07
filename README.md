@@ -44,6 +44,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [CRUD İşlemleri](dosyalar/crud-islemleri.md)
 		- [Veritabanı Bağlantısı](dosyalar/veri-tabani-baglantisi.md)
 - PDO
+	- Genel
 		- [PDO Nedir?](dosyalar/pdo-nedir.md)
 		- [PDO Metodları Nelerdir?](dosyalar/pdo-metodlari.md)
 	- PDO Ders Notları (Nesne Tabanlı Php)
