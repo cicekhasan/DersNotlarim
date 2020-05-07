@@ -50,6 +50,8 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [PDO Kuralları](dosyalar/pdo-kurallar.md)
 	- PDO Ders Notları (Nesne Tabanlı Php)
 		- [Kütüphane Sayfalarını Oluşturma](dosyalar/pdo-sayfalar.md)
+		- [Sınıf Oluşturma](dosyalar/pdo-sinif-olusturma.md)
+		- [Değişken Tanımlama](dosyalar/pdo-degisken-tanimlama.md)
 - Genel	
 	- [İncelenecek Kodlar](dosyalar/incelenecekler.md)
 - Laravel
