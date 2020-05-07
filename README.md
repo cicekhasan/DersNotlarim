@@ -42,7 +42,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [İp Uçları](dosyalar/ip-uclari.md)
 		- [Laravel Notlari](dosyalar/laravel-notlari.md)
 		- [MySql](dosyalar/php-mysql.md)
-	- Kodlar
+	- Genel Kodlar
 		- [CRUD İşlemleri](dosyalar/crud-islemleri.md)
 		- [Veritabanı Bağlantısı](dosyalar/veri-tabani-baglantisi.md)
 - Genel	
