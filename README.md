@@ -47,12 +47,14 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 	- Genel
 		- [PDO Nedir?](dosyalar/pdo-nedir.md)
 		- [PDO Metodları Nelerdir?](dosyalar/pdo-metodlari.md)
+		- [PDO Kuralları](dosyalar/pdo-kurallar.md)
 	- PDO Ders Notları (Nesne Tabanlı Php)
 		- [Kütüphane Sayfalarını Oluşturma](dosyalar/pdo-sayfalar.md)
 - Genel	
 	- [İncelenecek Kodlar](dosyalar/incelenecekler.md)
 - Laravel
 		- [Hata Çözümleri](dosyalar/hata-cozumleri.md)
+		- [Sınıf Oluşturma](dosyalar/pdo-sinif-olusturma.md)
 
 ## İp Uçları
 
