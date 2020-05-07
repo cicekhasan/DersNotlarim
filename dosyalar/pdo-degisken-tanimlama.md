@@ -8,10 +8,10 @@
 
 		private static $_baglan = null;
 		private $_pdo,
-				$_query,
-				$_hatalar = false,
-				$_sonuc,
-				$_sayac = 0;
+			$_query,
+			$_hatalar = false,
+			$_sonuc,
+			$_sayac = 0;
 
 	}
 ?>
