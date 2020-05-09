@@ -4,8 +4,13 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 
 - Linux
 	- Genel
+		- [Ubuntu Kurulum Sonrası Yapılacaklar](dosyalar/kurulum-sonrasi-islemler.md)
+		- [Php Çalışma Ortamı Hazırlama](dosyalar/php-calisma-ortami-hazirlama.md)
+		- [Lamp Yeniden Kurulum Temizliği](dosyalar/lamp-temizlik.md)
+		- [Sık kullanılan Komutlar](dosyalar/kullanilan-komutlar.md)
 		- [Log Dosyaları Yapısı](dosyalar/dosya-yapisi.md)
 		- [Sistem Hataları ve Çözümleri](dosyalar/sistem-hatalari.md)
+		- [Saldırı Takibi](dosyalar/saldiri-takibi.md)
 	- Sisyem Yönetimi
 		- [Sistem Genel](dosyalar/sistem-islemleri.md)
 		- [Donanım İşlemleri](dosyalar/donanim-islemleri.md)
@@ -40,6 +45,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [İp Uçları](dosyalar/ip-uclari.md)
 		- [Laravel Notlari](dosyalar/laravel-notlari.md)
 		- [MySql](dosyalar/php-mysql.md)
+		- [Hata Çözümleri](dosyalar/php-hata-cozumleri.md)
 	- Genel Kodlar
 		- [CRUD İşlemleri](dosyalar/crud-islemleri.md)
 		- [Veritabanı Bağlantısı](dosyalar/veri-tabani-baglantisi.md)

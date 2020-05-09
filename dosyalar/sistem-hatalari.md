@@ -2,6 +2,14 @@
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
+## `apt-get check` failed Hatası
+
+```bash
+# HATA...
+libdvd-pkg: `apt-get check` failed, you may have broken packages. Aborting...
+# Çözümü
+sudo dpkg-reconfigure libdvd-pkg
+```
 
 ## Başlatılamayan systemd hizmetlerini bulmak
 
