@@ -8,8 +8,11 @@
 sudo apt install apache2 -y
 # Başlangıçta Çalıştırmak
 sudo sudo systemctl enable apache2
-# Kontrol (Sayfayı düzgün görüyorsanız çalışıyor demektir!)
-[Localhost](127.0.0.1/index.html)
+```
+
+Kontrol (Sayfayı düzgün görüyorsanız çalışıyor demektir!) [Localhost](http://127.0.0.1/index.php)
+
+```
 # Masaüstüne kısayal oluştur ve html dizinine geç...
 cd ~/Masaüstü
 ln -s /var/www/html/
@@ -31,7 +34,7 @@ sudo apt install php-gd php-mysql php-mbstring php-xml libapache2-mod-php -y
 sudo touch info.php
 sudo gedit /var/www/html/info.php
 ```
-info.php içerisine yapıştır ve kaydet. Sonrasında [Php Test](127.0.0.1/info.php)
+info.php içerisine yapıştır ve kaydet. Sonrasında [Php Test](http://127.0.0.1/info.php)
 ```php
 <?php
    phpinfo();
