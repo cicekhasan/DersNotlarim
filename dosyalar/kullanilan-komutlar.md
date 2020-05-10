@@ -88,3 +88,15 @@ sudo alien -k .rpm
 # Çevrilen paketi yüklemek...
 sudo dpkg -i paket.deb
 ```
+
+#### php.ini Dosyasının Yerini Öğrenme
+
+Dosyayı bulmak için index.php içerisine kopyala ve tarayıcıdan öğren.
+
+```php 
+<?php
+
+echo php_ini_loaded_file();
+
+?>
+```
