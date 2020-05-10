@@ -29,8 +29,13 @@ shutdown -r now
 sudo apt update && sudo apt upgrade -y
 # VLC media oynatıcı yükle...
 sudo apt-get install vlc
-# TeamViewer Kurulumu
+```
+
+##### TeamViewer Kurulumu
+
 [TeamViewer](https://download.teamviewer.com/download/linux/teamviewer_amd64.deb)
+
+```bash
 cd
 cd İndirilenler/
 # Alttaki kodu yapıştır ve tab tuşuna bas!
