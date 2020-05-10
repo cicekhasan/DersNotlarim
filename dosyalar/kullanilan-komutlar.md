@@ -75,3 +75,16 @@ sudo apt-get purge paketAdi
 sudo apt-get --purge remove paketAdi
 sudo apt-get remove --purge paketAdi
 ```
+
+#### .rpm Dosyalarını Yükleme
+
+Debian'a uyumlu olması için "alien" programını yüklemek gerekir.
+
+```bash
+# Alien yüklemek...
+sudo apt-get install alien -y
+# rpm dosyasını deb çevirmek...
+sudo alien -k .rpm
+# Çevrilen paketi yüklemek...
+sudo dpkg -i paket.deb
+```
