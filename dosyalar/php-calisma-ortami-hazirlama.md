@@ -71,7 +71,7 @@ sudo systemctl restart apache2
 sudo systemctl restart mariadb
 ```
 
-## YETKİLENDİRME
+#### Yetkilendirme
 ```bash
 # Aktif kullanıcıyı www-data grubuna eklemek...
 sudo adduser $USER www-data
