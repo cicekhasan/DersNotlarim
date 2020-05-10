@@ -12,6 +12,8 @@ sudo apt upgrade -y
 # Kullanılmayan paketleri kaldırma...
 sudo apt autoremove -y
 sudo apt autoclean -y
+# Bozuk paketleri onarma...
+sudo apt -y install -f
 ```
 
 #### Yetkilendirme
