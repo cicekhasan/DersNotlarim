@@ -5,7 +5,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 - Linux
 	- Genel
 		- [Ubuntu Kurulum Sonrası Yapılacaklar](dosyalar/kurulum-sonrasi-islemler.md)
-		- [Php Çalışma Ortamı Hazırlama](dosyalar/php-calisma-ortami-hazirlama.md)
+		- [Php Çalışma Ortamı Hazırlama (LAMP)](dosyalar/php-calisma-ortami-hazirlama.md)
 		- [Lamp Yeniden Kurulum Temizliği](dosyalar/lamp-temizlik.md)
 		- [Sık kullanılan Komutlar](dosyalar/kullanilan-komutlar.md)
 		- [Log Dosyaları Yapısı](dosyalar/dosya-yapisi.md)
