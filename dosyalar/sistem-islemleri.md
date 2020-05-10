@@ -7,7 +7,7 @@
 
 ```bash
 cat /proc/version
-# Örnek çıktı
+# Örnek ekran çıktısı...
 Linux version 4.19.0-8-amd64 (debian-kernel@lists.debian.org) (gcc version 8.3.0 (Debian 8.3.0-6)) #1 SMP Debian 4.19.98-1 (2020-01-26)
 ```
 
@@ -15,21 +15,23 @@ Linux version 4.19.0-8-amd64 (debian-kernel@lists.debian.org) (gcc version 8.3.0
 
 ```bash
 lsb_release -a
-# Çıktı
+# Örnek ekran çıktısı...
 No LSB modules are available.
-Distributor ID:	Pardus
-Description:	Pardus GNU/Linux Ondokuz
-Release:	19.2
-Codename:	ondokuz
+Distributor ID: Ubuntu
+Description:    Ubuntu 18.04.4 LTS
+Release:    18.04
+Codename:   bionic
 ```
 
 ```bash
-yeniceri@fetih1453:~$ ls -lrt /sbin/init
+ls -lrt /sbin/init
+# Örnek ekran çıktısı...
 lrwxrwxrwx 1 root root 20 Oca 29 21:07 /sbin/init -> /lib/systemd/systemd
 ```
 
 ```bash
-yeniceri@fetih1453:~$ sudo stat /proc/1/exe
+sudo stat /proc/1/exe
+# Örnek ekran çıktısı...
   File: /proc/1/exe -> /usr/lib/systemd/systemd
   Size: 0         	Blocks: 0          IO Block: 1024   sembolik bağ
 Device: 4h/4d	Inode: 18078       Links: 1
@@ -41,7 +43,8 @@ Change: 2020-04-02 22:57:00.031998403 +0300
 ```
 
 ```bash
-yeniceri@fetih1453:~$ systemctl list-units --type service --state running
+systemctl list-units --type service --state running
+# Örnek ekran çıktısı...
 UNIT                       LOAD   ACTIVE SUB     DESCRIPTION                                 
 accounts-daemon.service    loaded active running Accounts Service                            
 apache2.service            loaded active running The Apache HTTP Server                      
@@ -83,6 +86,9 @@ To show all installed unit files use 'systemctl list-unit-files'.
 
 ```bash
 systemd-analyze
+# Örnek ekran çıktısı...
+Startup finished in 8ms (firmware) + 3ms (loader) + 2.925s (kernel) + 13.275s (userspace) = 16.213s
+graphical.target reached after 13.252s in userspace
 ```
 
 ## Linux yüksek kaynak tüketen hesapları öğrenme
