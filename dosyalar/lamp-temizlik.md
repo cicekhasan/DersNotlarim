@@ -2,7 +2,18 @@
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
-Not: Her hangi bir şekilde "LAMP" çalışmazsa temizleyip tekrar kurmak için gerekli komutlar aşağıdadır. Mysql çalışmazsa sadece onuda kaldırıp tekrar kurabilirsiniz.
+1. Sadece Mysql çalışmazsa, mysqli kaldırıp tekrar kurun ve deneyin.
+
+```bash
+# Mysql kaldırmak...
+sudo apt --purge remove mysql* -y
+# Kalan ve kullanılmayan paketleri temizlemek...
+sudo apt-get autoremove -y
+sudo apt-get autoclean -y
+```
+
+2. Her hangi bir şekilde "LAMP" çalışmazsa temizleyip tekrar kurmak için gerekli komutlar aşağıdadır. 
+
 
 ```bash
 # Apache kaldırmak...
