@@ -54,6 +54,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [PDO Nedir?](dosyalar/pdo-nedir.md)
 		- [PDO Metodları Nelerdir?](dosyalar/pdo-metodlari.md)
 		- [PDO Kuralları](dosyalar/pdo-kurallar.md)
+		- [PDO Kurulumu Kontrol Etmek](dosyalar/pdo-kontrol.md)
 	- PDO Ders Notları (Nesne Tabanlı Php)
 		- [Kütüphane Sayfalarını Oluşturma](dosyalar/pdo-sayfalar.md)
 		- [Sınıf Oluşturma](dosyalar/pdo-sinif-olusturma.md)
