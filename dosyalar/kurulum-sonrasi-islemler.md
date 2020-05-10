@@ -33,7 +33,7 @@ sudo apt-get install vlc
 
 ##### TeamViewer Kurulumu
 
-[TeamViewer](https://download.teamviewer.com/download/linux/teamviewer_amd64.deb)
+[TeamViewer İndir](https://download.teamviewer.com/download/linux/teamviewer_amd64.deb)
 
 ```bash
 cd
