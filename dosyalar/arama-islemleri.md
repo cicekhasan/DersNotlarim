@@ -6,7 +6,8 @@
 ## Dosya arama 
 
 ```bash
-find / -iname "dosyaIsmi"
+# yol aramaya nereden başlıyacağını ifade eder...
+find yol -iname "dosyaIsmi"
 ```
 
 ## İçeriğinde belli bir kelimenin geçtiği dosyayı ya da belli bir uzantıya sahip dosyaları listelemek
