@@ -12,6 +12,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [Sistem Hataları ve Çözümleri](dosyalar/sistem-hatalari.md)
 		- [Saldırı Takibi](dosyalar/saldiri-takibi.md)
 		- [Ön Yüklemeli USB Oluşturma](dosyalar/usb-olusturma.md)
+		- [Linux Dağıtım Yükseltme](dosyalar/yukseltme.md)
 	- Sisyem Yönetimi
 		- [Sistem Genel](dosyalar/sistem-islemleri.md)
 		- [Donanım İşlemleri](dosyalar/donanim-islemleri.md)
