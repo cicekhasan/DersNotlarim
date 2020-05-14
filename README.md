@@ -13,6 +13,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [Saldırı Takibi](dosyalar/saldiri-takibi.md)
 		- [Ön Yüklemeli USB Oluşturma](dosyalar/usb-olusturma.md)
 		- [Linux Dağıtım Yükseltme](dosyalar/yukseltme.md)
+		- [DNS Değiştirme](dosyalar/dns-degistirme.md)
 	- Sisyem Yönetimi
 		- [Sistem Genel](dosyalar/sistem-islemleri.md)
 		- [Donanım İşlemleri](dosyalar/donanim-islemleri.md)
