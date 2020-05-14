@@ -11,4 +11,6 @@ options edns0
 # Altına bunları ekle
 nameserver 8.8.8.8
 nameserver 8.8.4.4
+# Dns i sabitlemek için alttakikodu gönder...
+chattr +i /etc/resolv.conf
 ```
