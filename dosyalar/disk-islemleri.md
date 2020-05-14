@@ -123,3 +123,17 @@ sudo nano /etc/fstab
 UUID=8A12441812440C1F /media/Depo ntfs 
 ```
 
+#### Disk Biçimlendirme
+
+```bash
+# Diskin yolunu bulma...
+sudo fdisk -l
+# Gerekirse diski ayır. Gerekmezse alttaki koddan devam et...
+umount /dev/sde1
+# Biçimlendirme...
+# mkfs yazılıyken iki kere taba basarsak format şekillerini görebiliriz...
+# mkfs.fat seçersek fat32 olur :)
+# Disk yolundan emin olmanız lazım!
+mkfs.fat /dev/sde1 -I
+```
+
