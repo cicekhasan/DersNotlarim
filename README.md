@@ -5,10 +5,9 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 - Linux
 	- Genel
 		- [Ubuntu Kurulum Sonrası Yapılacaklar](dosyalar/kurulum-sonrasi-islemler.md)
-		- [Php Çalışma Ortamı Hazırlama (LAMP)](dosyalar/php-calisma-ortami-hazirlama.md)
 		- [Lamp Yeniden Kurulum Temizliği](dosyalar/lamp-temizlik.md)
 		- [Sık kullanılan Komutlar](dosyalar/kullanilan-komutlar.md)
-		- [Log Dosyaları Yapısı](dosyalar/dosya-yapisi.md)
+		- [Log Dosyaları Yapısı](dosyalar/log-dosya-yapisi.md)
 		- [Sistem Hataları ve Çözümleri](dosyalar/sistem-hatalari.md)
 		- [Saldırı Takibi](dosyalar/saldiri-takibi.md)
 		- [Ön Yüklemeli USB Oluşturma](dosyalar/usb-olusturma.md)
@@ -47,6 +46,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 - PHP
 	- Genel
 		- [Editörler (IDM)](dosyalar/editorler.md)
+		- [Php Çalışma Ortamı Hazırlama (LAMP)](dosyalar/php-calisma-ortami-hazirlama.md)
 		- [Fonksiyonlar](dosyalar/fonksiyonlar.md)
 		- [İp Uçları](dosyalar/ip-uclari.md)
 		- [Laravel Notlari](dosyalar/laravel-notlari.md)

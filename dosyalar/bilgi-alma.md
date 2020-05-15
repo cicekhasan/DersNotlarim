@@ -249,4 +249,5 @@ sudo vmstat 2 10
 sudo history
 # Geçmişi temizlemek...
 sodu history -c
+# Konsol ekranını
 ```
