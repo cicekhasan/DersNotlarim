@@ -150,29 +150,103 @@ Bu komutun işlevi sistemin donanım ve BIOS bilgilerini göstermektir.
 
 ```bash
 sudo dmidecode
+# İstediğimiz veriye kısayoldan ulaşmak...
+# Örneğin bios verilerine...
+sudo dmidecode -t bios
+# Ayrıca bios yerine sıra numarası ile veri getirebiliriz...
+sudo dmidecode -t 0
 ```
 
-Tablo çıktı sırası aşağıdaki gibidir:
+Tablo sıra numaraları aşağıdaki gibidir:
 
 | Sıra | Açıklama |
 | --- | --- |
-| 1 | Bios | 21 | Bellek Cihazı Haritalı Adres |
-| 2 | Sistem | 22 | Dahili İşaret Aygıtı |
-| 3 | Baz Kurulu | 23 | Taşınabilir Pil |
-| 4 | Şasi | 24 | Sistem Sıfırlama |
-| 5 | İşlemci | 25 | Donanım Güvenlik |
-| 6 | Bellek Denetleyicisi | 26 | Sistem Güç Denetimleri |
-| 7 | Bellek Modülü | 27 | Gerilim Probu |
-| 8 | Önbellek | 28 | Soğutma Cihazı |
-| 9 | Port Bağlantıları | 29 | Sıcaklık Probu |
-| 10 | Sistem Uyarısı | 30 | Elektrik Akımı Probu |
-| 11 | On Board Cihazları | 31 | Uzaktan Erişim |
-| 12 | OEM Dizeleri | 32 | Boot Bütünlüğü Hizmetleri |
-| 13 | Sistem Yapılandırma Seçenekleri | 33 | Sistem Önyükleme |
-| 14 | Bios Dili | 34 | 64 Bit Bellek Hatası |
-| 15 | Grup Dernekler | 35 | Yönetim Cihazı |
-| 16 | Sistem Event Log | 36 | Yönetim Cihaz Bileşeni |
-| 17 | Fiziksel Bellek Array | 37 | Yönetim Cihaz Eşik Verileri |
-| 18 | Bellek Cihazı | 38 | Bellek Kanal |
-| 19 | 32 Bit Bellek Hatası | 39 | IPMI Cihazı |
-| 20 | Bellek Dizisi Haritalı Adres | 40 | Güç Kaynağı |
+| 0 | Bios                             | 20 | Bellek Cihazı Haritalı Adres |
+| 1 | Sistem                           | 21 | Dahili İşaret Aygıtı |
+| 2 | Baz Kurulu                       | 22 | Taşınabilir Pil |
+| 3 | Şasi                             | 23 | Sistem Sıfırlama |
+| 4 | İşlemci                          | 24 | Donanım Güvenlik |
+| 5 | Bellek Denetleyicisi             | 25 | Sistem Güç Denetimleri |
+| 6 | Bellek Modülü                    | 26 | Gerilim Probu |
+| 7 | Önbellek                         | 27 | Soğutma Cihazı |
+| 8 | Port Bağlantıları                | 28 | Sıcaklık Probu |
+| 9 | Sistem Uyarısı                   | 29 | Elektrik Akımı Probu |
+| 10 | On Board Cihazları              | 30 | Uzaktan Erişim |
+| 11 | OEM Dizeleri                    | 31 | Boot Bütünlüğü Hizmetleri |
+| 12 | Sistem Yapılandırma Seçenekleri | 32 | Sistem Önyükleme |
+| 13 | Bios Dili                       | 33 | 64 Bit Bellek Hatası |
+| 14 | Grup Dernekler                  | 34 | Yönetim Cihazı |
+| 15 | Sistem Event Log                | 35 | Yönetim Cihaz Bileşeni |
+| 16 | Fiziksel Bellek Array           | 36 | Yönetim Cihaz Eşik Verileri |
+| 17 | Bellek Cihazı                   | 37 | Bellek Kanal |
+| 18 | 32 Bit Bellek Hatası            | 38 | IPMI Cihazı |
+| 19 | Bellek Dizisi Haritalı Adres    | 39 | Güç Kaynağı |
+
+
+11. ```fdisk -l``` Komutu
+
+Sistem hakkında bilgi verirken, diski de dahil eder. Sistemimizdeki disk bölümleri sıralı ve düzenli şekilde listelenir.
+
+```bash
+sudo fdisk -l
+```
+
+12. ```df``` Komutu
+
+Disk kullanımı hakkında ayrıntılı bilgir.
+
+```bash
+sudo df
+```
+
+13. ```du``` Komutu
+
+Bir dizinin, içerdiği tüm dosyalar ile birlikte diskte kapladığı toplam alanı verir.
+
+```bash
+sudo du -h
+```
+
+14. ```free``` Komutu
+
+Kullanılan bellek miktarını KB cinsinden öğrenebiliriz. Ancak çıktımızın MB cinsinden olmasını istersek -m parametresini kullanabiliriz.
+
+```bash
+sudo free -m
+```
+
+15. ```modinfo``` Komutu
+
+Linux Kernel(çekirdek) modüllerinin bilgisi verir. Bu modülleri ekran bastırmak isterseniz komut satırına ```lsmod``` yazarak modülleri listeleyebilirsiniz.
+
+```bash
+sudo lsmod
+sudo modulAdi
+```
+
+16. ```stat``` Komutu
+
+Dosyalar veya dizinler hakkındaki bilgi verir. 
+
+```bash
+sudo stat dizinAdi
+```
+
+17. ```vmstat``` Komutu
+
+Sistemimizin o anlık genel durumunu görebiliriz. Ancak komutu verdikten sonra sistem durumu listelenip sonlanacaktır. Eğer sistemin durumunu bir süre izlemek istersek vmstat gecikme_hızı yenilenme_sayısı şeklinde komut vermeliyiz.
+
+```bash
+# 2 saniyede bir 10 defa sistemi izleme...
+sudo vmstat 2 10
+```
+
+18. ```history``` Komutu
+
+.bash_history dosyasında tutulan kullanmış olduğumuz komutları listeler. Dosyaya konsolu kapattıktan sonra en son kullandılarımızı kayıt eder. Konsolu kapatmadan dosyaya bakarsak son kullandığımız komutları göremeyiz.
+
+```bash
+sudo history
+# Geçmişi temizlemek...
+sodu hiztory -c
+```
