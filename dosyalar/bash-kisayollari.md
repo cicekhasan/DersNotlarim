@@ -3,7 +3,7 @@
 #### İmleç Hareketleri
 
 | . | Kısayol | Açıklama |
-|---|---|
+|---|---|---|
 | 1. | ```CTRL+A ``` | İmleç satır başına gider. |
 | 2. | ```CTRL+E ``` | İmleç satır sonuna gider. |
 | 3. | ```CTRL+P ``` | Önce çalıştırılmış komutu gösterir. |
@@ -17,7 +17,7 @@
 #### Düzenleme
 
 | . | Kısayol | Açıklama |
-|---|---|
+|---|---|---|
 | 1. | ```CTRL+L ``` | Ekranı temizler ve imleç en üste çıkar. 'clear' komutu ile aynı işlemi yapar. |
 | 2. | ```ALT+O  ``` | İmleçten sonraki kelimeyi siler. |
 | 3. | ```CTRL+U ``` | İmlecin solundaki her şeyi siler. |
