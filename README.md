@@ -15,6 +15,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [Linux Dağıtım Yükseltme](dosyalar/yukseltme.md)
 		- [DNS Değiştirme](dosyalar/dns-degistirme.md)
 		- [Bash Kısayolları](dosyalar/bash-kisayollari.md)
+		- [Yardım Alma](dosyalar/yardim-alma.md)
 	- Sisyem Yönetimi
 		- [Sistem Genel](dosyalar/sistem-islemleri.md)
 		- [Donanım İşlemleri](dosyalar/donanim-islemleri.md)
