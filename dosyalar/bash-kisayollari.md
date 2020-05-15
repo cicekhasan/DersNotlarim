@@ -31,3 +31,29 @@
 15. ```TAB    ```    Otomatik tamamlama yapar.
 16. ```CTRL+_ ```    Geri alma (Undo).
 16. ```ALT+DEL```    İmlecin önündeki sözcüğü siler.
+
+#### Püf Noktaları
+
+1. Birinci komut başarısız olursa diğer komutu çalıştırması için komutlar arasına ```||``` konulur.
+
+```bash
+# Örnek;
+sudo cp index.php ~/Masaüstü/index.php || sudo mv index.php ~/Masaüstü/index.php 
+```
+
+2. Aynı anda birden fazla komut çalıştırmak için, komutlar arasına ```&&``` ya da ```;``` konulur.
+
+```bash
+# Örnek;
+sudo apt update && apt upgrade -y
+sudo apt update ; apt upgrade -y
+```
+
+3. ```CTRL+D``` ile yanlışlıkla komut satırını kapanmasını engellemek için, Bu özelliği sınırlandırabiliriz. En alt satırda 4, ```CTRL+D``` 4 defa girildikten sonra kapanılacak olduğunu ifade etmektedir. Siz istediğiniz değeri verebilirsiniz.
+
+```bash
+# Dosyayı aç...
+sudo gedit -w ~/.bashrc
+# En alt satıra aşağıdakini ekle, kaydet ve konsolu yeniden başlat!
+export IGNOREEOF=4
+```
