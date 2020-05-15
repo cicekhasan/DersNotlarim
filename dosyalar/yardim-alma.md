@@ -31,3 +31,9 @@ man chmod
 ```bash
 apropos sil
 ```
+
+4. "man" dosyalarını güncelleme.
+
+```bash
+mandb
+```

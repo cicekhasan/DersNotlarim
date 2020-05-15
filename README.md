@@ -21,9 +21,10 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [Donanım İşlemleri](dosyalar/donanim-islemleri.md)
 		- [Servis İşlemleri](dosyalar/servis-islemleri.md)
 		- [Sorun Tespiti](dosyalar/sorun-tespiti.md)
-	- Terminal
+	- Terminal Komutları
 		- [Ağ İşlemleri](dosyalar/ag-islemleri.md)
 		- [Arama İşlemleri](dosyalar/arama-islemleri.md)
+		- [Bilgi Alma İşlemleri](dosyalar/bilgi-alma.md)
 		- [Disk İşlemleri](dosyalar/disk-islemleri.md)
 		- [Dosya Yönetimi](dosyalar/dosya-yonetimi.md)
 		- [E-Posta İşlemleri](dosyalar/e-posta-islemleri.md)
