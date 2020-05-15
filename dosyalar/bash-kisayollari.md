@@ -56,4 +56,6 @@ sudo apt update ; apt upgrade -y
 sudo gedit -w ~/.bashrc
 # En alt satıra aşağıdakini ekle, kaydet ve konsolu yeniden başlat!
 export IGNOREEOF=4
+# Devre dışı bırakmak...
+set +o ignoreeof
 ```
