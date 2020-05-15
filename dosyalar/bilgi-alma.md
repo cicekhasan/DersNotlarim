@@ -159,8 +159,8 @@ sudo dmidecode -t 0
 
 Tablo sıra numaraları aşağıdaki gibidir:
 
-| Sıra | Açıklama |
-| --- | --- |
+| Sıra | Açıklama | Sıra | Açıklama |
+| --- | --- | --- | --- |
 | 0 | Bios                             | 20 | Bellek Cihazı Haritalı Adres |
 | 1 | Sistem                           | 21 | Dahili İşaret Aygıtı |
 | 2 | Baz Kurulu                       | 22 | Taşınabilir Pil |
