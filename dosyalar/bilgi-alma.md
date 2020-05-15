@@ -248,5 +248,5 @@ sudo vmstat 2 10
 ```bash
 sudo history
 # Geçmişi temizlemek...
-sodu hiztory -c
+sodu history -c
 ```
