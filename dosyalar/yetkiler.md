@@ -34,15 +34,23 @@ sudo groupadd grupAdi
 ### Grupları Listeleme
 
 ```bash
-getent group
+less /etc/group
+# ya da
+more /etc/group
 # ya da
 cat /etc/group
+```
+
+### Kullanıcının Gruplarını Görme
+
+```bash
+id kullanıcıAdı
 ```
 
 ### Kullanıcıyı Gruba Atama
 
 ```bash
-usermod -aG GrupAdı KullanıcıAdı
+usermod -aG GrupAdı kullanıcıAdı
 ```
 
 ### Kullanıcıyı Gruptan Çıkarma

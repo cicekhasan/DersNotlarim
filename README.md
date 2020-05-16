@@ -45,7 +45,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [Veri İşlemleri](dosyalar/veri-islemleri.md)
 		- [Veritabanı İşlemleri](dosyalar/veri-tabani.md)
 		- [Web Projeleri Yönetimi](dosyalar/web-projeleri.md)
-		- [Yetkiler-İzinler](dosyalar/yetkiler.md)
+		- [Yetkiler ve Kullanıcı İşlemleri](dosyalar/yetkiler.md)
 		- [Zamanlanmış Görevler](dosyalar/zamanlanmis-gorevler.md)
 - PHP
 	- Genel
