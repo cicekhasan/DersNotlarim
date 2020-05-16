@@ -1,0 +1,3 @@
+## LİNUX DOSYA YAPISI
+
+

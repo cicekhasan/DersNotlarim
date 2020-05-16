@@ -7,6 +7,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [Ubuntu Kurulum Sonrası Yapılacaklar](dosyalar/kurulum-sonrasi-islemler.md)
 		- [Lamp Yeniden Kurulum Temizliği](dosyalar/lamp-temizlik.md)
 		- [Sık kullanılan Komutlar](dosyalar/kullanilan-komutlar.md)
+		- [Linux Dosya Yapısı](dosyalar/dosya-yapisi.md)
 		- [Log Dosyaları Yapısı](dosyalar/log-dosya-yapisi.md)
 		- [Sistem Hataları ve Çözümleri](dosyalar/sistem-hatalari.md)
 		- [Saldırı Takibi](dosyalar/saldiri-takibi.md)
@@ -15,6 +16,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [DNS Değiştirme](dosyalar/dns-degistirme.md)
 		- [Bash Kısayolları](dosyalar/bash-kisayollari.md)
 		- [Yardım Alma](dosyalar/yardim-alma.md)
+		- [Linux Dosya Yapısı](dosyalar/linux-dosya-yapisi.md)
 	- Sisyem Yönetimi
 		- [Sistem Genel](dosyalar/sistem-islemleri.md)
 		- [Donanım İşlemleri](dosyalar/donanim-islemleri.md)
