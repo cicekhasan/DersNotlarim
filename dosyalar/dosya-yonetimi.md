@@ -119,15 +119,6 @@ cat dosya1 dosya2 >toplam
 mv dosyaAdı yeniDosyaAdı
 ```
 
-## Dosya Sıkıştırma/Arşivleme ve Çıkarma
-
-```bash
-# 1,2 ve de ile başlayan dosyaları arşivler.
-tar cf dosya.tar dosya1 dosya2 de*
-# xf çıkarır, cf arşivler, czf (gzip) yada cjf (bzip) sıkıştırır. f dosya adı yazılacağını simgeler.
-tar xf dosya.tar
-```
-
 ## Bir Dosya Ya da Klasör İçin Link Oluşturma
 
 ```bash

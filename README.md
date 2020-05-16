@@ -24,6 +24,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [Sorun Tespiti](dosyalar/sorun-tespiti.md)
 	- Terminal Komutları
 		- [Ağ İşlemleri](dosyalar/ag-islemleri.md)
+		- [Arşivleme](dosyalar/dosya-arsivleme.md)
 		- [Arama İşlemleri](dosyalar/arama-islemleri.md)
 		- [Bilgi Alma İşlemleri](dosyalar/bilgi-alma.md)
 		- [Disk İşlemleri](dosyalar/disk-islemleri.md)
