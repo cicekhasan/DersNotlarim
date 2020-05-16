@@ -1,8 +1,7 @@
-# YETKİLENDİRME
+# YETKİLENDİRME İŞLEMLERİ
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
-**Yetkiler üzerinde işlem yapabilmek için önce kullanıcıları ve yetkilerini biliyor olmamız gerekmektedir.**
 
 ## KULLANICI İŞLEMLERİ
 ### Kullanıcıları Listeleme
@@ -121,4 +120,15 @@ chown root:root dosyaAdi
 chmod -x dosyaAdi
 # Dosyayı root dahil kimse silemesin
 chattr -i dosyaAdi 
+```
+
+## Dosyayı Silmeye Karşı Koruma Altına Alma
+
+```bash
+# Koruma altına alma...
+chattr +i dosyaAdi
+# Korumalı dosyaları listeleme...
+lsattr
+# Korumayı kaldırma...
+chattr -i dosyaAdi
 ```

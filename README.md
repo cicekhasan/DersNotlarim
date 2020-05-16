@@ -35,7 +35,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [Fotograf ve Ses İşlemleri](dosyalar/fotograf-ses.md)
 		- [GİT İşlemleri](dosyalar/git-islemleri.md)
 		- [Hızlandırma](dosyalar/hizlandirma.md)
-		- [İndirme İşlemleri](dosyalar/yetkiler.md)
+		- [İndirme İşlemleri](dosyalar/indirme-islemleri.md)
 		- [Lamp Kurulumu](dosyalar/lamp-kurulumu.md)
 		- [Log Dosyaları](dosyalar/log-dosyalari.md)
 		- [Metin İşleme (Dosyadan veri oluşturma.)](dosyalar/metin-isleme.md)
