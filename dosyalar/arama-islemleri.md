@@ -54,31 +54,3 @@ find / -mmin -60
 ```bash
 find / -size +250M -size -512M
 ```
-
-## Dizin/Dosya Kopyalama
-
-```bash
-cp kaynakDosya hedefDosya
-# Dizin kopyalarsak (İçindekilerle beraber)...
-cp -i kaynakDizin hedefDizin
-```
-
-## Dizin/Dosya Taşımak
-
-```bash
-mv dosyaKonumu/dosyaAdi tasinacakKonum
-# Dizin kopyalarsak (İçindekilerle beraber)...
-mv -r dizinKonumu/dizinAdi tasinacakKonum
-```
-
-## Dizin/Dosya Silme
-
-```bash
-rm dosyaAdi
-# İçindekilerle beraber...
-rm -r dizinAdi
-# Güvenli dosya silme...
-shred dosyaAdi
-```
-
-

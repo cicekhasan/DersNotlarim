@@ -154,3 +154,31 @@ awk '{print $6}' NOT.asc
 # not.asc dosyasının 6. sütununu yatay olarak getirir.
 awk '{print $6}' NOT.asc |paste -s
 ```
+
+## Dizin/Dosya Kopyalama
+
+```bash
+cp kaynakDosya hedefDosya
+# Dizin kopyalarsak (İçindekilerle beraber)...
+cp -i kaynakDizin hedefDizin
+```
+
+## Dizin/Dosya Taşımak
+
+```bash
+mv dosyaKonumu/dosyaAdi tasinacakKonum
+# Dizin kopyalarsak (İçindekilerle beraber)...
+mv -r dizinKonumu/dizinAdi tasinacakKonum
+```
+
+## Dizin/Dosya Silme
+
+Bu komut sayesinde dosyalarımızı daha güvenli şekilde silebiliriz. shred komutu dosyanın içerisine rastgele bitler yazarak dosyanın okunmaz hale gelmesini sağlıyor.
+
+```bash
+rm dosyaAdi
+# İçindekilerle beraber...
+rm -r dizinAdi
+# Güvenli dosya silme...
+shred dosyaAdi
+```
