@@ -27,6 +27,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [Arama İşlemleri](dosyalar/arama-islemleri.md)
 		- [Bilgi Alma İşlemleri](dosyalar/bilgi-alma.md)
 		- [Disk İşlemleri](dosyalar/disk-islemleri.md)
+		- [Dizin İşlemleri](dosyalar/dizin-komutlari.md)
 		- [Dosya Yönetimi](dosyalar/dosya-yonetimi.md)
 		- [E-Posta İşlemleri](dosyalar/e-posta-islemleri.md)
 		- [Favorilerim](dosyalar/favorilerim.md)
