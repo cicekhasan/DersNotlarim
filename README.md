@@ -12,6 +12,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [X] [Lamp Yeniden Kurulum Temizliği](dosyalar/lamp-temizlik.md)
 		- [X] [Linux Dağıtım Yükseltme](dosyalar/yukseltme.md)
 		- [X] [Bash Kısayolları](dosyalar/bash-kisayollari.md)
+		- [X] [Lamp Kurulumu](dosyalar/lamp-kurulumu.md)
 		- [X] [Yardım Alma](dosyalar/yardim-alma.md)
 	- [ ] Sisyem Yönetimi
 		- [X] [Sistem Genel](dosyalar/sistem-islemleri.md)
@@ -36,7 +37,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [X] [GİT İşlemleri](dosyalar/git-islemleri.md)
 		- [X] [Hızlandırma](dosyalar/hizlandirma.md)
 		- [X] [İndirme İşlemleri](dosyalar/indirme-islemleri.md)
-		- [X] [Lamp Kurulumu](dosyalar/lamp-kurulumu.md)
+		- [X] [Link İşlemleri](dosyalar/link-islemleri.md)
 		- [X] [Log Dosyaları](dosyalar/log-dosyalari.md)
 		- [X] [Metin İşleme (Dosyadan veri oluşturma.)](dosyalar/metin-isleme.md)
 		- [X] [Paket İşlemleri](dosyalar/paketler.md)
