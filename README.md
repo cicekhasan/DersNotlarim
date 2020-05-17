@@ -2,79 +2,78 @@
 
 Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuştur...
 
-- Linux
+- [ ] Linux
 	- [ ] Genel
 		- [X] [Ubuntu Kurulum Sonrası Yapılacaklar](dosyalar/kurulum-sonrasi-islemler.md)
-		- [Lamp Yeniden Kurulum Temizliği](dosyalar/lamp-temizlik.md)
-		- [Sık kullanılan Komutlar](dosyalar/kullanilan-komutlar.md)
-		- [Linux Dosya Yapısı](dosyalar/dosya-yapisi.md)
-		- [Log Dosyaları Yapısı](dosyalar/log-dosya-yapisi.md)
-		- [Sistem Hataları ve Çözümleri](dosyalar/sistem-hatalari.md)
-		- [Saldırı Takibi](dosyalar/saldiri-takibi.md)
-		- [Ön Yüklemeli USB Oluşturma](dosyalar/usb-olusturma.md)
-		- [Linux Dağıtım Yükseltme](dosyalar/yukseltme.md)
-		- [DNS Değiştirme](dosyalar/dns-degistirme.md)
-		- [Bash Kısayolları](dosyalar/bash-kisayollari.md)
-		- [Yardım Alma](dosyalar/yardim-alma.md)
-		- [Linux Dosya Yapısı](dosyalar/linux-dosya-yapisi.md)
-	- Sisyem Yönetimi
-		- [Çalışma Seviyeleri](dosyalar/calisma-seviyeleri.md)
-		- [Sistem Genel](dosyalar/sistem-islemleri.md)
-		- [Donanım İşlemleri](dosyalar/donanim-islemleri.md)
-		- [Servis İşlemleri](dosyalar/servis-islemleri.md)
-		- [Sorun Tespiti](dosyalar/sorun-tespiti.md)
-	- Terminal Komutları
-		- [Ağ İşlemleri](dosyalar/ag-islemleri.md)
-		- [Arşivleme](dosyalar/dosya-arsivleme.md)
-		- [Arama İşlemleri](dosyalar/arama-islemleri.md)
-		- [Bilgi Alma İşlemleri](dosyalar/bilgi-alma.md)
-		- [Disk İşlemleri](dosyalar/disk-islemleri.md)
-		- [Dizin İşlemleri](dosyalar/dizin-komutlari.md)
-		- [Dosya İşlemleri](dosyalar/dosya-yonetimi.md)
-		- [E-Posta İşlemleri](dosyalar/e-posta-islemleri.md)
-		- [Favorilerim](dosyalar/favorilerim.md)
-		- [Fotograf ve Ses İşlemleri](dosyalar/fotograf-ses.md)
-		- [GİT İşlemleri](dosyalar/git-islemleri.md)
-		- [Hızlandırma](dosyalar/hizlandirma.md)
-		- [İndirme İşlemleri](dosyalar/indirme-islemleri.md)
-		- [Lamp Kurulumu](dosyalar/lamp-kurulumu.md)
-		- [Log Dosyaları](dosyalar/log-dosyalari.md)
-		- [Metin İşleme (Dosyadan veri oluşturma.)](dosyalar/metin-isleme.md)
-		- [Paket İşlemleri](dosyalar/paketler.md)
-		- [PDF İşlemleri](dosyalar/pdf-islemleri.md)
-		- [Terminal Kullanımı](dosyalar/terminal-kullanimi.md)
-		- [Veri İşlemleri](dosyalar/veri-islemleri.md)
-		- [Veritabanı İşlemleri](dosyalar/veri-tabani.md)
-		- [Web Projeleri Yönetimi](dosyalar/web-projeleri.md)
-		- [Yetkiler ve Kullanıcı İşlemleri](dosyalar/yetkiler.md)
-		- [Zamanlanmış Görevler](dosyalar/zamanlanmis-gorevler.md)
-- PHP
-	- Genel
-		- [Editörler (IDM)](dosyalar/editorler.md)
-		- [Php Çalışma Ortamı Hazırlama (LAMP)](dosyalar/php-calisma-ortami-hazirlama.md)
-		- [Fonksiyonlar](dosyalar/fonksiyonlar.md)
-		- [İp Uçları](dosyalar/ip-uclari.md)
-		- [Laravel Notlari](dosyalar/laravel-notlari.md)
-		- [MySql](dosyalar/php-mysql.md)
-		- [Hata Çözümleri](dosyalar/php-hata-cozumleri.md)
-	- Genel Kodlar
-		- [CRUD İşlemleri](dosyalar/crud-islemleri.md)
-		- [Veritabanı Bağlantısı](dosyalar/veri-tabani-baglantisi.md)
-- PDO
-	- Genel
-		- [PDO Nedir?](dosyalar/pdo-nedir.md)
-		- [PDO Metodları Nelerdir?](dosyalar/pdo-metodlari.md)
-		- [PDO Kuralları](dosyalar/pdo-kurallar.md)
-		- [PDO Kurulumu Kontrol Etmek](dosyalar/pdo-kontrol.md)
-	- PDO Ders Notları (Nesne Tabanlı Php)
-		- [Kütüphane Sayfalarını Oluşturma](dosyalar/pdo-sayfalar.md)
-		- [Sınıf Oluşturma](dosyalar/pdo-sinif-olusturma.md)
-		- [Değişken Tanımlama](dosyalar/pdo-degisken-tanimlama.md)
-- Genel	
-	- [İncelenecek Kodlar](dosyalar/incelenecekler.md)
-- Laravel
-		- [Hata Çözümleri](dosyalar/hata-cozumleri.md)
-		- [Sınıf Oluşturma](dosyalar/pdo-sinif-olusturma.md)
+		- [X] [Linux Dosya Yapısı](dosyalar/linux-dosya-yapisi.md)
+		- [X] [Log Dosyaları Yapısı](dosyalar/log-dosya-yapisi.md)
+		- [X] [Sık kullanılan Komutlar](dosyalar/kullanilan-komutlar.md)
+		- [X] [Ön Yüklemeli USB Oluşturma](dosyalar/usb-olusturma.md)
+		- [X] [Lamp Yeniden Kurulum Temizliği](dosyalar/lamp-temizlik.md)
+		- [X] [Linux Dağıtım Yükseltme](dosyalar/yukseltme.md)
+		- [X] [DNS Değiştirme](dosyalar/dns-degistirme.md)
+		- [X] [Bash Kısayolları](dosyalar/bash-kisayollari.md)
+		- [X] [Yardım Alma](dosyalar/yardim-alma.md)
+	- [ ] Sisyem Yönetimi
+		- [X] [Saldırı Takibi](dosyalar/saldiri-takibi.md)
+		- [X] [Sistem Hataları ve Çözümleri](dosyalar/sistem-hatalari.md)
+		- [X] [Çalışma Seviyeleri](dosyalar/calisma-seviyeleri.md)
+		- [X] [Sistem Genel](dosyalar/sistem-islemleri.md)
+		- [X] [Donanım İşlemleri](dosyalar/donanim-islemleri.md)
+		- [X] [Servis İşlemleri](dosyalar/servis-islemleri.md)
+		- [X] [Sorun Tespiti](dosyalar/sorun-tespiti.md)
+	- [ ] Terminal Komutları
+		- [X] [Ağ İşlemleri](dosyalar/ag-islemleri.md)
+		- [X] [Arşivleme](dosyalar/dosya-arsivleme.md)
+		- [X] [Arama İşlemleri](dosyalar/arama-islemleri.md)
+		- [X] [Bilgi Alma İşlemleri](dosyalar/bilgi-alma.md)
+		- [X] [Disk İşlemleri](dosyalar/disk-islemleri.md)
+		- [X] [Dizin İşlemleri](dosyalar/dizin-komutlari.md)
+		- [X] [Dosya İşlemleri](dosyalar/dosya-yonetimi.md)
+		- [X] [E-Posta İşlemleri](dosyalar/e-posta-islemleri.md)
+		- [X] [Favorilerim](dosyalar/favorilerim.md)
+		- [X] [Fotograf ve Ses İşlemleri](dosyalar/fotograf-ses.md)
+		- [X] [GİT İşlemleri](dosyalar/git-islemleri.md)
+		- [X] [Hızlandırma](dosyalar/hizlandirma.md)
+		- [X] [İndirme İşlemleri](dosyalar/indirme-islemleri.md)
+		- [X] [Lamp Kurulumu](dosyalar/lamp-kurulumu.md)
+		- [X] [Log Dosyaları](dosyalar/log-dosyalari.md)
+		- [X] [Metin İşleme (Dosyadan veri oluşturma.)](dosyalar/metin-isleme.md)
+		- [X] [Paket İşlemleri](dosyalar/paketler.md)
+		- [X] [PDF İşlemleri](dosyalar/pdf-islemleri.md)
+		- [X] [Terminal Kullanımı](dosyalar/terminal-kullanimi.md)
+		- [X] [Veri İşlemleri](dosyalar/veri-islemleri.md)
+		- [X] [Veritabanı İşlemleri](dosyalar/veri-tabani.md)
+		- [X] [Web Projeleri Yönetimi](dosyalar/web-projeleri.md)
+		- [X] [Yetkiler ve Kullanıcı İşlemleri](dosyalar/yetkiler.md)
+		- [X] [Zamanlanmış Görevler](dosyalar/zamanlanmis-gorevler.md)
+- [ ] PHP
+	- [ ] Genel
+		- [X] [Editörler (IDM)](dosyalar/editorler.md)
+		- [X] [Php Çalışma Ortamı Hazırlama (LAMP)](dosyalar/php-calisma-ortami-hazirlama.md)
+		- [X] [Fonksiyonlar](dosyalar/fonksiyonlar.md)
+		- [X] [İp Uçları](dosyalar/ip-uclari.md)
+		- [X] [Laravel Notlari](dosyalar/laravel-notlari.md)
+		- [X] [MySql](dosyalar/php-mysql.md)
+		- [X] [Hata Çözümleri](dosyalar/php-hata-cozumleri.md)
+	- [ ] Genel Kodlar
+		- [X] [CRUD İşlemleri](dosyalar/crud-islemleri.md)
+		- [X] [Veritabanı Bağlantısı](dosyalar/veri-tabani-baglantisi.md)
+- [ ] PDO
+	- [ ] Genel
+		- [X] [PDO Nedir?](dosyalar/pdo-nedir.md)
+		- [X] [PDO Metodları Nelerdir?](dosyalar/pdo-metodlari.md)
+		- [X] [PDO Kuralları](dosyalar/pdo-kurallar.md)
+		- [X] [PDO Kurulumu Kontrol Etmek](dosyalar/pdo-kontrol.md)
+	- [ ] PDO Ders Notları (Nesne Tabanlı Php)
+		- [X] [Kütüphane Sayfalarını Oluşturma](dosyalar/pdo-sayfalar.md)
+		- [X] [Sınıf Oluşturma](dosyalar/pdo-sinif-olusturma.md)
+		- [X] [Değişken Tanımlama](dosyalar/pdo-degisken-tanimlama.md)
+- [ ] Genel	
+	- [X] [İncelenecek Kodlar](dosyalar/incelenecekler.md)
+- [ ] Laravel
+		- [X] [Hata Çözümleri](dosyalar/hata-cozumleri.md)
+		- [X] [Sınıf Oluşturma](dosyalar/pdo-sinif-olusturma.md)
 
 ## İp Uçları
 
@@ -117,48 +116,48 @@ ls -al | grep files
 
 ## Faydalı Siteler
 
-- [Ücretsiz Tema 1](https://w3layouts.com/) 
-- [Alan Siteleri 1](https://digitalocean.com/)
-- [Alan Siteleri 2](https://www.vultr.com/)
-- [JS Kütüphane 1](http://trentrichardson.com/Impromptu/)
-- [JS Kütüphane 2](http://textillate.js.org/)
-- [JS Kütüphane 3](http://www.justinaguilar.com/animations/index.html)
-- [JS Kütüphane 4](https://daneden.github.io/animate.css/)
-- [Basit Blog 1](http://beltslib.net/basit-blog.html) 
-- [Basit Blog 2](https://github.com/hozakar/basitblog/releases)
-- [flat-file-cms ve Grav 1](http://blog.dynamicdrive.com/best-flat-file-cms-reviewed-and-compared/)
-- [Admin Template](https://github.com/coreui/coreui-free-bootstrap-admin-template)
-- [ISO dosyasını USB'ye yazdırmak için (Etcher)](https://etcher.io/)
-- [CSS Framework](https://turkuazcss.com/)
+- [X] [Ücretsiz Tema 1](https://w3layouts.com/) 
+- [X] [Alan Siteleri 1](https://digitalocean.com/)
+- [X] [Alan Siteleri 2](https://www.vultr.com/)
+- [X] [JS Kütüphane 1](http://trentrichardson.com/Impromptu/)
+- [X] [JS Kütüphane 2](http://textillate.js.org/)
+- [X] [JS Kütüphane 3](http://www.justinaguilar.com/animations/index.html)
+- [X] [JS Kütüphane 4](https://daneden.github.io/animate.css/)
+- [X] [Basit Blog 1](http://beltslib.net/basit-blog.html) 
+- [X] [Basit Blog 2](https://github.com/hozakar/basitblog/releases)
+- [X] [flat-file-cms ve Grav 1](http://blog.dynamicdrive.com/best-flat-file-cms-reviewed-and-compared/)
+- [X] [Admin Template](https://github.com/coreui/coreui-free-bootstrap-admin-template)
+- [X] [ISO dosyasını USB'ye yazdırmak için (Etcher)](https://etcher.io/)
+- [X] [CSS Framework](https://turkuazcss.com/)
 
 ## Videolar
 
-- [Bob Rose (Ressam) video 1](https://www.youtube.com/channel/UCxcnsr1R5Ge_fbTu5ajt8DQ)
-- [Bob Rose (Ressam) video 2](https://yandex.com.tr/video/preview/?filmId=6948454151854644335&text=bob+ross+resim+sevinci)
-- [ESP8266 kullanarak kablosuz data aktarımı.](https://www.youtube.com/watch?v=3mhEp4yjI20)
-- [Genclere ve kendini gelistirmek isteyenlere tavsiyeler.](https://www.youtube.com/watch?v=Ca35wp7W_jA&feature=em-uploademail)
-- [DNS eğitimi](https://www.youtube.com/watch?v=mpQZVYPuDGU)
-- [Scratch eğitimleri oynatma listesi](https://www.youtube.com/playlist?list=PLh9ECzBB8tJOUsrd6J-ifCB1LQeMCHD-x)
-- [Linux giriş eğitimi serisi](https://www.youtube.com/playlist?list=PLh9ECzBB8tJOnxXrUTOqXfurKOZkN4mEY)
-- [Get started with Node-Red](https://www.youtube.com/watch?v=O-FDqkhCryA&feature=share)
-- [CRUD - Part1 (Nuri Akman)](https://www.youtube.com/watch?v=8fBLT-Ouvr0)
+- [X] [Bob Rose (Ressam) video 1](https://www.youtube.com/channel/UCxcnsr1R5Ge_fbTu5ajt8DQ)
+- [X] [Bob Rose (Ressam) video 2](https://yandex.com.tr/video/preview/?filmId=6948454151854644335&text=bob+ross+resim+sevinci)
+- [X] [ESP8266 kullanarak kablosuz data aktarımı.](https://www.youtube.com/watch?v=3mhEp4yjI20)
+- [X] [Genclere ve kendini gelistirmek isteyenlere tavsiyeler.](https://www.youtube.com/watch?v=Ca35wp7W_jA&feature=em-uploademail)
+- [X] [DNS eğitimi](https://www.youtube.com/watch?v=mpQZVYPuDGU)
+- [X] [Scratch eğitimleri oynatma listesi](https://www.youtube.com/playlist?list=PLh9ECzBB8tJOUsrd6J-ifCB1LQeMCHD-x)
+- [X] [Linux giriş eğitimi serisi](https://www.youtube.com/playlist?list=PLh9ECzBB8tJOnxXrUTOqXfurKOZkN4mEY)
+- [X] [Get started with Node-Red](https://www.youtube.com/watch?v=O-FDqkhCryA&feature=share)
+- [X] [CRUD - Part1 (Nuri Akman)](https://www.youtube.com/watch?v=8fBLT-Ouvr0)
 
 ## Okumalar
 
-- [HTTP İşleyişi ve Güvenliği Açısından Cookie ve Session Yönetimi](https://www.netsparker.com.tr/blog/web-guvenligi/http-isleyisi-ve-guvenligi-acisindan-cookie-ve-session-yonetimi/)
-- [Veri Tabanlarında Normalizasyon](http://beltslib.net/veri-tabanlarinda-normalizasyon.html)
-- [Raspberry Pi 2](http://www.raspi.gen.tr/2015/02/02/raspberry-pi-2-duyuruldu-ilk-inceleme-ve-on-izlenimler/)
-- [Online pdf küçültme](https://smallpdf.com/tr/compress-pdf)
+- [X] [HTTP İşleyişi ve Güvenliği Açısından Cookie ve Session Yönetimi](https://www.netsparker.com.tr/blog/web-guvenligi/http-isleyisi-ve-guvenligi-acisindan-cookie-ve-session-yonetimi/)
+- [X] [Veri Tabanlarında Normalizasyon](http://beltslib.net/veri-tabanlarinda-normalizasyon.html)
+- [X] [Raspberry Pi 2](http://www.raspi.gen.tr/2015/02/02/raspberry-pi-2-duyuruldu-ilk-inceleme-ve-on-izlenimler/)
+- [X] [Online pdf küçültme](https://smallpdf.com/tr/compress-pdf)
 
 
 ## BAKIP ARAŞTIR!
 
-- [ ] Linux ekran kartı tanımlaması öğreniecek, sorunlar çözülecek.
-- [ ] Digitalocean kullanımı pekiştirilecek!
-- [ ] Linux log dosyaları konusu araştırılacak, logları okuma öğrenilecek.
-- [ ] Http ve https nedir derin araştırılacak.
-- [ ] Ultrasonik ses dalgaları nerelerde kullanılır? Araştırılacak!
-- [ ] Proje Yönetim, lokalde bağımsız çalışan uygulama varsa bakılacak ya da tasarlanacak.
-- [ ] Nginx öğrenilecek.
-- [ ] Command Injection araştırılacak ve DVWA nedir?
-- [ ] Saç bakımı [Nano Hair].
+- [X] [ ] Linux ekran kartı tanımlaması öğreniecek, sorunlar çözülecek.
+- [X] [ ] Digitalocean kullanımı pekiştirilecek!
+- [X] [ ] Linux log dosyaları konusu araştırılacak, logları okuma öğrenilecek.
+- [X] [ ] Http ve https nedir derin araştırılacak.
+- [X] [ ] Ultrasonik ses dalgaları nerelerde kullanılır? Araştırılacak!
+- [X] [ ] Proje Yönetim, lokalde bağımsız çalışan uygulama varsa bakılacak ya da tasarlanacak.
+- [X] [ ] Nginx öğrenilecek.
+- [X] [ ] Command Injection araştırılacak ve DVWA nedir?
+- [X] [ ] Saç bakımı [Nano Hair].
