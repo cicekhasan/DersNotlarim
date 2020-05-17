@@ -3,14 +3,93 @@
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
-eth0     : Ethernet kartı.
-wlp4s0b1 : Wifi kartı.
+eth0     : Ethernet kartı
+enp3s0   : Ethernet kartı
+lo       : Localhost
+wlp4s0   : Wifi kartı
 
-
-#### Network Arayüzlerini/Kartlarını (Interface) Öğrenme
 
 ```bash
+# Ağ kartlarını görme...
 ifconfig -a 
+# Wifi ip değiştirme (192.168.1.50 yapalım)...
+ifconfig wlp4s0 192.168.1.50
+# Wifi ip, netmask ve broadcast değiştirme...
+ifconfig wlp4s0 192.168.1.50 netmask 255.255.255.0 broadcast 192.168.1.255
+# Kablosuz kartını açmak...
+ifconfig wlp4s0 up
+# Kablosuz kartını kapatma...
+ifconfig wlp4s0 down
+```
+#### ```ping``` Komutu
+
+Hedef ile bizim sistemimiz arasında iletişimin sağlanıp sağlanmadığını kontrol ederek hedef sunucunun çalışıp çalışmadığını veya aktarım hızının ne kadar olduğunu öğrenmemizi sağlar. ```CTRL+C``` ile durdurulur.
+
+```bash
+ping www.google.com
+ping 172.217.17.68 # www.google.com
+ping 139.59.138.6  # aysubey.com
+# 4 defa ping atma...
+ping -c 4 aysubey.com
+```
+
+#### ```route``` Komutu
+
+Sistemimizdeki IP yönlendirme tablosunun içeriğini görmemizi sağlar.
+
+```bash
+# IP yönlendirme tablosunun içeriğini görmek...
+route -n 
+```
+
+#### ```traceroute``` Komutu
+
+Bir önceki kısımda route komutu ile gördüğümüz yerel ağda geçerli olan yönlendirme takibini, belirli bir hedef adrese yapabilmemize olanak sağlayan komut traceroute komutudur. Yani komutumuz belirli bir hedefe gönderilen paketin hangi host'lardan geçtiğini bizlere gösterir. Bir nevi izlediği yolu yani adımlarını takip etmemizi sağlar.
+
+```bash
+traceroute aysubey.com 
+```
+
+#### ```whois``` Komutu
+
+Whois kavramını bilmeyenler için whois, genel olarak domain bilgilerini içeren bir mekanizmadır. Yani whois; domain ne zaman kurulmuş, ne zamana kadar geçerli, kimin üzerine kayıtlı ve bunun gibi diğer tüm bilgileri tutar.
+
+```bash
+whois aysubey.com 
+```
+
+#### ```host``` Komutu
+
+Hedef adres hakkında bilgi almanızı sağlar. host komutu ile IP adresinden alan adı(domain name) ve alan adından(domain name) IP adresine ulaşabiliriz.
+
+```bash
+host aysubey.com 
+```
+
+#### ```dig``` Komutu
+
+dig(domain information groper/domain bilgi çukuru) DNS kayıtlarına bakmak için kullanımı oldukça kolay olduğundan yaygın olarak kullanılmaktadır.
+
+```bash
+dig aysubey.com 
+```
+
+#### ```arp``` Komutu
+
+IP-MAC Adresi eşleştirmelerinin tutulduğu tablolardır.
+
+```bash
+arp 
+```
+
+#### ```tcpdump``` Komutu
+
+Sistemimizin yaptığı bağlantıları ve sistemimize yapılan bağlantıları anlık olarak görüntülememize olanak sağlar.
+
+```bash
+tcpdump 
+# Ayrıca adres çözümlemesi yapmadan direk olarak bağlantıları takip etmek...
+tcpdump -n
 ```
 
 #### Ağ Servisini Yeniden Başlatmak
@@ -128,15 +207,35 @@ ifconfig eth0 192.168.1.10 netmask 255.255.255.0
 route add default gw 192.168.1.1 eth0
 ```
 
-#### DNS'leri Girme (Manuel)
+### DNS Ayarları
+
+Komut satırından DNS ayarlarımızı değiştirmek istersek DNS bilgilerinin tutulduğu /etc/resolv.conf/ dosyasında değişiklik yapmamız gerekiyor. İşlemeleri adım adım açıklayarak ilerleyelim.
+
+İlk olarak DNS ayarlarının bulunduğu dosya içeriğine göz atıyorum. Çünkü daha sonra değişiklik yaptığımızda ilk hali ile kıyaslamamız gerekecek. Bu işlemi cat komutu yardımı ile gerçekleştireceğiz.
 
 ```bash
-sudo nano /etc/resolv.conf 
-# İçerisine;
-# Sunucunun aramayapacağı domain
-search aysubey.com
-# İsim çözümlemede kullanılacak olan dns adresi 1 
+cat /etc/resolv.conf
+# Örnek ekran çıktısı...
+nameserver 127.0.0.53
+options edns0
+# Yeni dns leri girme...
+echo "nameserver 8.8.8.8" > /etc/resolv.conf
+echo "nameserver 8.8.8.8" >> /etc/resolv.conf
+# Eski ayarların saklı kalmasını istersek...
+sudo gedit /etc/resolv.conf
+# ile dosyayı açıp aşağıdaki gibi düzeitiriz. Eskilerinin başına # koyarız...
+# BURADAN
+# nameserver 127.0.0.53
+#options edns0
 nameserver 8.8.8.8
-# İsim çözümlemede kullanılacak olan dns adresi 2
 nameserver 8.8.4.4
+# BURAYA kadar olanı yapıştır...
+```
+
+### Host Dosyası
+
+Yerel bir alan adı sunucusu işlevindedir. Sistemde alan adı çözümlemesi yapılırken bu dosyaya bakılır. Dosyanın konumu /etc/hosts şeklindedir.
+
+```bash
+cat /etc/hosts
 ```
