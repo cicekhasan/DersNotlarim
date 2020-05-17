@@ -1,5 +1,8 @@
 ## BİLGİ ALMA KOMUTLARI
 
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
+
 1. ```uname``` Komutu
 
 Sistemde kullanılan çekirdek hakkında bilgiler verir.

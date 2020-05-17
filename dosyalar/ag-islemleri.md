@@ -1,4 +1,4 @@
-# AĞ İŞLEMLERİ
+## AĞ İŞLEMLERİ
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
@@ -7,19 +7,19 @@ eth0     : Ethernet kartı.
 wlp4s0b1 : Wifi kartı.
 
 
-## Network Arayüzlerini/Kartlarını (Interface) Öğrenme
+#### Network Arayüzlerini/Kartlarını (Interface) Öğrenme
 
 ```bash
 ifconfig -a 
 ```
 
-## Ağ Servisini Yeniden Başlatmak
+#### Ağ Servisini Yeniden Başlatmak
 
 ```bash
 sudo /etc/init.d/networking restart
 ```
 
-## Ağ Yönetimi
+#### Ağ Yönetimi
 
 **nmap (Nmap Script Engine)**: Güçlü bir ağ yönetim yardımcısıdır. Ağda bulunan cihazların zafiyetlerini keşfetme ve gerekli önlemleri alma imkanı verir. (dangerous) yazan satır varsa dikkat et!
 
@@ -52,7 +52,7 @@ sudo nmap -sS -sV -sC -n -v -p 21,53,80,139,445,1001,1900  192.168.1.41
 10. -sC         : -sV ile versiyon tespiti yapılırken nmap scriptlerini kullanır.
 11. -p          : Sadece bu parametreden sonra belirtilen portları tarar.
 
-## Network Trafiği Kontrolu
+#### Network Trafiği Kontrolu
 
 **Wireshark**: Network trafiğinin, bir grafik arayüz üzerinden izlenmesini sağlayan, pek çok zaman hayat kurtarancı öneme sahip bir programdır. "tshark" ise bunun konsoldan kullanılan paketidir.
 
@@ -60,7 +60,7 @@ sudo nmap -sS -sV -sC -n -v -p 21,53,80,139,445,1001,1900  192.168.1.41
 sudo apt install -y wireshark
 ```
 
-## TCP Paket Kontrolu
+#### TCP Paket Kontrolu
 
 **Tcpdump**: Komut satırında çalışan bir paket analizcisi programıdır. Kullanıcıya bağlı bulunduğu bir ağ üzerinden iletilen veya alınan TCP/IP paketlerini veya diğer paketleri yakalama ve gözlemleme olanağı sunar.
 
@@ -68,7 +68,7 @@ sudo apt install -y wireshark
 sudo apt install -y tcpdump
 ```
 
-## Ağ Dinleme ve İzleme
+#### Ağ Dinleme ve İzleme
 
 **Dsniff**: Ağ güvenliği ve trafik dinleme amacıyla yazılmış açık kaynak kodlu bir program, küçük olmasına karşın işlevi fazlasıyla büyüktür.
 
@@ -80,7 +80,7 @@ sudo apt install -y dsniff
 sudo dsniff -i wlp4s0
 ```
 
-## Dış (External) IP Öğrenme
+#### Dış (External) IP Öğrenme
 
 ```bash
 # 1. Yol
@@ -89,19 +89,19 @@ curl ifconfig.me
 dig +short myip.opendns.com @resolver1.opendns.com
 ```
 
-## Bir Domain Hakkında Bilgi Edinmek
+#### Bir Domain Hakkında Bilgi Edinmek
 
 ```bash
 whois aysubey.com 
 ```
 
-## Router ları Bulmak (Yol Takibi)
+#### Router ları Bulmak (Yol Takibi)
 
 ```bash
 traceroute ipAdresi
 ```
 
-## Sunucumuzun 80 portuna (apache) bağlantı yapan ip leri bağlantı sayısına göre küçükten büyüğe tespit etmek.
+#### Sunucumuzun 80 portuna (apache) bağlantı yapan ip leri bağlantı sayısına göre küçükten büyüğe tespit etmek.
 
 ```bash
 # 1.
@@ -114,21 +114,21 @@ iptables -A INPUT -s banlanacakipadresi -j DROP
 iptables -D INPUT -s banlanacakipadresi -j DROP
 ```
 
-# NETWORK AYARLARI
+### NETWORK AYARLARI
 
-## Alt Ağ Maskesi ve İp Tanımlama
+#### Alt Ağ Maskesi ve İp Tanımlama
 
 ```bash
 ifconfig eth0 192.168.1.10 netmask 255.255.255.0
 ```
 
-## Default Gateway Tanımlamak
+#### Default Gateway Tanımlamak
 
 ```bash
 route add default gw 192.168.1.1 eth0
 ```
 
-## DNS'leri Girme (Manuel)
+#### DNS'leri Girme (Manuel)
 
 ```bash
 sudo nano /etc/resolv.conf 

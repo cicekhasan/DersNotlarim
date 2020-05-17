@@ -1,9 +1,9 @@
-# Veritabanı Bağlantısı
+## VERİTABANIBAĞLANTISI
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
-## Direkt Bağlantı
+#### Direkt Bağlantı
 
 ```php
 try {
@@ -14,7 +14,7 @@ try {
 }
 ```
 
-## Değişken Tanımlayarak Bağlantı
+#### Değişken Tanımlayarak Bağlantı
 
 ```php
 $sunucu    = "localhost";

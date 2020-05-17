@@ -1,8 +1,9 @@
-# DOSYA YAPISI
+## DOSYA YAPISI
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
-### Log dosyaları
+
+#### Log dosyaları
 
 - /var/log/boot.log    : System boot logları.
 - /var/log/apt.log     : Paket yükleme uygulaması logları. Debian

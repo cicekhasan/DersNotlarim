@@ -1,4 +1,4 @@
-# İPUÇLARI
+## İPUÇLARI
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 

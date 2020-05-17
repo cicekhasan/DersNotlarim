@@ -1,9 +1,9 @@
-# FOTOĞRAF, VİDEO SES KOMUTLARI
+## FOTOĞRAF, VİDEO SES KOMUTLARI
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
-## Konsoldan Fotoğraf Çekmek
+#### Konsoldan Fotoğraf Çekmek
 
 Bilgisayardaki Web Kamerayı Bulma
 
@@ -32,43 +32,43 @@ sudo uvccapture -d/dev/video0 -oscreenxxx.jpg -m | mail -s "Uyarı Mesajı! Bilg
 sudo uvccapture -d/dev/video0 -oscreenxxx.jpg -m | mail --attach=screenxxx.jpg -s "İzinsiz bilgisayarın açıldı." aysubey@gmail.com
 ```
 
-## Yazı Okutma
+#### Yazı Okutma
 
 ```bash
 spd-say "Ben Algoritma Uzmanına Bayılıyorum"
 ```
 
-## Wav Uzantılı Dosya Çalma
+#### Wav Uzantılı Dosya Çalma
 
 ```bash
 play /usr/share/sounds/alsa/dosyaAdi.wav
 ```
 
-## Resimleri Videoya Çevirme
+#### Resimleri Videoya Çevirme
 
 ```bash
 ffmpeg -f image2 -i image%d.jpg dosyaAdi.mpg
 ```
 
-## Videoları Resime Çevirme
+#### Videoları Resime Çevirme
 
 ```bash
 ffmpeg -i video.mpg image%d.jpg
 ```
 
-## Mpeg-Avi Çevirme
+#### Mpeg-Avi Çevirme
 
 ```bash
 ffmpeg -i orjinalVideo.mpg donusturulecekVideo.avi
 ```
 
-## Videodaki Sesi Mp3'e Çevirme
+#### Videodaki Sesi Mp3'e Çevirme
 
 ```bash
 ffmpeg -i kaynakVideo.avi -vn -ar 44100 -ac 2 -ab 192k -f mp3Ses.mp3
 ```
 
-## Avi-Gif Çevirme
+#### Avi-Gif Çevirme
 
 ```bash
 ffmpeg -i orjinalVideo.avi gifDosyasi.gif

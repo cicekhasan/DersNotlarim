@@ -1,4 +1,7 @@
-# ÖN YÜKLEMELİ USB OLUŞTURMA
+## ÖN YÜKLEMELİ USB OLUŞTURMA
+
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
 
 ```bash
 # Usb flash diske yükleyeceğiniz kalıbın bulunduğu dosyaya geç...

@@ -1,19 +1,19 @@
-# EDİTÖRLER (IDM)
+## EDİTÖRLER (IDM)
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
-## Doğru Editör Seçimi (IDE)
+### Doğru Editör Seçimi (IDE)
 
 Başka editörler kullanırken PHP kodları için eklenti yüklemek gerekebilir ve gerekecektir. Eğer kullandığınız dile ait bir IDE varsa onu kullanmamız gerekir.
 
 Örneğin; Php için "Phpstorm" kullanmak gibi. Fakat biz sizlere [Atom](#Atom) yada [SublimeText](#SublimeText) kullanmanızı öneriyoruz. Çünkü, kullanmanız için herhangi bir ücret ödemeniz gerekmiyor.
 
 
-## SUBLİME TEXT EDITOR
-### SublimeText
+### SUBLİME TEXT EDITOR
+#### SublimeText
 
-#### Sublime Text Kod Düzenini Sağlamak
+##### Sublime Text Kod Düzenini Sağlamak
 
 Sublime Text üzerinde kodlarımızı düzenlemek için editörün Reindent özelliğini kullanıyoruz.Bu özelliğini kullanabilmek için ilk önce programımızı açıp
 
@@ -23,11 +23,11 @@ Prefences > Key Bindings – User menü yolunu izliyoruz ve açılan sayfada kö
 
 Artık Reindent özelliğimiz kullanıma hazır.Kodlarımızı düzenleyebilmek için artık yapmamız gereken ```CTRL+ALT+f``` klavye kısayolunu kullanmak.
 
-#### SUBLİME KISAYOLLARI
+##### SUBLİME KISAYOLLARI
 
 [Kaynak](https://ertugruldeniz.com/sublime-text-kisayollari-132)
 
-#### Sublime text eklenti kurma
+##### Sublime text eklenti kurma
 
 ```CTRL+Shift+p``` tuşlarına basalım ve açılan pencereye Install Package Yazalım.
 
@@ -47,7 +47,7 @@ by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read
   if dh != h else 'Please restart Sublime Text to finish installation')
 ```
 
-#### Eklentiler
+##### Eklentiler
 
 1. Emmet: Kısayoldan html etiketleri oluşturmak için kullanılır.
 
@@ -65,7 +65,7 @@ form>input[class="kelime"]*5:
 
 5. Alignment: Bu eklenti de kodlarınızı basit bir klavye tuş kombinasyonuyla hizalamanıza yarar. ```Ctrl+a``` klavye tuş kombinasyonuyla seçtiğiniz kodları ```Ctrl+Alt+a``` ile hizalayabilirsiniz. Ben bunu ```Ctrl+Alt+f``` yaptım.
 
-#### Bazı sublime ayarları
+##### Bazı sublime ayarları
 
 Bu kodları kopyalayıp preferences/settings dosyası aracılığıyla user-settings sayfasına yapıştırın. Eğer sayfada hali hazırda ```{ }``` süslü parantezler bulunuyorsa yukarıdaki kodlardaki süslü parantezleri silin ve hali hazırdaki parantezlerin içerisine yapıştırın. Bir diğer ihtimal user-settings sayfanızda ```{ }``` süslü parantezlerinizin içinde kod ya da kodlar var ise yukarıdaki kodların süslü parantezleri olmayacak şekilde kopyalayın ve süslü parantezleriniz içerisindeki kodların son satırının bir altına geçin, yapıştırın. Ve yapıştırdığınız kodlarınızın başlangıcını unutmayın. Yapıştırdığınız kodlarınızın başlangıcından önceki en son kod satırının true ya da false değerinin yanına bir virgül koyun. 
 
@@ -91,14 +91,14 @@ Bu kodları kopyalayıp preferences/settings dosyası aracılığıyla user-sett
 }
 ```
 
-##### Nasıl düzenlenir?
+###### Nasıl düzenlenir?
 
 Sublime Text, kod yazma deneyiminizi görsel olarak geliştirecek bazı harika özelliklerle birlikte geliyor; ama nedendir bilinmez, bu özellikler varsayılan olarak etkinleştirilmiş halde olmuyor. Bu ayarları düzenleyebilmek için. 
 
 Not: Sublime Text ayarlarının yer aldığı dosyayı düzenleyebilmek için, Sublime Text 3 > Preferences > Settings - Default'a gidin.
  
 
-##### Yazı Tipleri and Aralıklar
+###### Yazı Tipleri and Aralıklar
 
 Doğru yazı tipini ve aralık oranını seçmek kodunuzu özelleştirmenin olabilecek en kişisel yollarından biri. İlk olarak kodlamanıza uygun, tercihen de eşit aralıklı bir yazı tipi seçin. Yazı tipinizi belirledikten sonra, bu yazı tipinin sisteminizde yüklü olduğundan emin olun, ardından ayarlarınıza ekleyin ve boyutunu, yazı aralıklarını aşağıdaki seçeneklerle düzenleyin:
 
@@ -109,7 +109,7 @@ Doğru yazı tipini ve aralık oranını seçmek kodunuzu özelleştirmenin olab
 "line_padding_top": 1,
 ``` 
 
-##### highlight_modified_tabs
+###### highlight_modified_tabs
 
 Çalışmakta olduğunuz projedeki yaptığınız son değişikliklerin henüz kaydedilmediği dosyaları odak haline getirmek için, bu ayar o anki pencerede yer alıp düzenlenmiş ancak kaydedilmemiş sekmeleri vurgular.
 
@@ -117,7 +117,7 @@ Doğru yazı tipini ve aralık oranını seçmek kodunuzu özelleştirmenin olab
 "highlight_modified_tabs": true,
 ``` 
 
-##### word_wrap
+###### word_wrap
 
 Sayfayı yatay olarak kaydırmak bazen işkence gibi geliyor insana. Bu sözcük kaydırma ayarını aktifleştirerek, metninizin ekran boyutunuza sığacak bir şekilde akışı olmasını sağlayacak ve sizi sayfayı yatay olarak kaydırma zahmetinden kurtaracak.
 
@@ -125,7 +125,7 @@ Sayfayı yatay olarak kaydırmak bazen işkence gibi geliyor insana. Bu sözcük
 "word_wrap": true,
 ```
 
-##### fade_fold_buttons
+###### fade_fold_buttons
 
 Sublime Text'te kod parçalarını katlayıp açabiiyorsunuz. Bu ayarı etkin hale getirmeniz durumunda, katlama/açma için kenarda çıkan ok işareti yerinde sabit kalacak.
 
@@ -133,7 +133,7 @@ Sublime Text'te kod parçalarını katlayıp açabiiyorsunuz. Bu ayarı etkin ha
 "fade_fold_buttons": false,
 ```
 
-##### bold_folder_labels
+###### bold_folder_labels
 
 Yan menüye daha güçlü görsel elemanlar katmak için harika ayarlar var, bunlardan bazılarını aşağıda bulabilirsiniz:
 
@@ -141,7 +141,7 @@ Yan menüye daha güçlü görsel elemanlar katmak için harika ayarlar var, bun
 "bold_folder_labels": true,
 ```
  
-##### Açık Dosyaları Yan Menüde Gösterme
+###### Açık Dosyaları Yan Menüde Gösterme
 
 Bu seçenek preferences dosyasında etkin değil. Açık dosyaları yan menünün en üstünde göstermek için şu yolu izleyin:
 
@@ -150,10 +150,10 @@ View → Side Bar → Show Open Files
 ```
 
 
-## ATOM TEXT EDİTOR
-### Atom
+### ATOM TEXT EDİTOR
+#### Atom
 
-#### Kurulum
+##### Kurulum
 
 Atom Text Editörünü kurabilmek için ilk önce paketin bulunduğu listeyi sistemimize ekliyoruz.
 
@@ -172,7 +172,7 @@ Atom Text Editörünü kurabilmek için ilk önce paketin bulunduğu listeyi sis
 
 Atom Metin editörü hakkında bilgiye ve kullanışlı eklentilerine [buradan](https://emregeldegul.net/2017/10/kullanisli-atom-paketleri/) ulaşabilirsiniz.
 
-#### Önemli Eklentiler
+##### Önemli Eklentiler
 
 | Eklenti Adı | Açıklama |
 | ---- | ---- |

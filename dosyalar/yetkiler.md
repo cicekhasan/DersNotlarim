@@ -1,10 +1,10 @@
-# YETKİLENDİRME İŞLEMLERİ
+## YETKİLENDİRME İŞLEMLERİ
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
-## KULLANICI İŞLEMLERİ
-### Kullanıcıları Listeleme
+### KULLANICI İŞLEMLERİ
+#### Kullanıcıları Listeleme
 
 *Not: İd'si 800 den aşağıda olanlar sistem yöneticisidir. İlk kullanıcı 1000 id sini alır.*
 
@@ -12,26 +12,26 @@
 cat /etc/passwd
 ```
 
-### Kullanıcı Bilgisi Öğrenme
+#### Kullanıcı Bilgisi Öğrenme
 
 ```bash
 finger kullanıcıadı
 ```
 
-### Kullanıcıya Yönetici Yetkisi Verme
+#### Kullanıcıya Yönetici Yetkisi Verme
 
 ```bash
 sudo usermod -a -G sudo kullaniciAdi
 ```
 
-## GRUP İŞLEMLERİ
-### Grup Oluşturmak
+### GRUP İŞLEMLERİ
+#### Grup Oluşturmak
 
 ```bash
 sudo groupadd grupAdi
 ```
 
-### Grupları Listeleme
+#### Grupları Listeleme
 
 ```bash
 less /etc/group
@@ -41,25 +41,25 @@ more /etc/group
 cat /etc/group
 ```
 
-### Kullanıcının Gruplarını Görme
+#### Kullanıcının Gruplarını Görme
 
 ```bash
 id kullanıcıAdı
 ```
 
-### Kullanıcıyı Gruba Atama
+#### Kullanıcıyı Gruba Atama
 
 ```bash
 usermod -aG GrupAdı kullanıcıAdı
 ```
 
-### Kullanıcıyı Gruptan Çıkarma
+#### Kullanıcıyı Gruptan Çıkarma
 
 ```bash
 deluser kullanıcıAdı grupAdı
 ```
 
-## YETKİLER
+### YETKİLER
 
 Şifreli sayılar (777) yerine anlaşılır steno (ugo+rwx) ile yetki vermek daha bilinçli olur. Ayrıca öğrenmesi de kolaydır.
 
@@ -130,7 +130,7 @@ chmod -x dosyaAdi
 chattr -i dosyaAdi 
 ```
 
-## Dosyayı Silmeye Karşı Koruma Altına Alma
+### Dosyayı Silmeye Karşı Koruma Altına Alma
 
 ```bash
 # Koruma altına alma...

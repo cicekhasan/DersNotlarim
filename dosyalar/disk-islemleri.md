@@ -1,7 +1,6 @@
-# DİSK İŞLEMLERİ
+## DİSK İŞLEMLERİ
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
-
 
 
 #### Disk Sorgulama 

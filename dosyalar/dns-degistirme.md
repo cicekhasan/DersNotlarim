@@ -1,4 +1,7 @@
-# DNS DEĞİŞTİRME
+## DNS DEĞİŞTİRME
+
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
 
 Google dns lerini ayarlıyalım. Bunun için "etc/resolv.conf" dosyasında değişiklik yapacağız!
 

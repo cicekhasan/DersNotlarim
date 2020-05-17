@@ -1,6 +1,7 @@
-# YENİ KURULUM TEMİZLİĞİ
+## YENİ KURULUM TEMİZLİĞİ
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
 
 1. Sadece Mysql çalışmazsa, mysqli kaldırıp tekrar kurun ve deneyin.
 

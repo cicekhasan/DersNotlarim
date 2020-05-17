@@ -1,4 +1,7 @@
-# HACK KONTROL (SYSTEMD)
+## HACK KONTROL (SYSTEMD)
+
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
 
 Dünyada internet ortamında altyapı, ağ ve sunucu gibi hizmetlerin büyük çoğunluğunda "Linux" işletim sistemi kullanılmaktadır. Bu nedenledir ki linux işletim sistemli sunucular da diğer işletim sistemleri gibi saldırganların hedefi haline gelmiştir. Büyük çoğunluğun linux işletim sistemi kullanmasından dolayı saldırılara en çok maruz kalan ve ele geçirilen işletim sistemi durumuna gelmiştir.
 
@@ -8,7 +11,7 @@ Saldırılar sonrası sistemin nasıl incelenir, canlı analiz yöntemi nasıl o
 
 ***Not: Bu tarz çalışmalar yaparken mutlaka sistemin yedeğini alın ve yedeği aldığınızdan emin olun!***
 
-### Zaman Kontrolu
+#### Zaman Kontrolu
 
 Analiz çalışmasına başlamadan önce mutlaka sistemin zamanını kontrol edin. Zaman bilgisinin yanlış olmasının farkında olmazsanız, inceleme sonuçlarını yanlış değerlendirirsiniz.
 
@@ -16,7 +19,7 @@ Analiz çalışmasına başlamadan önce mutlaka sistemin zamanını kontrol edi
 date
 ```
 
-### İşletim Sistemi ve Çekirdek(Kernel) Bilgisi
+#### İşletim Sistemi ve Çekirdek(Kernel) Bilgisi
 
 Bu bilgi zaman bilgisi kadar önemlidir. Çalıştığınız işletim sistemi, çekirdek ve mimari bilgisi nereye nasıl bakacağınızı bilemezsiniz.
 
@@ -24,7 +27,7 @@ Bu bilgi zaman bilgisi kadar önemlidir. Çalıştığınız işletim sistemi, �
 uname -a 
 ```
 
-### Dosyalara Ait Bütünlük Özet(Hash) Değerlerinin Kontrol Edilmesi
+#### Dosyalara Ait Bütünlük Özet(Hash) Değerlerinin Kontrol Edilmesi
 
 ***Not: Canlı sistemlerde çalışılacaksa sistemin yedeği ve tüm dosyaların özet bilgilerinin önceden alınmış olması önemlidir!***
 
@@ -43,7 +46,7 @@ Alt dizinler ile beraber aldığımız hash bilgilerini "file-hash.txt" dosyası
 
 **Not: Canlı sistem şüpheli olduğu için analiz sırasında komutları kayıt edilemez/yazılamaz bir aygıt aracılığı ile sisteme bağlanılarak yapılmaıdır.**
 
-### Sızma Yöntemleri ve Giriş Noktalarının Tespiti
+#### Sızma Yöntemleri ve Giriş Noktalarının Tespiti
 
 Saldırgan gözü ile sisteme bakılarak "Hangi yöntemle bu sisteme sızabilirim?" sorusunun yanıtını bulmak önceliğimiz olması gerekir. Nmap, Nessus ve OpenVAS gibi programlarla bilinen yollar kullanılarak hızlı bir şekilde sisteme girilip girilmediğine bakılabilir.
 
@@ -58,7 +61,7 @@ Sızma yöntemlerini;
 
 Bu sızma yöntemleri içerisinde en olası ve kullanılan sızma yönteminin "Web uygulama sunucusunun sahip olduğu zaafiyetler" olarak görebiliriz.
 
-## Sistem Analizi
+### Sistem Analizi
 
 Sistem analizine başlamadan önce nereden başlıyacağımıza ve nereye bakacağımıza karar verip, bunu bir liste halinde elimizde bulundurmamız gerekmektedir. Temel olarak incelenmesi gerekenleri;
 
@@ -80,7 +83,7 @@ Sistem analizine başlamadan önce nereden başlıyacağımıza ve nereye bakaca
 16. Disklerin incelenmesi,
 17. Zararlı yazılımların aranması olarak listeleyebiliriz.
 
-### 1. Yerel ve Uzak Bağlantıların Dökümü
+#### 1. Yerel ve Uzak Bağlantıların Dökümü
 
 Aktif bağlantıları ```netstat``` ve ```lsof``` tespit edebiliriz. Dosya çıktılarını dosyaya kaydedip incelememiz daha verimli ve hızlı olacaktır.
 
@@ -205,13 +208,13 @@ udp6       0      0 :::40881                :::*                                
 udp6       0      0 :::5353                 :::*                                - 
 ```
 
-### 2. Olay Anı ve Sonrası Bellek Dökümü
+#### 2. Olay Anı ve Sonrası Bellek Dökümü
 
 Saldırgan tespit edilmemek için dosya ve loglar gibi izlerini bırakabileceği öğeleri silecektir. Disk üzerinden bunları geri getirmek mümkün olmayabilir. İşte böyle bir durumda bellek(RAM) bize bir çok bilgi verebilir. Yeni proses'ler çalıştırılıp üzerine yazılana kadar sonlandırılan proseslere ait bir çok bilgi verebilir. Ayrıca bellek verileri üzerinde geçici olarak tuttuğu için sistem kapatılmamalıdır. Analiz için çalıştırılan proseslerde bellek üzerine yazsada şansımızı denememiz gerekmektedir. Bu kaybı önlemek için belleğin imajını alıp, imaj üzerinden inceleme yapmak gerekmektedir.
 
 İmaj dosyası ikili sistemde yazılı olacağından string şekilde elde edebileceğimiz verilerden daha çok veri elde edebiliriz. Bellek imajını olay öncesi ve sonrası olmak üzere iki farklı şekilde alarak karşılaştırmalı inceleme yapmalıyız. Aradaki farklar bize daha çok ışık tutacaktır. 
 
-### 3. Aktif Olan Dosyaların İncelenmesi
+#### 3. Aktif Olan Dosyaların İncelenmesi
 
 Linux sistemlerde her şey dosyalar(portlar, aygıtlar vb.) üzerine kuruludur. Her hangi bir psorsesin eriştiği tüm dosyaları ```lsof```  ile listeleyebiliriz. Açık olan network bağlantıları ve portlarını listelemek için -i parametresinden faydalanırız. Zararlı olarak düşündüğümüz bir prosesin hangi dosyayı kullandığı, hangi port üzerinden nereye bağlandığının bilgisine buradan ulaşabiliriz. Aktif durumdaki ve dinlenen portlar (LISTEN) durumunda görünür.
 
@@ -259,7 +262,7 @@ telegram- 6849 yeniceri   19u  IPv4 917133      0t0  TCP 192.168.1.40:50752->149
 telegram- 6849 yeniceri   35u  IPv4 891870      0t0  TCP 192.168.1.40:50010->149.154.167.92:https (ESTABLISHED)
 ```
 
-### 4. Son Bir Kaç Günde Yeni Eklenmiş Dosyaların İncelenmesi
+#### 4. Son Bir Kaç Günde Yeni Eklenmiş Dosyaların İncelenmesi
 
 Saldırı, önemsiz bir dosya içerisine yüklenip buradan kendini her hangi bir prosese eklemis olabilir ya da kullanılan bir sistem dosyasını değiştirip ekleme yapmış olabilir. Bu durumda orjinal dosyayı bulmamız işimize yarıyabilir. Linux sistemlerde son günlerde eklenmiş dosyaları bulmak oldukça kolaydır.
 
@@ -300,7 +303,7 @@ sudo find /etc -type f -mtime -60 -exec ls -al {} \;
 
 Dosya işlemleri için alternatif olarak ```xargs``` paketini de kullanabilirsiniz.
 
-### 5. İzinleri 777 Olan Dosyaların İncelenmesi
+#### 5. İzinleri 777 Olan Dosyaların İncelenmesi
 
 Linux sistemlerde kullanıcı izinleri için ```chmod```(Change Mod) komutu kullanılır. ```sudo chmod ugo+777 dosyaAdi``` komutu ile belirttiğimiz dosyaya herkes tarafından okunabilir, yazılabilir ve çalışma iznini vermiş oluruz. Yani o dosyada herkes her şeyi yapabilir. Aman dikkat sakıncalı. *"Herkesin her şeyi yaptığı bir yerde kimin ne yaptığını kimse bilemez. Bilir de kontrol edemez!"* Saldırgan her hangi bir kullanıcının hesabı ile dosyayı istediği gibi düzenleyip, çalıştırabilir.
 
@@ -310,7 +313,7 @@ Linux sistemlerde kullanıcı izinleri için ```chmod```(Change Mod) komutu kull
 sudo find / -type f -perm 0777
 ```
 
-### 6. Başarılı ve Başarısız Olan Giriş Denemeleri
+#### 6. Başarılı ve Başarısız Olan Giriş Denemeleri
 
 Olası bir saldırıda herkesin aklına gelen ilk soru **"En son kim girdi/giremedi."** Giremedi deyince şaşırmayın. Kullanıcı olarak giremediyse farklı bir yol bulmuştur olarak düşünün. Bunu tespit etmenin linux sistemlerde bir kaç yolu vardır.
 

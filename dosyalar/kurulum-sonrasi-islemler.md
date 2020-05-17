@@ -1,6 +1,7 @@
-# KURULUM SONRASI YAPILACAKLAR
+## KURULUM SONRASI YAPILACAKLAR
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
 
 ```bash
 # Bu dosyayı açmak için "SublimeText" kur!

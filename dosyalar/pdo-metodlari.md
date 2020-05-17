@@ -1,9 +1,9 @@
-# PDO METODLARI
+## PDO METODLARI
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
-## Exec Metodu
+#### Exec Metodu
 
 Exec Metodu SQL sorgusu çalıştırır ve etkilenen satır sayısını döndürür. **İnsert, update ve delete işlemleri gibi sonuç almayı beklediğimiz sorgularda kullanılır.**
 
@@ -12,7 +12,7 @@ $sonuc = $db->exec(INSERT INTO rehber(adSoy,telefon) VALUES ('Hasan Çiçek', '0
 echo $sonuc .' satır eklendi ';
 ```
 
-## Query Metodu
+#### Query Metodu
 
 Query Metodu SQL sorgusu çalıştırıp tablodaki veri sonuçlarını bir dizi değişken olarak döndürür. İkinci parametresi sonuç döndürme biçimidir. **Select gibi her hangi bir etki yapmadan sadece görüntülemek için kullanılan sorguda kullanılır.**
 

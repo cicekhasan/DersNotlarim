@@ -1,6 +1,9 @@
-# DONANIM İŞLEMLERİ
+## DONANIM İŞLEMLERİ
 
-### Donanım Sorgulama 
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
+
+#### Donanım Sorgulama 
 
 ```bash
 sudo lshw -short
@@ -10,7 +13,7 @@ sudo lshw
 lsblk -a
 ```
 
-### İşlemci (CPU) Bilgilerini Görme
+#### İşlemci (CPU) Bilgilerini Görme
 
 ```bash
 cat /proc/cpuinfo
@@ -18,26 +21,26 @@ cat /proc/cpuinfo
 cat /proc/cpuinfo | grep cores
 ```
 
-### Bellek Bilgilerini Öğrenme
+#### Bellek Bilgilerini Öğrenme
 
 ```bash
 free -m 
 # YA DA
 cat /proc/meminfo
 ```
-### Grafik (Ekran) Kartını Sorgulama 
+#### Grafik (Ekran) Kartını Sorgulama 
 
 ```bash
 lspci | grep VGA
 ```
 
-### PCI Cihazlarını Görüntüleme (Ethernet, kablosuz, ses kartları vb.) 
+#### PCI Cihazlarını Görüntüleme (Ethernet, kablosuz, ses kartları vb.) 
 
 ```bash
 lspci
 ```
 
-### USB cihazlarını Görüntüleme
+#### USB cihazlarını Görüntüleme
 
 ```bash
 lsusb

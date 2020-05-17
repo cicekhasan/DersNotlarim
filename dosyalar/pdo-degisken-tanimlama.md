@@ -1,4 +1,7 @@
-## PDO Değişken Tanımlama
+## PDO DEĞİŞKEN TANIMLAMA
+
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
 
 ```php
 <?php

@@ -1,19 +1,19 @@
-# İNDİRME İŞLEMLERİ
+## İNDİRME İŞLEMLERİ
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
-## WGET
+#### WGET
 
 ```bash
 wget indirmeLinki
 ```
-## CURL
+#### CURL
 
 ```bash
 curl -O indirmeLinki
 ```
-## AXEL
+#### AXEL
 
 ```bash
 

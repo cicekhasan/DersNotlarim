@@ -1,8 +1,9 @@
-# TERMİNAL KULLANIMI
+## TERMİNAL KULLANIMI
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
-## YARDIMCI PAKETLER
+
+### YARDIMCI PAKETLER
 ### TMUX
 
 #### Nedir?

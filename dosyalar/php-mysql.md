@@ -1,9 +1,9 @@
-# MYSQL
+## MYSQL
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
-## MYSQL
+### MYSQL
 
 - Veritabanı oluştururken dilini utf8_turkish_ci olarak ayarlamayı unutma.
 - Site bilgileri tablosu örneği.

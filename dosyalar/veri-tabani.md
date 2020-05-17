@@ -1,11 +1,11 @@
-# VERİTABANI İŞLEMLERİ
+## VERİTABANI İŞLEMLERİ
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
-## MYSQL
+### MYSQL
 
-### Mysql Giriş
+#### Mysql Giriş
 
 ```bash
 mysql -u root -p

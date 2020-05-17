@@ -1,3 +1,7 @@
+## SİSTEMD YARDIM
+
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
 
 iostat                           // Disk okuma yazma hızını kontrol eder.
 cat /etc/fstab                   // Disk bilgilerini verir.
@@ -13,7 +17,7 @@ systemctl --state=failed		// Ayağa kalkmayan servis var mı? Bakarsın...
 
 
 
-## İşletim sistemini görme
+#### İşletim sistemini görme
 
 ```bash
 lsb_release -a
@@ -81,7 +85,7 @@ SUB    = The low-level unit activation state, values depend on unit type.
 To show all installed unit files use 'systemctl list-unit-files'.
 ```
 
-## SORUN TESPİTİ
+#### SORUN TESPİTİ
 
 1. Ana servislerin başlama süresini görme
 
@@ -118,7 +122,7 @@ systemd-analyze plot > boot_analizi.svg
 xdg-open boot_analizi.svg
 ```
 
-## Uzak sunucu işlemleri
+#### Uzak sunucu işlemleri
 
 ```bash
 systemd-analyze time -H root@192.168.56.5
@@ -126,13 +130,13 @@ systemd-analyze blame -H root@192.168.56.5
 systemd-analyze critical-chain -H root@192.168.56.5
 ```
 
-## Servis log dosyalarını görmek
+#### Servis log dosyalarını görmek
 
 ```bash
 sudo journalctl -u NetworkManager.service
 ```
 
-## runlevel
+#### runlevel
 
 Sistem açılışında runlevel dediğimiz sistemin sunacağı hizmetlere göre yapılandırıldığı çalışma seviyeleri mevcuttur.
 
@@ -152,7 +156,7 @@ N 5 // Benim ki...
 telinit 6
 ```
 
-## Servisi başlatma durdurma
+#### Servisi başlatma durdurma
 
 ```bash
 # Başlatma
@@ -161,7 +165,7 @@ systemctl start servisAdi
 systemctl stop servisAdi
 ```
 
-## Servis Restart Etmek
+#### Servis Restart Etmek
 
 ```bash
 systemctl restart servisAdi
@@ -169,19 +173,19 @@ systemctl restart servisAdi
 systemctl reload servisAdi
 ```
 
-## Servislerin sistem açılışlarında otomatik olarak start edilmesi
+#### Servislerin sistem açılışlarında otomatik olarak start edilmesi
 
 ```bash
 systemctl enable servisAdi
 ```
 
-## Servislerin sistem açılışlarında kaldırmak. Servis devredışı kalır.
+#### Servislerin sistem açılışlarında kaldırmak. Servis devredışı kalır.
 
 ```bash
 systemctl disable servisAdi
 ```
 
-## Servisin çalıştırılmasını engellemek/engeli kaldırmak
+#### Servisin çalıştırılmasını engellemek/engeli kaldırmak
 
 ```bash
 # Engellemek
@@ -190,7 +194,7 @@ systemctl mask servisAdi
 systemctl unmask servisAdi
 ```
 
-## İncelenecek komutlar
+#### İncelenecek komutlar
 
 ```bash
 systemd-analyze plot

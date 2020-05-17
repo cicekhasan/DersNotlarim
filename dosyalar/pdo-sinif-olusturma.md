@@ -1,4 +1,7 @@
-## PDO Sınıf Oluşturma
+## PDO SINIF OLUŞTURMA
+
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
 
 Sınıflar oluşturuluken baş harflerini büyükharf yapmalıyız!
 

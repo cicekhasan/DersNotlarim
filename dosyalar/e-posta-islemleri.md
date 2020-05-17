@@ -1,9 +1,9 @@
-# E-POSTA İŞLEMLERİ
+## E-POSTA İŞLEMLERİ
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
-## E-Posta Yapılandırması
+#### E-Posta Yapılandırması
 
 Kurulu olarak gelen programlarda "Mozilla Thunderbird" elektronik posta programını bilgilerini girerek etkinleştir. 
 

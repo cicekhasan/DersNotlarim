@@ -1,5 +1,8 @@
 ## SORUN TESPİTİ
 
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
+
 1. Ana servislerin başlama süresini görme
 
 Başlangıçta çekirdek, initrd ve kullanıcı alanı tarafından harcanan süre dahil olmak üzere her bir hizmeti başlatmak için harcanan toplam süre hakkındaki bilgileri listeler.

@@ -1,8 +1,9 @@
-# VERİ İŞLEMLERİ
+## VERİ İŞLEMLERİ
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
-## Bir Sitenin HTML Kodlarını Almak
+
+#### Bir Sitenin HTML Kodlarını Almak
 
 Ekrana sitenin html kodlarını basar.
 

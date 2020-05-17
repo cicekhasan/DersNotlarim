@@ -1,5 +1,8 @@
 ## LİNUX DOSYA YAPISI
 
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
+
 | | Açıklama |
 |---|---|
 | / | Kök dizini. |

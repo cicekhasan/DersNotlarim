@@ -1,6 +1,7 @@
-# PHP HATA ÇÖZÜMLERİ
+## PHP HATA ÇÖZÜMLERİ
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
 
 #### Mariadb Meşgul Hatası
 

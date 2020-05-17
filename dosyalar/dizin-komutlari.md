@@ -1,5 +1,8 @@
 ## DİZİN İŞLEMLERİ
 
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
+
 1. ```pwd``` Komutu
 
 Bulunduğumuz dizinin adını verir.

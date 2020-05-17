@@ -1,5 +1,8 @@
 ## YARDIM ALMA
 
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
+
 1. "help" Komutu
 
 ```bash

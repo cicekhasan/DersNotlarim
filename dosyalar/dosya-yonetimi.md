@@ -1,14 +1,15 @@
-# DOSYA İŞLEMLERİ
+## DOSYA İŞLEMLERİ
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
-## Dosya Hakkında Bilgi Edinme
+
+#### Dosya Hakkında Bilgi Edinme
 ```bash
 # Dosya hakkına istatistik bilgi verir.
 wc dosyaAdi
 ```
 
-## Dosya Oluşturmak
+#### Dosya Oluşturmak
 
 ```bash
 touch dosyaAdi
@@ -16,7 +17,7 @@ touch dosyaAdi
 touch dosyaAdi1 dosyaAdi2 dosyaAdi3
 ```
 
-## İçerisine Yazarak Oluşturma
+#### İçerisine Yazarak Oluşturma
 
 ```bash
 echo selam >   dosyaAdi.txt     # Tekrar yazarsan öncekini siler.
@@ -24,7 +25,7 @@ echo naber >>  dosyaAdi.txt     # Satır sonuna ekler.
 echo nasılsın 2>> dosyaAdi.txt  # Hatalı ise yazar.
 ```
 
-## Dosya İçeriklerini Görüntüleme
+#### Dosya İçeriklerini Görüntüleme
 
 ```bash
 cat dosyaAdi
@@ -48,19 +49,19 @@ tailf logDosyasiAdi
 zcat  dosya.tar.gz
 ```
 
-## Dosya İçeriklerini Tersten Görüntüleme
+#### Dosya İçeriklerini Tersten Görüntüleme
 
 ```bash
 tac dosyaAdi
 ```
 
-## Satır Satır Tersten Görüntüleme
+#### Satır Satır Tersten Görüntüleme
 
 ```bash
 rev dosyaAdi
 ```
 
-## Dosya çÇıktılarını Sıralatmak
+#### Dosya çÇıktılarını Sıralatmak
 
 ```bash
 # A-Z ye sıralamak...
@@ -69,19 +70,19 @@ sort dosyaAdi
 sort -r dosyaAdi
 ```
 
-## Aynı Anda İki Dosya Çıktısını Yan Yana Görmek
+#### Aynı Anda İki Dosya Çıktısını Yan Yana Görmek
 
 ```bash
 paste dosyaAdi1 dosyaAdi2
 ```
 
-## İki Dosyayı Karşılaştırmak
+#### İki Dosyayı Karşılaştırmak
 
 ```bash
 cmp dosyaAdi1 dosyaAdi2
 ```
 
-## Dosyada Filtreleme Yapmak
+#### Dosyada Filtreleme Yapmak
 
 Aşağıdaki komutla büyük küçük harf duyarlı (-i) olarak Hasan keimesini aratıyoruz.
 
@@ -92,13 +93,13 @@ grep -i "Hasan" dosyaAdi
 grep -r "hasan" *
 ```
 
-## Ekrana Çıktı Verme
+#### Ekrana Çıktı Verme
 
 ```bash
 echo "Görüntülenecek metin."
 ```
 
-## Dosya Ya da Klasör Kopyalama
+#### Dosya Ya da Klasör Kopyalama
 
 ```bash
 cp dosyaAdı yeniDosyaAdı
@@ -106,26 +107,26 @@ cat dosyaAdı > yeniDosyaAdı
 dd if=dosyaAdı of=yeniDosyaAdı
 ```
 
-## Dosya Birleştirme
+#### Dosya Birleştirme
 
 ```bash
 # 1 ve 2. dosyayı toplam dosyasında birleştirir. Video da birleştirebilir.
 cat dosya1 dosya2 >toplam
 ```
 
-## Dosya Taşıma Ya da Yeniden Adlandırma
+#### Dosya Taşıma Ya da Yeniden Adlandırma
 
 ```bash
 mv dosyaAdı yeniDosyaAdı
 ```
 
-## Bir Dosya Ya da Klasör İçin Link Oluşturma
+#### Bir Dosya Ya da Klasör İçin Link Oluşturma
 
 ```bash
 ln dosyaAdı link
 ```
 
-## Dosyaları Sıkıştırmak Ya da Çıkarmak
+#### Dosyaları Sıkıştırmak Ya da Çıkarmak
 
 Aşağıdaki paketlerden birini kur!
 
@@ -137,7 +138,7 @@ sudo apt install -y p7zip-full
 sudo apt install -y p7zip-rar
 ```
 
-## Dosya içeriği parçalama / Veri çıkarma
+#### Dosya içeriği parçalama / Veri çıkarma
 
 ```bash
 # not.asc dosyasının 6. sütununu dikey olarak getirir.
@@ -146,7 +147,7 @@ awk '{print $6}' NOT.asc
 awk '{print $6}' NOT.asc |paste -s
 ```
 
-## Dizin/Dosya Kopyalama
+#### Dizin/Dosya Kopyalama
 
 ```bash
 cp kaynakDosya hedefDosya
@@ -154,7 +155,7 @@ cp kaynakDosya hedefDosya
 cp -i kaynakDizin hedefDizin
 ```
 
-## Dizin/Dosya Taşımak
+#### Dizin/Dosya Taşımak
 
 ```bash
 mv dosyaKonumu/dosyaAdi tasinacakKonum
@@ -162,7 +163,7 @@ mv dosyaKonumu/dosyaAdi tasinacakKonum
 mv -r dizinKonumu/dizinAdi tasinacakKonum
 ```
 
-## Dizin/Dosya Silme
+#### Dizin/Dosya Silme
 
 Bu komut sayesinde dosyalarımızı daha güvenli şekilde silebiliriz. shred komutu dosyanın içerisine rastgele bitler yazarak dosyanın okunmaz hale gelmesini sağlıyor.
 

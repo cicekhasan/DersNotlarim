@@ -1,4 +1,4 @@
-# LAMP KURULUMU
+## LAMP KURULUMU
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 

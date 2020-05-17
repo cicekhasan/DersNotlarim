@@ -1,9 +1,9 @@
-# SİSTEM YÖNETİMİ
+## SİSTEM YÖNETİMİ
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
-## Sistem Hakkında Genel Bilgi Edinme 
+#### Sistem Hakkında Genel Bilgi Edinme 
 
 ```bash
 cat /proc/version
@@ -11,7 +11,7 @@ cat /proc/version
 Linux version 4.19.0-8-amd64 (debian-kernel@lists.debian.org) (gcc version 8.3.0 (Debian 8.3.0-6)) #1 SMP Debian 4.19.98-1 (2020-01-26)
 ```
 
-## İşletim sistemini görme
+#### İşletim sistemini görme
 
 ```bash
 lsb_release -a
@@ -82,7 +82,7 @@ SUB    = The low-level unit activation state, values depend on unit type.
 To show all installed unit files use 'systemctl list-unit-files'.
 ```
 
-## Ayağa kalkma süreciyle ilgili genel bilgi almak
+#### Ayağa kalkma süreciyle ilgili genel bilgi almak
 
 ```bash
 systemd-analyze
@@ -91,7 +91,7 @@ Startup finished in 8ms (firmware) + 3ms (loader) + 2.925s (kernel) + 13.275s (u
 graphical.target reached after 13.252s in userspace
 ```
 
-## Linux yüksek kaynak tüketen hesapları öğrenme
+#### Linux yüksek kaynak tüketen hesapları öğrenme
 
 ```bash
 ps axo pcpu,comm,pid,user | sort -nr | head -n 10
@@ -101,13 +101,13 @@ ps -eo pcpu,pid,user,args,pmem | sort -k 1 -r | head -10
 ps axo %mem,comm,pid,euser | sort -nr | head -n 10
 ```
 
-## Bilgisayarım ne kadar açık
+#### Bilgisayarım ne kadar açık
 
 ```bash
 uptime
 ```
 
-## Sistemin Güncellenmesi
+#### Sistemin Güncellenmesi
 
 ```bash
 sudo apt update
@@ -116,7 +116,7 @@ sudo apt upgrade -y
 sudo apt dist-upgrade -y
 ```
 
-## Sistemin Temizlenmesi
+#### Sistemin Temizlenmesi
 
 ```bash
 # ilk komut çözümlenemeyen listeleride kaldırır.
@@ -125,7 +125,7 @@ sudo apt autoclean -y
 sudo apt -y install -f
 ```
 
-## Tüm geçmiş komutların temizlenmesi
+#### Tüm geçmiş komutların temizlenmesi
 
 ```clear``` ya da ```CTRL+l``` sadece ekranda görülen komutları temizler. ```history -c``` ise dosyaya kaydedilen komutları da temizlediği için ```history``` komutu boş gelir. Bu komut birilerinin sizin kullandığınız komutları görmemesi kullanmaması(güvenlik) amacı ile kullanılır.
 
@@ -138,7 +138,7 @@ history -c
 history -d kayitNumarasi
 ```
 
-## runlevel
+#### runlevel
 
 Sistem açılışında runlevel dediğimiz sistemin sunacağı hizmetlere göre yapılandırıldığı çalışma seviyeleri mevcuttur.
 

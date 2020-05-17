@@ -18,6 +18,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [Yardım Alma](dosyalar/yardim-alma.md)
 		- [Linux Dosya Yapısı](dosyalar/linux-dosya-yapisi.md)
 	- Sisyem Yönetimi
+		- [Çalışma Seviyeleri](dosyalar/calisma-seviyeleri.md)
 		- [Sistem Genel](dosyalar/sistem-islemleri.md)
 		- [Donanım İşlemleri](dosyalar/donanim-islemleri.md)
 		- [Servis İşlemleri](dosyalar/servis-islemleri.md)

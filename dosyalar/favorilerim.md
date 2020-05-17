@@ -1,17 +1,17 @@
-# FAVORİLERİM
+## FAVORİLERİM
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
 Açılırken E ve A ya basarsanız güvenilir kipte açar.
 
-### Bilgisayarı Derin Uykuya Yatırma
+#### Bilgisayarı Derin Uykuya Yatırma
 
 ```bash
 systemctl suspend
 ```
 
-## En çok kullanılan kod satırları
+#### En çok kullanılan kod satırları
 
 ```bash
 #Sistemi güncellememek ve kullanılmayan sistem dosyalarını temizlemek

@@ -1,9 +1,9 @@
-# ARAMA İŞLEMLERİ
+## ARAMA İŞLEMLERİ
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
-## Dosya arama 
+#### Dosya arama 
 
 ```bash
 # yol aramaya nereden başlıyacağını ifade eder...
@@ -29,7 +29,7 @@ find yol -name ayar* -cperm 755
 
 ```
 
-## Önce verilen girdi verilerini kendisinden sonrakine tek tek aktarmak
+#### Önce verilen girdi verilerini kendisinden sonrakine tek tek aktarmak
 
 Aşağıdaki komutla Masaüstü'nde bulduğu her jpg uzantılı dosyayı tek tek siler.
 
@@ -37,19 +37,19 @@ Aşağıdaki komutla Masaüstü'nde bulduğu her jpg uzantılı dosyayı tek tek
 find /home/kaptan/Masaüstü -name *.jpg | xargs rm
 ```
 
-## İçeriğinde belli bir kelimenin geçtiği dosyayı ya da belli bir uzantıya sahip dosyaları listelemek
+#### İçeriğinde belli bir kelimenin geçtiği dosyayı ya da belli bir uzantıya sahip dosyaları listelemek
 
 ```bash
 locate "*.jpg"
 ```
 
-## Son bir saatte değiştirilen dosyaları bulmak
+#### Son bir saatte değiştirilen dosyaları bulmak
 
 ```bash
 find / -mmin -60
 ```
 
-## Boyuta göre dosya aramak
+#### Boyuta göre dosya aramak
 
 ```bash
 find / -size +250M -size -512M

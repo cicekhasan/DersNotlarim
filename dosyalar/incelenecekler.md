@@ -1,4 +1,4 @@
-# İNCELENECEK KOMUTLAR
+## İNCELENECEK KOMUTLAR
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 

@@ -1,6 +1,7 @@
-# CRUD İŞLEMLERİ
+## CRUD İŞLEMLERİ
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
 
 Kullanılan bazı kısaltmalar(Örnek değişken değerleri):
 
@@ -16,15 +17,15 @@ Kullanılan bazı kısaltmalar(Örnek değişken değerleri):
 | sutunAdi      | İşlem yaptığımız sütun adı (Column name)              |
 
 
-## Çekme (Select) İşlemi
+### Çekme (Select) İşlemi
 
-### Tek satır çekmek
+#### Tek satır çekmek
 ```php
 $satir = $vt->query('SELECT * FROM tabloAdi WHERE id = 1')->fetch();
 echo $satir['sutunAdi'];
 ```
 
-### Tüm satırları çekmek
+#### Tüm satırları çekmek
 ```php
 $satirlar = $vt->query('SELECT * FROM tabloAdi')->fetchAll();
 foreach($satirlar as $satir) {
@@ -38,7 +39,7 @@ foreach($vt->query('SELECT * FROM tabloAdi')->fetchAll() as $satir) {
 }
 ```
 
-## Ekleme (insert) İşlemi
+### Ekleme (insert) İşlemi
 
 **1. Yöntem :** 
 ```php
@@ -64,7 +65,7 @@ echo ($sonuc==1) ? "Yüklenmiş olması lazım!" : "Yüklenemedi";
 ```
 
 
-## Silme (delete) İşlemi
+### Silme (delete) İşlemi
 ```php
 $sil = $vt->query("DELETE FROM tabloAdi WHERE id=".$_GET['id']."");
 ```

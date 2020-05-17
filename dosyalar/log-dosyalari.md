@@ -1,10 +1,11 @@
-# LİNUX LOG DOSYALARI
+## LİNUX LOG DOSYALARI
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
+
 Linux tek satırlık log girdileri tutar ve böylece okumayı kolaylaştırır. Log dosyalarının nerede tutulduğunu bilmek ve logları okuyabilmek / anlamlandırabilmek sorun çözme sırasında yardımcı olur ve zamandan tasarruf sağlar!
 
-## Sistemdeki log dosyalarını görmek için;
+#### Sistemdeki log dosyalarını görmek için;
 
 ```bash
 ls –l /var/log 

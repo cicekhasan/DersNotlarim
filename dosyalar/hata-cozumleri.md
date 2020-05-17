@@ -1,11 +1,11 @@
-# HATA ÇÖZÜMLERİ
+## HATA ÇÖZÜMLERİ
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
-## LARAVEL
+### LARAVEL
 
-### Laravel Uzun Veri Hatası
+#### Laravel Uzun Veri Hatası
 
 app\Provides\AppServiceProvider.php dosyasının içerisine;
 
@@ -16,7 +16,7 @@ public function boot()
 }
 ```
 
-### 404|Not Found Hatası
+#### 404|Not Found Hatası
 
 Key oluştur. 
 
@@ -24,14 +24,14 @@ Key oluştur.
 php artisan key:generate
 ```
 
-### Laravel Takılırsa.
+#### Laravel Takılırsa.
 
 ```bash
 ps -ef | grep php
 kill 1453
 ```
 
-### Bash Hatası
+#### Bash Hatası
 
 E: Could not get lock /var/lib/dpkg/lock – open (11: Resource temporarily unavailable)
 E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?
@@ -47,7 +47,7 @@ sudo kill id
 sudo killall apt apt
 ```
 
-### Açılışta "Sistem programı sorunu saptandı." Hatası. 
+#### Açılışta "Sistem programı sorunu saptandı." Hatası. 
 
 Aşağıdaki kodu çalıştırarak, raporları inceleyip bahsi geçen sorunları takip et.
 ```bash

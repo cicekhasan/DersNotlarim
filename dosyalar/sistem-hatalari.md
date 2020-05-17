@@ -1,6 +1,7 @@
-# KARŞILAŞTIĞIM SİSTEM HATALARI ve ÇÖZÜMLERİ
+## KARŞILAŞTIĞIM SİSTEM HATALARI VE ÇÖZÜMLERİ
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
 
 ## `apt-get check` failed Hatası
 

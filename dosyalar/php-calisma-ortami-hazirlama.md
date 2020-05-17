@@ -1,6 +1,7 @@
-# LAMP KURULUMU
+## LAMP KURULUMU
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
 
 #### Apache Kurulumu
 ```bash

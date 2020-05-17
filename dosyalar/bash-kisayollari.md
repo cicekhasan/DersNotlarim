@@ -1,5 +1,8 @@
 ## BASH KISAYOLLARI
 
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
+
 #### İmleç Hareketleri
 
 | . | Kısayol | Açıklama |

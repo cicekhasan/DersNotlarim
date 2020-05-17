@@ -1,33 +1,34 @@
-# PAKET İŞLEMLERİ
+## PAKET İŞLEMLERİ
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
-## Kurulu paketleri listeleme
+
+#### Kurulu paketleri listeleme
 
 ```bash
 dpkg -l
 ```
 
-## Kurulu paketlerde arama
+#### Kurulu paketlerde arama
 
 ```bash
 dpkg -l | grep paketAdi
 ```
 
-## Paket Kurma
+#### Paket Kurma
 
 ```bash
 sudo apt install paketAdi -y
 ```
 
-## Paket Kaldırma
+#### Paket Kaldırma
 
 ```bash
 # Ek pakaetleri ile beraber kaldırır
 sudo apt --purge remove paketAdi
 ```
 
-## Yüklemeden Önce Paket Hakkında Bilgi Alma
+#### Yüklemeden Önce Paket Hakkında Bilgi Alma
 
 ```bash
 apt show paketAdi
@@ -35,15 +36,15 @@ apt show paketAdi
 apt-cache show paketAdi
 ```
 
-# YARARLI PAKETLER
+### YARARLI PAKETLER
 
-## Java Paketi
+#### Java Paketi
 
 ```bash
 sudo apt install openjdk-8-jre -y
 ```
 
-## Tünellenmiş Ağ (VPN)
+#### Tünellenmiş Ağ (VPN)
 
 **openvpn**: Sanal özel ağ teknolojisi, bilgisayarınızı tünellenmiş ağ üzerinden başka bir ağın parçası haline getiren bir servistir. 
 

@@ -1,4 +1,4 @@
-# TERMİNALDEN METİN İŞLEME
+## TERMİNALDEN METİN İŞLEME
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
