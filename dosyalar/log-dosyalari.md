@@ -5,10 +5,12 @@
 
 Linux tek satırlık log girdileri tutar ve böylece okumayı kolaylaştırır. Log dosyalarının nerede tutulduğunu bilmek ve logları okuyabilmek / anlamlandırabilmek sorun çözme sırasında yardımcı olur ve zamandan tasarruf sağlar!
 
+Sistemde meydana gelen hatalar, sorunlar, işlemler, değişiklikler ve neredeyse her şey kayıt altına alınarak saklanır. Bu kayıt altına alınan bilgilere log deniyor. Neden log(kayıt) tutulmak zorunda diye soracak olursanız; kısaca sistemin olumsuz bir durumla karşılaşması halinde sorunun yaşanma nedeninin belirlenmesi, sistem güvenliğini sağlama, gerektiğinde veri kurtarma ve adli bilişim gibi alanlarda başvurmamız gereken yegane kaynaklardır log dosyaları. Anlayacağınız log(kayıt) dosyaları sistem bütünü için çok önemli yer tutmaktadır.
+
 #### Sistemdeki log dosyalarını görmek için;
 
 ```bash
-ls –l /var/log 
+ls -l /var/log 
 ```
 
 | Dosya Adı | Tuttuğu Log |
@@ -48,3 +50,13 @@ less auth.log
 # Dosya içeriğine bakma (Yüzdeli)
 more auth.log
 ```
+
+#### ```dmesg``` Komutu
+
+Sistem açılışından itibaren çekirdek tarafından üretilen tüm iletiler ve kernel hakkındaki kayıtlar /proc/kmsg dizininde tutuluyor. Ancak biz bütün kernel kayıtları yerine, sistem açılışında yazan açılış notlarını ```dmesg``` komutu ile görüntüleyebiliriz. Yani ```dmesg``` komutu sadece tampondaki son iletileri gösterir. Bu komutun kullanımına genelde sistem açılışında bildirilen problemlerin tespiti ve diğer sistem uyarılarını saptamak için başvurulur.
+
+Elbetteki çıktı çok daha uzun ancak ben örnek olması açısından çıktıları kısaca verdim. Eğer siz bu çıktıları filtrelemek isterseniz ```grep``` komutunu kullanarak ilgili çıktılara rahatlıkla ulaşabileceğinizi biliyorsunuz. Örneğin yalnızca hataları görüntülemek istersek konsola ```dmesg | grep "fail"``` şeklinde yazdığımızda, konsol bize yalnızca sistem açılışında belirtilen hataları basacaktır.
+
+#### ```last``` Komutu
+
+Komutumuzun isminden de az çok anlaşılacağı gibi; en son oturum açan kullanıcıları listelemek için ```last``` komutunu kullanabiliriz.
