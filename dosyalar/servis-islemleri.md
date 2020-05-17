@@ -3,40 +3,27 @@
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
-## Servisi başlatma durdurma
+#### Servislerin Durumuna Bakmak
 
 ```bash
-# Başlatma
-systemctl start servisAdi
-# Durdurma
-systemctl stop servisAdi
-```
-
-## Servis Restart Etmek
-
-```bash
-systemctl restart servisAdi
-# Ya da
-systemctl reload servisAdi
-```
-
-## Servislerin sistem açılışlarında otomatik olarak start edilmesi
-
-```bash
+# Servisin durumuna bakmak...
+service servisAdi status
+# Servisi başlatma...
+service servisAdi start
+# Servisi durdurma...
+service servisAdi stop
+# Servisi yeniden başlatmak...
+service servisAdi restart
+# Servisi açılışta başlatılması...
 systemctl enable servisAdi
-```
-
-## Servislerin sistem açılışlarında kaldırmak. Servis devredışı kalır.
-
-```bash
+# Servisi açılıştan kaldırma...
 systemctl disable servisAdi
-```
-
-## Servisin çalıştırılmasını engellemek/engeli kaldırmak
-
-```bash
-# Engellemek
+# Servisin çalıştırılmasını engellemek...
 systemctl mask servisAdi
-# Engeli kaldırmak
+# Çalıştrıma engelini kaldırmak...
 systemctl unmask servisAdi
+# Tüm servisleri listeleme...
+service --status-all
 ```
+
+Çıktıdaki servislerin sol tarafında yer alan [ — ] işareti servisin çalışmadığını, [ + ] işareti servisin çalıştığını ve [ ? ] işareti ise servisin durumunun belirsiz olduğunu ifade ediyor.
