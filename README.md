@@ -3,8 +3,8 @@
 Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuştur...
 
 - Linux
-	- Genel
-		- [Ubuntu Kurulum Sonrası Yapılacaklar](dosyalar/kurulum-sonrasi-islemler.md)
+	- [ ] Genel
+		- [X] [Ubuntu Kurulum Sonrası Yapılacaklar](dosyalar/kurulum-sonrasi-islemler.md)
 		- [Lamp Yeniden Kurulum Temizliği](dosyalar/lamp-temizlik.md)
 		- [Sık kullanılan Komutlar](dosyalar/kullanilan-komutlar.md)
 		- [Linux Dosya Yapısı](dosyalar/dosya-yapisi.md)
