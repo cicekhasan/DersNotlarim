@@ -47,8 +47,6 @@ Yalnız, matematiksel operatörleri kullanırken işlem sırasına(önceliğine)
 *Önemli Not: Eğer aynı önceliğe sahip işlemler varsa (Örneğin bir işlemde hem çarpma hem de bölme varsa) işlemler soldan sağa doğru yapılır.*
 
 
-[Sihirli Karakterler](sihirli_karakterler.md) :arrow_left: [ANASAYFA](../../../) :arrow_right: [Atama Operatörleri](atama.md)
-
 #### Atama Operatörleri
 
 | Operatör | Açıklama |
@@ -63,7 +61,6 @@ Yalnız, matematiksel operatörleri kullanırken işlem sırasına(önceliğine)
 | \.= | Birleştirerek değer atama operatörü.|
 
 
-[Aritmatik Operatörler](Ubuntu-Php/blob/master/notlar/aritmatik.md) :arrow_left: [ANASAYFA](Ubuntu-Php) :arrow_right: [Artırma ve Azaltma Operatörleri](Ubuntu-Php/blob/master/notlar/artirma_azaltma.md)
 
 #### Artırma ve Azaltma Operatörleri
 
@@ -75,7 +72,6 @@ Yalnız, matematiksel operatörleri kullanırken işlem sırasına(önceliğine)
 | \--$a | Azaltma operatörü. |
 
 
-[Atama Operatörleri](Ubuntu-Php/blob/master/notlar/atama.md) :arrow_left: [ANASAYFA](Ubuntu-Php) :arrow_right: [Karşılaştırma Operatörleri](Ubuntu-Php/blob/master/notlar/karsilastirma.md)
 
 #### Karşılaştırma Operatörleri
 
