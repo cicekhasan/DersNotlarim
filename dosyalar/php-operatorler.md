@@ -37,7 +37,7 @@ Matematik işlemleri için kullanılırlar. Aşağıdaki tabloda operatörler g�
 
 Yalnız, matematiksel operatörleri kullanırken işlem sırasına(önceliğine) dikkat etmek gerekmektedir.
 
-**İşlem Önceliği**
+###### İşlem Önceliği
 
 - Üs alma işlemleri
 - Parantez içindeki işlemler
