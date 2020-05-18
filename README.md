@@ -54,6 +54,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 	- [ ] Genel
 		- [X] [Editörler (IDM)](dosyalar/editorler.md)
 		- [X] [Php Çalışma Ortamı Hazırlama (LAMP)](dosyalar/php-calisma-ortami-hazirlama.md)
+		- [X] [Diziler](dosyalar/php-diziler.md)
 		- [X] [Operatörler](dosyalar/php-operatorler.md)
 		- [X] [Fonksiyonlar](dosyalar/fonksiyonlar.md)
 		- [X] [İp Uçları](dosyalar/ip-uclari.md)
