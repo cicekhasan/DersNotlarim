@@ -78,7 +78,7 @@ Yalnız, matematiksel operatörleri kullanırken işlem sırasına(önceliğine)
 | Operatör | Açıklama |
 |----|----|
 | \== | Eşittir. |
-| === | Aynıdır, Denkse. |
+| === | Türleri de eşittir. |
 | \!= | Eşit değildir. |
 | \<> | Eşit değildir. |
 | \!== | Farklıdır. |
