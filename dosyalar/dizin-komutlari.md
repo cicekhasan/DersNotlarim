@@ -47,7 +47,11 @@ Dosyanın değiştirilme tarihine göre sıralar.
 
 Konsola basılan çıktıyı ters çevirerek basar.
 
-11. ```mkdir``` Komutu
+11. ```ls -R``` Komutu
+
+Ağaç şeklinde gösterir.
+
+12. ```mkdir``` Komutu
 
 Dizin oluşturur.
 
