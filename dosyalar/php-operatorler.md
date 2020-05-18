@@ -81,7 +81,7 @@ Yalnız, matematiksel operatörleri kullanırken işlem sırasına(önceliğine)
 | === | Türleri de eşittir. |
 | \!= | Eşit değildir. |
 | \<> | Eşit değildir. |
-| \!== | Farklıdır. |
+| \!== | Farklıdır, türünüde kontrol eder.. |
 | \< | Küçüktür. |
 | \> | Büyüktür. |
 | \<= | Küçük yada eşittir. |
