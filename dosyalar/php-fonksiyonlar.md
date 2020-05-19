@@ -1,4 +1,4 @@
-## FONKSİYONLAR
+## PHP FONKSİYONLAR
 
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
