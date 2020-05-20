@@ -1,5 +1,8 @@
 ## PHP DOSYA İŞLEMLERİ
 
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
+
 #### Dosya Yetkilerini Ayarlamak
 
 ```php

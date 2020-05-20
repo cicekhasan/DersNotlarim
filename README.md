@@ -58,6 +58,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [X] [Operatörler](dosyalar/php-operatorler.md)
 		- [X] [Fonksiyonlar](dosyalar/php-fonksiyonlar.md)
 		- [X] [Dosya İşlemleri](dosyalar/php-dosya-islemleri.md)
+		- [X] [Oturum İşlemleri](dosyalar/php-oturum-islemleri.md)
 		- [X] [İp Uçları](dosyalar/ip-uclari.md)
 		- [X] [Laravel Notlari](dosyalar/laravel-notlari.md)
 		- [X] [MySql](dosyalar/php-mysql.md)
