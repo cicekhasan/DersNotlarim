@@ -33,6 +33,27 @@ $dosyalar = array_filter(scandir(.), 'is_dir');
 print_r($dosyalar);
 ```
 
+Örnek Fonksiyon; Dosyaları ağaç şeklinde listeliyelim.
+
+```php
+function dosyaListele($dizinAdi){
+  $dosyalar = scandir($dizinAdi);
+  echo '<ul>';
+  foreach ($dosyalar as $dosya) {
+    if (!in_array($dosya, ['.','..'])) {
+      echo '<li>'.$dosya;
+      if (is_dir($dizinAdi.'/'.$dosya)) {
+        dosyaListele($dizinAdi.'/'.$dosya);
+      }
+      echo '</li>';
+    }
+  }
+  echo '</ul>';
+}
+
+dosyaListele('.');
+```
+
 ###### ```glob``` Komutu
 
 ```php
@@ -57,4 +78,34 @@ print_r($dosyalar);
 # Hem dizinleri, hem de php dosyalarını listeler...
 $dosyalar = glob('*{/,php}', GLOB_BRACE);
 print_r($dosyalar);
+```
+
+Örnek Fonksiyon; Dosyaları ağaç şeklinde listeliyelim.
+
+```php
+function listele($dizinAdi){
+  $dosyalar = scandir($dizinAdi);
+  echo '<ul>';
+    $dosyalar = glob($dizinAdi);
+    foreach ($dosyalar as $dosya) {
+      echo '<li>'.$dosya;
+      if (is_dir($dosya)) {
+        listele($dosya.'/*');
+      }
+      echo '</li>';
+    }
+  echo '</ul>';
+}
+
+listele('*');
+```
+
+#### Dosyaları Yeniden Adlandırmak
+ Aynı komut kullanımları dizinler için de geçerlidir!
+```php
+rename('oncekiYol', 'sonrakiYol');
+# setting.php dosyasının adını ayarlar.php yapıyoruz...
+rename('setting.php', 'ayarlar.php');
+# ayarlar.php dosyasını yonetim dizinine taşıyalım...
+rename('ayarlar.php', 'yonetim/ayarlar.php');
 ```
