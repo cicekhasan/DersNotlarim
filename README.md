@@ -64,6 +64,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [X] [MySql](dosyalar/php-mysql.md)
 		- [X] [Hata Çözümleri](dosyalar/php-hata-cozumleri.md)
 	- [ ] Örnek Kodlar
+		- [X] [Giriş Örneği](dosyalar/php-giris-ornegi.md)
 		- [X] [CRUD İşlemleri](dosyalar/crud-islemleri.md)
 		- [X] [Veritabanı Bağlantısı](dosyalar/veri-tabani-baglantisi.md)
 - [ ] PDO
