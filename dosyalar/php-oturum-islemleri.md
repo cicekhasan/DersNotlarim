@@ -13,6 +13,8 @@ $_SESSION['kullaniciAdi'] = "Hasan Çiçek";
 echo $_SESSION['kullaniciAdi'];
 # Sonlandırma...
 session_destroy();
+# Bir tane oturum kaldırmak...
+unset($_SESSION['kullaniciAdi']);
 ```
 
 
