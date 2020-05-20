@@ -63,7 +63,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [X] [Laravel Notlari](dosyalar/laravel-notlari.md)
 		- [X] [MySql](dosyalar/php-mysql.md)
 		- [X] [Hata Çözümleri](dosyalar/php-hata-cozumleri.md)
-	- [ ] Genel Kodlar
+	- [ ] Örnek Kodlar
 		- [X] [CRUD İşlemleri](dosyalar/crud-islemleri.md)
 		- [X] [Veritabanı Bağlantısı](dosyalar/veri-tabani-baglantisi.md)
 - [ ] PDO
