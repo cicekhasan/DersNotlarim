@@ -1,0 +1,60 @@
+## PHP DOSYA İŞLEMLERİ
+
+#### Dosya Yetkilerini Ayarlamak
+
+```php
+# Php ile dosyaya izin vermek
+chmod('dosyaAdi.php', 0777);
+```
+
+1. numara mutlaka 0 ile başlar,
+2. numara dosya sahibinin izni,
+3. numara kullanıcı gruplarının izni,
+4. numara da geri kalan herkesin iznini temsil eder.
+
+1 = execute (işlem) izni,
+2 = yazma izni,
+4 = okuma izni.
+
+0777 = 0(1+2+4)(1+2+4)(1+2+4)
+
+#### Dosyaları Listelemek
+
+###### ```scandir``` Komutu
+
+```scandir``` komutu ```glob``` komutundan hariç . ve .. gibi kendi oluşturduğu dosyalarıda listeler.
+
+```php
+# Çalıştığı dizindeki dizinleri ve dosyaları listelemek...
+$dosyalar = scandir(.);
+print_r($dosyalar);
+# Çalıştığı dizindeki sadece dizinleri listelemek...
+$dosyalar = array_filter(scandir(.), 'is_dir');
+print_r($dosyalar);
+```
+
+###### ```glob``` Komutu
+
+```php
+# Çalıştığı dizindeki dizinleri ve dosyaları listelemek...
+$dosyalar = glob('*');
+print_r($dosyalar);
+# Çalıştığı dizindeki sadece dizinleri listelemek 1...
+$dosyalar = glob('*/');
+print_r($dosyalar);
+# Çalıştığı dizindeki sadece dizinleri listelemek 2...
+$dosyalar = glob('*', GLOB_ONLYDIR);
+print_r($dosyalar);
+# Çalıştığı dizindeki dosyaları listelemek...
+# Sadece php dosyalarını listeler...
+$dosyalar = glob('*.php');
+print_r($dosyalar);
+# Çalıştığı dizindeki birden fazla dosya cinsini listelemek...
+# php ve txt dosyalarını listeler...
+$dosyalar = glob('*.{php,txt}', GLOB_BRACE);
+print_r($dosyalar);
+# Çalıştığı dizindeki hem dizin hem istediğimiz dosya cinsini listelemek...
+# Hem dizinleri, hem de php dosyalarını listeler...
+$dosyalar = glob('*{/,php}', GLOB_BRACE);
+print_r($dosyalar);
+```
