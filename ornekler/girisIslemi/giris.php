@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
   }elseif ($parola != $uye['parola']) {        
     $hata = 'Parolanız Yanlış!';
   }else{
-    $_SESSION['zaman'] = time() + 10;
+    $_SESSION['zaman'] = time() + 86400;
     $_SESSION['kullaniciAdi'] = $uye['kullaniciAdi'];
     header('Location: index.php');
   }

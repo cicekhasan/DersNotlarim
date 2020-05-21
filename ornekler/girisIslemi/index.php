@@ -8,7 +8,7 @@ if (isset($_SESSION['zaman']) && time() > $_SESSION['zaman']) {
   session_destroy();
   header('Location: oturumSonlandi.php');
 }else{    
-  $_SESSION['zaman'] = time() + 10;
+  $_SESSION['zaman'] = time() + 86400;
 }
 ?>
 <!DOCTYPE html>

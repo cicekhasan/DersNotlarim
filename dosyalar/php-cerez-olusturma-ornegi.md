@@ -18,3 +18,14 @@ setcookie('siteAdi', 'aysubey', time() - 10);
 # Görmek için...
 print_r($_COOKIE);
 ```
+
+Çerezleri Dizi Şeklinde Oluşturma:
+
+```php
+setcookie('uye[id]', 1, time() + 86400);
+setcookie('uye[KullaniciAdi]', 'hasancicek', time() + 86400);
+setcookie('uye[parola]', '123', time() + 86400);
+setcookie('uye[tamAdi]', 'Hasan Çiçek', time() + 86400);
+setcookie('uye[ePosta]', 'hasan.cicek@yandex.com.tr', time() + 86400);
+setcookie('uye[yetki]', 1, time() + 86400);
+```
