@@ -66,6 +66,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [X] [Hata Çözümleri](dosyalar/php-hata-cozumleri.md)
 	- [ ] Örnek Kodlar
 		- [X] [Giriş Örneği](dosyalar/php-giris-ornegi.md)
+		- [X] [Session Zaman Yönetimi](dosyalar/php-oturumda-zaman-ornegi.md)
 		- [X] [CRUD İşlemleri](dosyalar/crud-islemleri.md)
 		- [X] [Veritabanı Bağlantısı](dosyalar/veri-tabani-baglantisi.md)
 - [ ] PDO
@@ -83,6 +84,9 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 - [ ] Laravel
 		- [X] [Hata Çözümleri](dosyalar/hata-cozumleri.md)
 		- [X] [Sınıf Oluşturma](dosyalar/pdo-sinif-olusturma.md)
+- [ ] Örnek Çalışma Dosyaları
+		- [X] [Giriş İşlemi](ornekler/girisIslemi)
+		- [X] [Oturum Zaman Yönetimi](ornekler/oturumZamanYonetimi)
 
 ## İp Uçları
 

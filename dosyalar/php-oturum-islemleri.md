@@ -18,4 +18,7 @@ session_destroy();
 unset($_SESSION['kullaniciAdi']);
 ```
 
+- Oturuma örnek; [Giriş Örneği](dosyalar/php-giris-ornegi.md) dosyasında verilmiştir...
+- Oturumda zaman yönetimine örnek; [Session Zaman Yönetimi](dosyalar/php-oturumda-zaman-ornegi.md) dosyasında verilmiştir...
+
 
