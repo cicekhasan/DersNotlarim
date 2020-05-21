@@ -82,11 +82,11 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 - [ ] Genel	
 	- [X] [İncelenecek Kodlar](dosyalar/incelenecekler.md)
 - [ ] Laravel
-		- [X] [Hata Çözümleri](dosyalar/hata-cozumleri.md)
-		- [X] [Sınıf Oluşturma](dosyalar/pdo-sinif-olusturma.md)
+	- [X] [Hata Çözümleri](dosyalar/hata-cozumleri.md)
+	- [X] [Sınıf Oluşturma](dosyalar/pdo-sinif-olusturma.md)
 - [ ] Örnek Çalışma Dosyaları
-		- [X] [Giriş İşlemi](ornekler/girisIslemi)
-		- [X] [Oturum Zaman Yönetimi](ornekler/oturumZamanYonetimi)
+	- [X] [Giriş İşlemi](ornekler/girisIslemi)
+	- [X] [Oturum Zaman Yönetimi](ornekler/oturumZamanYonetimi)
 
 ## İp Uçları
 
