@@ -3,6 +3,7 @@
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
+Oturumlar sunucu tarafında oluşturulurlar, çalışılan bilgisayarda oluşturulmazlar!
 Oturum başlatmak istiyorsak mutlaka sayfanın en üstünde ```session_start()``` ile başlatılması gerekmektedir!
 ```php
 # Oturum başlatmak...
