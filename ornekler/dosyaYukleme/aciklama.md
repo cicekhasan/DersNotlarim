@@ -19,3 +19,12 @@ text/x-php
 2. Dosyanın boyutunu kontrol et,
 3. Dosyanın adını oluştur,
 4. Dosyanın kayıt edileceği dosyayı oluştur.
+
+#### ```copy()``` Kullanımı
+
+copy() fonksiyonu ile tek satırda yükleme yapabiliriz.
+
+```php
+# Kontrolsuz tek satırda dosya yükleme...
+copy($_FILES['dosya']['tmp_name'], 'uploads/'.$_FILES['dosya']['name']);
+```
