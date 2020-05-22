@@ -1,3 +1,32 @@
+
+Skip to content
+Pull requests
+Issues
+Marketplace
+Explore
+@cicekhasan
+cicekhasan /
+DersNotlarim
+
+1
+0
+
+    0
+
+Code
+Issues 0
+Pull requests 0
+Actions
+Projects 0
+Wiki
+Security
+Insights
+
+    Settings
+
+DersNotlarim/ornekler/dosyaYukleme/index.php /
+@cicekhasan cicekhasan readme.md güncellendi. 3b824e1 2 hours ago
+43 lines (42 sloc) 948 Bytes
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,3 +70,18 @@
 
 </body>
 </html>
+
+    © 2020 GitHub, Inc.
+    Terms
+    Privacy
+    Security
+    Status
+    Help
+
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+
