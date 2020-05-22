@@ -86,6 +86,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 	- [X] [Sınıf Oluşturma](dosyalar/pdo-sinif-olusturma.md)
 - [ ] Örnek Çalışma Dosyaları
 	- [X] [Giriş İşlemi](ornekler/girisIslemi)
+	- [X] [Dosya Yükleme](ornekler/dosyaYukleme)
 	- [X] [Oturum Zaman Yönetimi](ornekler/oturumZamanYonetimi)
 
 ## İp Uçları
