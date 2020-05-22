@@ -7,10 +7,11 @@
       $gecerliUzantilar = ['image/jpg', 'image/png', 'image/jpeg'];
       $gecerliBoyut     = (1024 * 1024 * 3);
       $uzanti           = $_FILES['dosya']['type'];
-      $uzantiParcala = explode('/', $uzanti);
+      $uzantiParcala    = explode('/', $uzanti);
       $zaman            = explode('-', date('g-m-Y'));
       $saat             = explode(':', date('H:i:s'));
       $vakit            = $zaman[0].$zaman[1].$zaman[2].$saat[0].$saat[1].$saat[2];
+      //$isim             = uniqid(); // Kullanılabilir...
       $isim             = rand(1000, 9999);
       $isim            .= $vakit;
       $isim            .= ".".$uzantiParcala[1];
