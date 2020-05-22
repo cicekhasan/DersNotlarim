@@ -28,11 +28,6 @@
     <button type="submit">Yükle</button>
   </form> <br /><br />
   <?php
-  // mime type öğrenme...
-  // mime_content_type('dosyaAdi.uzantisi');
-  // echo mime_content_type('sonuc.php');
-  // Ekran çıktısı...
-  // text/x-php
   $dosyalar = glob('uploads/*.*');
   foreach ($dosyalar as $dosya) {
     //echo $dosya."<br />";
