@@ -30,7 +30,7 @@
           $sonuc['hata'] = "En fazla 4MB dosya yükleyebilirsiniz!";
         }
       }else{
-        $sonuc['hata'] = "Dosya sadece jpg, jpeg ve png formatında olabilir!";
+        $sonuc['hata'] = "Yüklediğiniz dosya geçerli formatta değildir!";
       }
     }else{
       $sonuc['hata'] = "Dosya yüklenirken bir sorun oluştu!";
