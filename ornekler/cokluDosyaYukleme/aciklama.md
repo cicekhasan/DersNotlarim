@@ -5,6 +5,15 @@
 
 Birden fazla resim yükleme fonksiyonu yapılmıştır. Her şekilde kullanabilirsiniz...
 
+#### Önemli
+
+Mutlaka dosyaların yetkilendirmelerini yapın!
+
+```bash
+# html dizinini www-data grubuna eklemek...
+sudo chown -R $USER:www-data /var/www/html/
+```
+
 #### Kurallar
 
 1. Dosyaların cinsini kontrol et,

@@ -3,6 +3,16 @@
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
+
+#### Önemli
+
+Mutlaka dosyaların yetkilendirmelerini yapın!
+
+```bash
+# html dizinini www-data grubuna eklemek...
+sudo chown -R $USER:www-data /var/www/html/
+```
+
 #### Kurallar
 
 1. Dosyanın cinsini kontrol et,
