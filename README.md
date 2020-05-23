@@ -88,6 +88,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 	- [X] [Giriş İşlemi](ornekler/girisIslemi)
 	- [X] [Dosya Yükleme](ornekler/dosyaYukleme)
 	- [X] [Fonksiyonlu Dosya Yükleme](ornekler/fonksiyonluDosyaYukleme)
+	- [X] [Çoklu Dosya Yükleme](ornekler/cokluDosyaYukleme)
 	- [X] [Oturum Zaman Yönetimi](ornekler/oturumZamanYonetimi)
 
 ## İp Uçları
