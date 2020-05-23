@@ -3,9 +3,11 @@
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
+Birden fazla resim yükleme fonksiyonu yapılmıştır. Her şekilde kullanabilirsiniz...
+
 #### Kurallar
 
-1. Dosyanın cinsini kontrol et,
+1. Dosyaların cinsini kontrol et,
   - [Mime Type](http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types)
 
 ```php
@@ -16,9 +18,9 @@ echo mime_content_type('sonuc.php');
 text/x-php
 ```
 
-2. Dosyanın boyutunu kontrol et,
-3. Dosyanın adını oluştur,
-4. Dosyanın kayıt edileceği dosyayı oluştur.
+2. Dosyaların boyutunu kontrol et,
+3. Dosyaların adını oluştur,
+4. Dosyaların kayıt edileceği dosyayı oluştur.
 
 #### ```copy()``` Kullanımı
 
@@ -27,4 +29,23 @@ copy() fonksiyonu ile tek satırda yükleme yapabiliriz.
 ```php
 # Kontrolsuz tek satırda dosya yükleme...
 copy($_FILES['dosya']['tmp_name'], 'uploads/'.$_FILES['dosya']['name']);
+```
+
+```php
+# Kullanım....
+$sonuc = cokluDosyaYukle($_FILES['dosya']);
+
+# Ekrana hataları bastırmak için...
+if (isset($sonuc['dosya'])) {
+  print_r($sonuc['dosya']);
+  if (isset($sonuc['hata'])) {
+    print_r($sonuc['hata']);
+  }
+}elseif (isset($sonuc['hata'])) {
+  if (is_array($sonuc['hata'])) {
+    echo implode('<br />', $sonuc['hata']);
+  }else{
+    echo $sonuc['hata'];
+  }
+}
 ```
