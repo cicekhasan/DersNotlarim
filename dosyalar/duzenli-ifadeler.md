@@ -3,6 +3,11 @@
 - [Önsöz](https://github.com/cicekhasan/DersNotlarim)
 
 
+Düzenli ifadeleri deneme siteleri:
+
+- [regex101.com](https://regex101.com/)
+- [www.phpliveregex.com](https://www.phpliveregex.com/)
+
 | DESEN     | AÇIKLAMA                                                                                                                      |
 | ---       | ---                                                                                                                           |
 | [abc]+    | a,b ya da c harfleri ile eşleştir.                                                                                            |
