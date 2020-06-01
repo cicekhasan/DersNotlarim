@@ -63,3 +63,13 @@ if ($sonuc) {
   echo "E-Posta geçerli değildir!";
 }
 ```
+
+Açıklaması:
+
+1. Baştaki ve sondaki ```/``` karakteri sınırlayıcı karakterdir,
+2. Sadece ```^\w+``` sayı,harf ve alt çizgi( _ ) karakterleri ile başlar ve kullanılabilir,
+3. @ ,şareti olacak,
+4. ```[a-z]+``` en az bir, sadece harf olacak,
+5. ``` . ``` olacak,
+6. ```[a-z]{2,}``` en az 2, sadece harf olacak,
+7. (.tr kısmı!) ```(.[a-z]{2}|)$``` en az 2, harf olacak. Nokta ile başlayacak. Burası olada bilir, olmayabilir de!
