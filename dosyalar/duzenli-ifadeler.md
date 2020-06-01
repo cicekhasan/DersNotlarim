@@ -8,6 +8,8 @@ Düzenli ifadeleri deneme siteleri:
 - [regex101.com](https://regex101.com/)
 - [www.phpliveregex.com](https://www.phpliveregex.com/)
 
+#### DÜZENLİ İFADE KURALLARI
+
 | DESEN     | AÇIKLAMA                                                                                                                      |
 | ---       | ---                                                                                                                           |
 | [abc]+    | a,b ya da c harfleri ile eşleştir.                                                                                            |
@@ -34,11 +36,15 @@ Düzenli ifadeleri deneme siteleri:
 | a$        | İfade a ile biterse eşleşir.                                                                                                  |
 | n\b       | n ile biten her kelime ile eşleşir.                                                                                           |
 | n\B       | n ile bitmeyen fakat içerisinde n geçen kelimelerle eşleşir.                                                                  |
-| --------- | ----------------------------------------------------------------                                                              |
-| +         | Dahil                                                                                                                         |
-| ^         | Hariç                                                                                                                         |
-| ^         | Başlangıç karakteri                                                                                                           |
-| $         | Son karakter                                                                                                                  |
-| /g        | İlk eşleşmeden sonra eşleşmeyi devam ettirir.                                                                                 |
-| /i        | Büyük küçük harf duyarlılığını kaldırır.                                                                                      |
-| /s        | Çoklu satırlarda filtreleme yapmak için kullanılır.                                                                           |
+
+#### MODİFİER
+
+| Niteleyici | Açıklama                                                                                                                      |
+| ---        | ---                                                                                                                           |
+| +          | Dahil                                                                                                                         |
+| ^          | Hariç                                                                                                                         |
+| ^          | Başlangıç karakteri                                                                                                           |
+| $          | Son karakter                                                                                                                  |
+| /g         | İlk eşleşmeden sonra eşleşmeyi devam ettirir.                                                                                 |
+| /i         | Büyük küçük harf duyarlılığını kaldırır.                                                                                      |
+| /s         | Çoklu satırlarda filtreleme yapmak için kullanılır.                                                                           |
