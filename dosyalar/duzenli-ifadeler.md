@@ -53,6 +53,7 @@ Düzenli ifadeleri deneme siteleri:
 Örnek: E-posta geçerli bir e-posta mı?
 
 ```php
+<?php
 $ePosta = 'hasancicek@yandex.com.tr';
 $desen  = '/^\w+@[a-z]+\.[a-z]{2,}(.[a-z]{2}|)$/';
 $sonuc  = preg_match($desen, $ePosta);
@@ -62,6 +63,7 @@ if ($sonuc) {
 }else{
   echo "E-Posta geçerli değildir!";
 }
+?>
 ```
 
 Açıklaması:
