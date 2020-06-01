@@ -12,6 +12,10 @@ Düzenli ifadeleri deneme siteleri:
 
 | DESEN     | AÇIKLAMA                                                                                                                      |
 | ---       | ---                                                                                                                           |
+| +         | Dahil                                                                                                                         |
+| ^         | Hariç                                                                                                                         |
+| ^         | Başlangıç karakteri                                                                                                           |
+| $         | Son karakter                                                                                                                  |
 | [abc]+    | a,b ya da c harfleri ile eşleştir.                                                                                            |
 | [^abc]+   | a,b ya da c harfleri hariç diğer karekterlerle eşleştir.                                                                      |
 | [a-z]+    | a'dan z'ye kadar harfler ile eşleştir. a-z ifadesinde türkçe karakterleri de istersek a-zçişöüğÖÜ şeklinde eklememiz gerekir. |
@@ -41,10 +45,6 @@ Düzenli ifadeleri deneme siteleri:
 
 | Niteleyici | Açıklama                                                                                                                      |
 | ---        | ---                                                                                                                           |
-| +          | Dahil                                                                                                                         |
-| ^          | Hariç                                                                                                                         |
-| ^          | Başlangıç karakteri                                                                                                           |
-| $          | Son karakter                                                                                                                  |
 | /g         | İlk eşleşmeden sonra eşleşmeyi devam ettirir.                                                                                 |
 | /i         | Büyük küçük harf duyarlılığını kaldırır.                                                                                      |
 | /s         | Çoklu satırlarda filtreleme yapmak için kullanılır.                                                                           |
