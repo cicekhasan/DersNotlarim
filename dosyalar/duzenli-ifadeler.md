@@ -48,3 +48,18 @@ Düzenli ifadeleri deneme siteleri:
 | /g         | İlk eşleşmeden sonra eşleşmeyi devam ettirir.                                                                                 |
 | /i         | Büyük küçük harf duyarlılığını kaldırır.                                                                                      |
 | /s         | Çoklu satırlarda filtreleme yapmak için kullanılır.                                                                           |
+
+
+Örnek: E-posta geçerli bir e-posta mı?
+
+```php
+$ePosta = 'hasancicek@yandex.com.tr';
+$desen  = '/^\w+@[a-z]+\.[a-z]{2,}(.[a-z]{2}|)$/';
+$sonuc  = preg_match($desen, $ePosta);
+
+if ($sonuc) {
+  echo "E-Posta geçerlidir...";
+}else{
+  echo "E-Posta geçerli değildir!";
+}
+```
