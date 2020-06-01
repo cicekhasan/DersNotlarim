@@ -2,6 +2,9 @@
 
 Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuştur...
 
+- [ ] Genel	
+	- [X] [Düzenli İfadeler (REGEX)](dosyalar/duzenli-ifadeler.md)
+	- [X] [İncelenecek Kodlar](dosyalar/incelenecekler.md)
 - [ ] Linux
 	- [ ] Genel
 		- [X] [Ubuntu Kurulum Sonrası Yapılacaklar](dosyalar/kurulum-sonrasi-islemler.md)
@@ -79,8 +82,6 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [X] [Kütüphane Sayfalarını Oluşturma](dosyalar/pdo-sayfalar.md)
 		- [X] [Sınıf Oluşturma](dosyalar/pdo-sinif-olusturma.md)
 		- [X] [Değişken Tanımlama](dosyalar/pdo-degisken-tanimlama.md)
-- [ ] Genel	
-	- [X] [İncelenecek Kodlar](dosyalar/incelenecekler.md)
 - [ ] Laravel
 	- [X] [Hata Çözümleri](dosyalar/hata-cozumleri.md)
 	- [X] [Sınıf Oluşturma](dosyalar/pdo-sinif-olusturma.md)
