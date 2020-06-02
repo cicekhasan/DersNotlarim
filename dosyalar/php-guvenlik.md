@@ -32,7 +32,8 @@ cookie yoluyla bilgileri sağlama almak için farklı bir yol olarak da; cookie 
 
 ```php
 # php.net orjinal setcookie kullanımı...
-setcookie ( string $name [, string $value = "" [, int $expires = 0 [, string $path = "" [, string $domain = "" [, bool $secure = FALSE [, bool $httponly = FALSE ]]]]]] );
+setcookie ( string $name [, string $value = "" [, int $expires = 0 [, string $path = "" [, string $domain = "" [,
+ bool $secure = FALSE [, bool $httponly = FALSE ]]]]]] );
 # Sondaki parametre ile "httpOnly Cookie"'yi devreye alıyoruz!
 setcookie('parola', 'hasancicek', strtotime('+1 day'), '/', null, null, true);
 ```
