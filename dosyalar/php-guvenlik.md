@@ -31,6 +31,8 @@ Filtreyi gösterirken kaldırmak için ```htmlspecialchars_decode();``` kullanab
 cookie yoluyla bilgileri sağlama almak için farklı bir yol olarak da; cookie oluştururken ```httpOnly Cookie``` parametresini true yaparsak güvenliği(XSS) sağlamış oluruz! HttpOnly Cookie'yi devreye aldığımızda java script codu olan "document.cookie" ile o verinin görülmesini engellemiş oluruz, bilgiler sadece server tarafında görülebilir olur!!!
 
 ```php
+# php.net orjinal setcookie kullanımı...
+setcookie ( string $name [, string $value = "" [, int $expires = 0 [, string $path = "" [, string $domain = "" [, bool $secure = FALSE [, bool $httponly = FALSE ]]]]]] );
 # Sondaki parametre ile "httpOnly Cookie"'yi devreye alıyoruz!
 setcookie('parola', 'hasancicek', strtotime('+1 day'), '/', null, null, true);
 ```
