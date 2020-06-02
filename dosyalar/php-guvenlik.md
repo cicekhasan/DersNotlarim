@@ -35,7 +35,9 @@ Bu fonksiyonları kullanmadan da, kayıt olurken kullanıcının girdiği parola
 ```php
 <?php
 
-$string = array("A","a","0","B","b","C","c","D","1","d","E","e","F","3","f","G","g","H","h","4","J","j","K","k","L","l","M","m","N","n","O","6","o","P","p","5","R","r","S","s","T","7","t","U","u","V","v","8","Y","y","Z","9","z","W","w","Q","q","2");
+$string = array("A","a","0","B","b","C","c","D","1","d","E","e","F","3","f","G","g",
+    "H","h","4","J","j","K","k","L","l","M","m","N","n","O","6","o","P","p","5","R",
+    "r","S","s","T","7","t","U","u","V","v","8","Y","y","Z","9","z","W","w","Q","q","2");
 
 $test = array_rand($string, 8);
 
