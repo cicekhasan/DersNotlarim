@@ -72,3 +72,80 @@ echo "Gizli Parola: ".$parola;
 Örnekte "hasancicek" olan asıl parolanın başına ve sonuna karışık dört karakter koydup md5 ile şifreledik. Bu şekilde kullanıcının asıl parolasını gislemiş olduk. Yalnız, parola kayıt sırasında başına ve sonuna koyduğumuz bu karakterleri de veritabanına kayıt etmemiz gerekir. Neden kullanıcı giriş yaparken de aynı karakterleri ekleyelim ki giriş başarılı olsun. Bir fikir siz dahafarklı yollar deneyebilirsiniz. Örneğin sadece başına bir iki karakter eklemeniz bile yeterli olabilir. Ya da kayıt sırasındabaşına elektronik postasını ekledikden sonra hasleyebilirsiniz. giriş sırasında da zaten elektronik postasını kayıt ettiğiniz için giriş işlemini düzgünce gerçekleştirebilirsiniz. Mesela...
 
 5. Formlardan değer alırken kontrol edin. Token kullanın! Token oluşturmak için ```uniqid();``` ve ya ```bintohex(random_bytes())```; gibi rastgele değerler oluşturan fonksiyon çıktılarının olup olmadığını kontrol ederek kullanabilirsiniz. Formdan gizli gönderdiğimiz rastgele değeri cookie ye alıyoruz. Daha sonra formdan gelen ```$_POST['token']``` varmı ve cookie'de post dan gelen ile token değeri eşit mi kontrol edilerek güvenlik sağlanır. Püf noktası token değerini oturum olarak alıyorsanız. Kontrol kodlarını oturumdan önce yazmanız gerekir. Sonra yazarsanız her yenilemede token değeri değişeceği için eşleşmez hata alırsınız!
+
+```php
+# Kodları denemek için,
+# test adında bir veritabanı oluşturun,
+# id[int, primery] ve hakkinda[text] sütunları ekleyin yeter.
+# Örnek db.php sayfası;
+<?php
+session_start();
+$db = new PDO('mysql:host=localhost;dbname=test', 'root', 'root');
+
+if ($SERVER['REQUEST_METHOD'] == 'POST') {
+  if (!isset($_POST['token']) || $_POST['token'] != $_SESSION['token']) {
+    die('Geçersiz CSRF Token!');
+  }
+}
+# Altta olacak!
+$_SESSION['token'] = uniqid();
+?>
+
+# Örnek index.php sayfası;
+<?php
+require 'db.php';
+$id = 1;
+$sorgu = $db->prepare('SELECT * FROM uyeler WHERE id = ?');
+$sorgu->execute([$id]);
+$uye = $sorgu->fetch(PDO::FETCH_ASSOC);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  <form action="form.php" method="post">
+    Hakkında: <br />
+    <textarea name="hakkinda" cols="30" rows="10"><?php echo $uye['hakkinda']; ?></textarea>
+    <button type="submit">Gönder</button>
+  </form>
+
+</body>
+</html>
+
+
+# Örnek form.php sayfası;
+<?php
+require 'db.php';
+$id = 1;
+$hakkinda = $_POST['hakkinda'];
+$sorgu = $db->prepare('UPDATE uyeler SET hakkinda = ? WHERE id = ?');
+$sorgu->execute([$hakkinda, $id]);
+header('Location:index.php');
+
+# Örnek b.html sayfası;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script>
+    $.ajax({
+      'url'  : 'form.php',
+      'type' : 'POST',
+      'data' : {
+        'hakkinda' : 'Hakkımı yiyene helal olsun...'
+      }
+    });
+  </script>
+</head>
+<body>
+  İncelediğimiz, ne olduğunun farkına varmadığımız içerik sayfası....
+</body>
+</html>
+
+```
