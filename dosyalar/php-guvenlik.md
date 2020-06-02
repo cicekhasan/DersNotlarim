@@ -28,6 +28,13 @@ yazarsak dizinlerin görüntülenmesini engelleyebiliriz. "deny from all" ı her
 ```
 Filtreyi gösterirken kaldırmak için ```htmlspecialchars_decode();``` kullanabilirsiniz. Bu içerik kayıt ve göstermek için gereklidir.
 
+cookie yoluyla bilgileri sağlama almak için farklı bir yol olarak da; cookie oluştururken ```httpOnly Cookie``` parametresini true yaparsak güvenliği(XSS) sağlamış oluruz! HttpOnly Cookie'yi devreye aldığımızda java script codu olan "document.cookie" ile o verinin görülmesini engellemiş oluruz!!!
+
+```php
+# Sondaki parametre ile "httpOnly Cookie"'yi devreye alıyoruz!
+setcookie('parola', 'hasancicek', strtotime('+1 day'), '/', null, null, true);
+```
+
 4. Parolaları şifreleyerek veritabanına kaydedin. En sık kulanılan şifreleme şekli ```md5('$parola');``` şeklindedir. md5 kırılabildiği için, veritabanına kayıt ederken php'nin sunduğu ```password_has();``` fonksiyonunu ve kullanıcı girerken de kontrol etmek için ```password_verify();``` fonksiyonunu kullanarak güvenliği sağlamış olursunuz.
 
 Bu fonksiyonları kullanmadan da, kayıt olurken kullanıcının girdiği parolanın başına ve sonuna çeşitli karakterler ekleyerek de güvenliği kendiniz sağayabilirsiniz. Örneğin;
