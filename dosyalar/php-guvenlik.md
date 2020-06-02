@@ -110,6 +110,7 @@ $uye = $sorgu->fetch(PDO::FETCH_ASSOC);
   <form action="form.php" method="post">
     Hakkında: <br />
     <textarea name="hakkinda" cols="30" rows="10"><?php echo $uye['hakkinda']; ?></textarea>
+    <input type="hidden" name="token" value="<?php echo $_SESSION['token']; ?>">
     <button type="submit">Gönder</button>
   </form>
 
@@ -126,7 +127,7 @@ $sorgu = $db->prepare('UPDATE uyeler SET hakkinda = ? WHERE id = ?');
 $sorgu->execute([$hakkinda, $id]);
 header('Location:index.php');
 
-# Örnek b.html sayfası;
+# Örnek cakal.php sayfası;
 <!DOCTYPE html>
 <html lang="en">
 <head>
