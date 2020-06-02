@@ -28,7 +28,7 @@ yazarsak dizinlerin görüntülenmesini engelleyebiliriz. "deny from all" ı her
 ```
 Filtreyi gösterirken kaldırmak için ```htmlspecialchars_decode();``` kullanabilirsiniz. Bu içerik kayıt ve göstermek için gereklidir.
 
-cookie yoluyla bilgileri sağlama almak için farklı bir yol olarak da; cookie oluştururken ```httpOnly Cookie``` parametresini true yaparsak güvenliği(XSS) sağlamış oluruz! HttpOnly Cookie'yi devreye aldığımızda java script codu olan "document.cookie" ile o verinin görülmesini engellemiş oluruz!!!
+cookie yoluyla bilgileri sağlama almak için farklı bir yol olarak da; cookie oluştururken ```httpOnly Cookie``` parametresini true yaparsak güvenliği(XSS) sağlamış oluruz! HttpOnly Cookie'yi devreye aldığımızda java script codu olan "document.cookie" ile o verinin görülmesini engellemiş oluruz, bilgiler sadece server tarafında görülebilir olur!!!
 
 ```php
 # Sondaki parametre ile "httpOnly Cookie"'yi devreye alıyoruz!
