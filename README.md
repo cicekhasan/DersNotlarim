@@ -61,6 +61,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [X] [Operatörler](dosyalar/php-operatorler.md)
 		- [X] [Fonksiyonlar](dosyalar/php-fonksiyonlar.md)
 		- [X] [İstisnalar](dosyalar/php-istisnalar.md)
+		- [X] [Güvenlik](dosyalar/php-guvenlik.md)
 		- [X] [Dosya İşlemleri](dosyalar/php-dosya-islemleri.md)
 		- [X] [Oturum İşlemleri](dosyalar/php-oturum-islemleri.md)
 		- [X] [Çerez (Cookie) Oluşturma](dosyalar/php-cerez-olusturma.md)

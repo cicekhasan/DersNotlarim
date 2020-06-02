@@ -1,5 +1,8 @@
 ## PHP'DE İSTİSNALAR
 
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
+
 Kullanılan metodlar;
 
     - Try-catch
