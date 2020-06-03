@@ -5,15 +5,15 @@
 
 Curl(Client Url) veri iletimi ve alımını sağlayan bir kütüphanedir. Bir çok dilde kullanılmakla beraber, kullanımında temel prensip aynıdır.
 
-####Neler yapabiliriz?
+##### Neler yapabiliriz?
 
 - Bir web sitesini kullanıcı gibi açıp gezebiliriz,
 - Formlarla veri gönderip dönen değerleri alabiliriz,
 - Header ile üstbilgi gönderip alabiliriz,
 - Cookie ve proxy işlemlerini yapabiliriz,
-- Karşı sunucuya dosya yükleme ve karşı sunucudan dosya indirme işlemlerini yapabiliriz. Bunların hepsi ile hedef sitelere boot yazarak kendi sitemize içerik çekebiliriz.
+- Karşı sunucuya dosya yükleme ve karşı sunucudan dosya indirme işlemlerini yapabiliriz. Bunların hepsi ile hedef sitelere bot yazarak kendi sitemize içerik çekebiliriz.
 
-#### Curl Çalışma Prensibi
+##### Curl Çalışma Prensibi
 
 - İlk önce curl oturumu başlat,
 - Curl'un ayarlarını yap,
@@ -44,8 +44,8 @@ Ayarları satır satır ya da dizi şeklinde birdenfazla verebiliriz.
 $ch = curl_init();
 // Curl ayarlarını yap...
 // aysubey.com'un kaynak kodundan title'ı alalım...
-curl_setopt($ch, [
-  CURLOPT_URL => 'http://aysubey.com/', 
+curl_setopt_array($ch, [
+  CURLOPT_URL            => 'http://aysubey.com/', 
   CURLOPT_RETURNTRANSFER => true
 ]);
 // Curl isteği...
@@ -60,3 +60,99 @@ print_r($title);
 ```
 
 curl ile düzgün veriler alabilmek istiyorsak ```preg_match();``` fonksiyonu ve regex kodlarını kullanmamız gerekir!
+
+### Curl ile Referer Bilgisi Göndermek
+
+Referer bigisi gitmezse bazı siteler bot diye girişi engelleyebilmekte.
+
+Karşı sunucunun bot kodu;
+
+```php
+<?php
+if (!isset($_SERVER['HTTP_REFERER'])) {
+  die('Bot girişimi engellendi!');
+}
+?>
+```
+
+```php
+<?php
+// Curl oturumunu başlat...
+$ch = curl_init();
+// Curl ayarlarını yap...
+// aysubey.com'un kaynak kodundan title'ı sanki wikipedia'dan gitmiş gibi alalım...
+curl_setopt_array($ch, [
+  CURLOPT_URL            => 'http://aysubey.com/', 
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_REFERER        => 'https://wikipedia.org'
+]);
+// Curl isteği...
+$source = curl_exec($ch);
+// Curl sonlandır...
+curl_close($ch);
+?>
+```
+
+### Curl ile Tarayıcı Bilgisi Göndermek
+
+Tarayıcı bilgisini ```echo $_SERVER['HTTP_USER_AGENT'];``` şeklinde alabiliyoruz.
+
+Karşı sunucunun bot kodu;
+
+```php
+<?php
+if (!isset($_SERVER['HTTP_USER_AGENT'])) {
+  die('Bot girişimi engellendi!');
+}
+?>
+```
+
+```php
+<?php
+// Curl oturumunu başlat...
+$ch = curl_init();
+// Curl ayarlarını yap...
+// aysubey.com'un kaynak kodundan title'ı sanki wikipedia'dan gitmiş gibi alalım...
+curl_setopt_array($ch, [
+  CURLOPT_URL            => 'http://aysubey.com/', 
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_REFERER        => 'https://wikipedia.org',
+  CURLOPT_USERAGENT      => $_SERVER['HTTP_USER_AGENT']
+]);
+// Curl isteği...
+$source = curl_exec($ch);
+// Curl sonlandır...
+curl_close($ch);
+
+echo $source;
+?>
+```
+
+### Curl ile Post İşlemleri
+
+```php
+<?php
+// Curl oturumunu başlat...
+$ch = curl_init();
+// Curl ayarlarını yap...
+curl_setopt_array($ch, [
+  CURLOPT_URL            => 'http://localhost/post.php', 
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_REFERER        => 'https://wikipedia.org',
+  CURLOPT_USERAGENT      => $_SERVER['HTTP_USER_AGENT'],
+  CURLOPT_POST           => true,
+  CURLOPT_POSTFIELDS     => [
+    'ad'     => 'Hasan',
+    'soyad'  => 'Çiçek',
+    'ePosta' => 'hasan.cicek@yamdex.com.tr',
+    'submit' => 1 // Submiti göndermezseniz veri curl tarafından post edilmez!
+  ]
+]);
+// Curl isteği...
+$source = curl_exec($ch);
+// Curl sonlandır...
+curl_close($ch);
+
+echo $source;
+?>
+```
