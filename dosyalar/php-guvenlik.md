@@ -150,3 +150,16 @@ header('Location:index.php');
 </html>
 
 ```
+
+6. Sql injection'u engelleyin! Sql sorgularına kullanıcıdan veri alıyorsanız dikkatli olun. Aşağıdaki örneği inceleyin; GET parametresinden $id değişkenindeki gibi bir veri gelirse geçmiş olsun, uyeler tablonuz silindi!
+
+```php
+$id =  "'; DROP TABLE uyeler; #";
+$sql = 'SELECT * FROM uyeler WHERE id ='. $id;
+echo $sql;
+# Ekran çıktısı...
+SELECT * FROM uyeler WHERE id = ''; DROP TABLE uyeler; #"
+```
+Bu tür saldırılardan korunmak için;
+  - Form elemanlarında aldığınız POST değerlerini "htmlspecialchars" ile filtreleyin (Yalnız bu tek başına güvenilir yöntem değildir!),
+  - Sorgularınızda "query" yerine "private-execute" metodlarını kullanın (Güvenilir yöntem budur!). private-execute metodu sql injection açıklarını kapatır.
