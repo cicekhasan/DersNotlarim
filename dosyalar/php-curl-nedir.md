@@ -159,7 +159,7 @@ echo $source;
 ?>
 ```
 
-### Curl ile Dosya Gönderme İşlemleri
+### Curl ile Dosya Göndermek
 
 Gönderme yapacağınız sitenin mime type ne ise onu yazarsanız, güvenliğini kırıp farklı bir dosya göndermiş olabilirsiniz!
 
@@ -186,7 +186,7 @@ echo $source;
 ?>
 ```
 
-### Curl ile Üst Bilgileri (Response Headers) Gönderme İşlemleri
+### Curl ile Üst Bilgileri (Response Headers) Göndermek
 
 Kendi oluşturduğumuz üst bilgileride curl ile gönderebilir ve bunları cevap kısmında görebiliriz.
 
@@ -222,7 +222,7 @@ $ch = curl_init('http://localhost/header.php');
 curl_setopt_array($ch, [
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_HEADER => true,
-  CURLOPT_NOBODY => true,
+  CURLOPT_NOBODY => true
 ]);
 // Curl isteği...
 $source = curl_exec($ch);
@@ -233,7 +233,7 @@ echo $source;
 ?>
 ```
 
-### Curl ile Dosya İndirme İşlemleri
+### Curl ile Dosya İndirmek
 
 php.net'in kaynak kodlarını alıp php.txt isimli dosyaya yazdıralım.
 
@@ -269,4 +269,40 @@ curl_close($ch);
 ?>
 ```
 
+### Curl'de Hata Yakalamak
 
+```php
+// Olmayan bir sayfaya istek atalım...
+// Curl oturumunu başlat...
+$ch = curl_init('http://ariyorum.var');
+// Curl ayarlarını yap...
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+// Curl isteği...
+if (curl_exec($ch) == false) {
+  echo curl_error($ch);
+}
+// Curl sonlandır...
+curl_close($ch);
+```
+
+### Curl ile Cookie İşlemleri
+
+##### Cookie Göndermek
+
+Cookie göndermek için CURLOPT_COOKIE kulanılır (cookieAdi1=cookieDegeri1&cookieAdi2=cookieDegeri2 gb)...
+
+```php
+// Curl oturumunu başlat...
+$ch = curl_init('http://localhost/cookie.php');
+// Curl ayarlarını yap...
+curl_setopt_array($ch, [
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_COOKIE => 'cookieAdi1=cookieDegeri1'
+]);
+// Curl isteği...
+$source = curl_exec($ch);
+// Curl sonlandır...
+curl_close($ch);
+
+echo $source;
+```
