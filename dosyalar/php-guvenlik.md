@@ -163,3 +163,48 @@ SELECT * FROM uyeler WHERE id = ''; DROP TABLE uyeler; #"
 Bu tür saldırılardan korunmak için;
   - Form elemanlarında aldığınız POST değerlerini "htmlspecialchars" ile filtreleyin (Yalnız bu tek başına güvenilir yöntem değildir!),
   - Sorgularınızda "query" yerine "private-execute" metodlarını kullanın (Güvenilir yöntem budur!). private-execute metodu sql injection açıklarını kapatır.
+
+7. Sitende boot kontrolu yap. Google reCAPTCHA kullan. Sitene eklemek için [Google](https://www.google.com/recaptcha) 'dan bir site key alman gerekir!;
+
+```php 
+<html>
+  <head>
+    <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <form action="?" method="POST">
+      <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
+```
+
+Türkçeleştirmek için (Kontroldan sonra verileri google göndermek için sayfasını inceleyin!);
+
+```php 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    var guvenlik;
+    var onloadCallback = function() {
+      guvenlik = grecaptcha.render('guvenlik',{
+        'sitekey' : '6Ldv4_8UAAAAAGuTQHoxzYqUlFNKIQCWCVxOorAM',
+        'theme' : 'dark'        
+      });
+    };
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit&hl=tr" async defer> </script>
+</head>
+<body>
+  <div id="guvenlik"></div>
+</body>
+</html>
+```
+
+
