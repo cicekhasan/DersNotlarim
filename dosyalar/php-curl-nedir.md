@@ -145,7 +145,9 @@ curl_setopt_array($ch, [
     'ad'     => 'Hasan',
     'soyad'  => 'Çiçek',
     'ePosta' => 'hasan.cicek@yamdex.com.tr',
-    'submit' => 1 // Submiti göndermezseniz veri curl tarafından post edilmez!
+    'submit' => 1
+    // Submiti göndermezseniz veri post edilemeyebilir!
+    // Genelde kontrol submit üzerinden yapılır!
   ]
 ]);
 // Curl isteği...
@@ -156,3 +158,115 @@ curl_close($ch);
 echo $source;
 ?>
 ```
+
+### Curl ile Dosya Gönderme İşlemleri
+
+Gönderme yapacağınız sitenin mime type ne ise onu yazarsanız, güvenliğini kırıp farklı bir dosya göndermiş olabilirsiniz!
+
+```php
+<?php
+// Curl oturumunu başlat...
+$ch = curl_init('http://localhost/post.php');
+// Curl ayarlarını yap...
+curl_setopt_array($ch, [
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_POST           => true,
+  CURLOPT_POSTFIELDS     => [
+    'ad'     => 'Hasan',
+    'soyad'  => 'Çiçek',
+    'dosya' => new CURLFile('test.txt', 'text/plain')
+  ]
+]);
+// Curl isteği...
+$source = curl_exec($ch);
+// Curl sonlandır...
+curl_close($ch);
+
+echo $source;
+?>
+```
+
+### Curl ile Üst Bilgileri (Response Headers) Gönderme İşlemleri
+
+Kendi oluşturduğumuz üst bilgileride curl ile gönderebilir ve bunları cevap kısmında görebiliriz.
+
+```php
+<?php
+// header ile normal gönderme...
+header('Token: hasancicek1453');
+// Curl oturumunu başlat...
+$ch = curl_init('http://localhost/header.php');
+// Curl ayarlarını yap...
+curl_setopt_array($ch, [
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_HTTPHEADER => [
+    'Token : hasancicek145'
+  ]
+]);
+// Curl isteği...
+$source = curl_exec($ch);
+// Curl sonlandır...
+curl_close($ch);
+
+echo $source;
+?>
+```
+Üst bilgi almak için;
+
+```php
+<?php
+// header.php sayfasının üst bilgilerini görüntülüyoruz...
+// Curl oturumunu başlat...
+$ch = curl_init('http://localhost/header.php');
+// Curl ayarlarını yap...
+curl_setopt_array($ch, [
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_HEADER => true,
+  CURLOPT_NOBODY => true,
+]);
+// Curl isteği...
+$source = curl_exec($ch);
+// Curl sonlandır...
+curl_close($ch);
+
+echo $source;
+?>
+```
+
+### Curl ile Dosya İndirme İşlemleri
+
+php.net'in kaynak kodlarını alıp php.txt isimli dosyaya yazdıralım.
+
+```php
+<?php
+// php.txt varsa aç ve yaz, yoksa yarat ve yaz...
+$file = fopen('php.txt', 'w+');
+// Curl oturumunu başlat...
+$ch = curl_init('http://php.net');
+// Curl ayarlarını yap...
+curl_setopt($ch, CURLOPT_FILE, $file);
+// Curl isteği...
+curl_exec($ch);
+// Curl sonlandır...
+curl_close($ch);
+?>
+```
+
+Siteden resim alma/indirme.
+
+```php
+<?php
+// php.txt varsa aç ve yaz, yoksa yarat ve yaz...
+$file = fopen('resimAdi.jpg', 'w+');
+// Curl oturumunu başlat...
+$ch = curl_init('http://siteAdi/resimAdi.jpg');
+// Curl ayarlarını yap...
+curl_setopt($ch, CURLOPT_FILE, $file);
+// Curl isteği...
+curl_exec($ch);
+// Curl sonlandır...
+curl_close($ch);
+?>
+```
+
+
