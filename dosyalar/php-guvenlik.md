@@ -201,7 +201,8 @@ Türkçeleştirmek için (Kontroldan sonra verileri google göndermek için sayf
       });
     };
   </script>
-  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit&hl=tr" async defer> </script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit&hl=tr"
+   async defer> </script>
 </head>
 <body>
   <div id="guvenlik"></div>
