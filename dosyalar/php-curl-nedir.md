@@ -306,3 +306,103 @@ curl_close($ch);
 
 echo $source;
 ```
+
+### Curl ile Örnek Döviz Kuru Botu
+
+```php
+<?php
+function kurAlma($url, $key=''){
+  global $sonuclar;
+  // Curl oturumunu başlat...
+  $ch = curl_init();
+// Curl ayarlarını yap...
+  curl_setopt_array($ch, [
+    CURLOPT_URL => $url,
+    CURLOPT_RETURNTRANSFER => true
+  ]);
+// Curl isteği...
+  $gelenler = curl_exec($ch);
+// Curl sonlandır...
+  curl_close($ch);
+
+  $gelenler = json_decode($gelenler, true);
+  $sonuclar = json_decode($gelenler['GetExchangeDataResult'], true);
+
+  if (!isset($key)) {
+    return $sonuclar;
+  }else{
+    return $sonuclar['Currencies'][$key];
+  }
+}
+
+$url = 'https://www.akbank.com/_vti_bin/AkbankServicesSecure/FrontEndServiceSecure.svc/GetExchangeData?_='.time();
+
+$altin = kurAlma($url, 17);
+$dolar = kurAlma($url, 16);
+$euro  = kurAlma($url, 6);
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Döviz Kuru</title>
+</head>
+<body>
+  <div style="float:left; margin-left: 20px;">
+  <table border="1">
+    <tbody>
+      <tr>
+        <th>ALTIN</th>
+        <th>%</th>
+        <th>Alış</th>
+        <th>Satış</th>
+      </tr>
+        <tr>
+          <td><?php echo $altin['Name']; ?></td>
+          <td><?php echo sprintf('%.2f', $altin['Rate']); ?></td>
+          <td><?php echo $altin['Buy']; ?></td>
+          <td><?php echo $altin['Sell']; ?></td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+  <div style="float:left; margin-left: 20px;">
+  <table border="1">
+    <tbody>
+      <tr>
+        <th>Para Birimi</th>
+        <th>%</th>
+        <th>Alış</th>
+        <th>Satış</th>
+      </tr>
+        <tr>
+          <td><?php echo $dolar['Name']; ?></td>
+          <td><?php echo sprintf('%.2f', $dolar['Rate']); ?></td>
+          <td><?php echo $dolar['Buy']; ?></td>
+          <td><?php echo $dolar['Sell']; ?></td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+  <div style="float:left; margin-left: 20px;">
+  <table border="1">
+    <tbody>
+      <tr>
+        <th>Para Birimi</th>
+        <th>%</th>
+        <th>Alış</th>
+        <th>Satış</th>
+      </tr>
+        <tr>
+          <td><?php echo $euro['Name']; ?></td>
+          <td><?php echo sprintf('%.2f', $euro['Rate']); ?></td>
+          <td><?php echo $euro['Buy']; ?></td>
+          <td><?php echo $euro['Sell']; ?></td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+</body>
+</html>
+```
