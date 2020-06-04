@@ -309,6 +309,8 @@ echo $source;
 
 ### Curl ile Örnek Döviz Kuru Botu
 
+**Akbank sitesinden döviz ve altın kuru botu:**
+
 ```php
 <?php
 function kurAlma($url, $key=''){
@@ -403,6 +405,73 @@ $euro  = kurAlma($url, 6);
     </tbody>
   </table>
   </div>
+</body>
+</html>
+```
+
+**İş Bankası sitesinden döviz ve altın kuru botu:**
+
+```php
+<?php
+function isBankasiKur(){
+  // Curl oturumunu başlat...
+  $ch = curl_init();
+  // Curl ayarlarını yap...
+  curl_setopt_array($ch, [
+    CURLOPT_URL => 'https://www.isbank.com.tr/_vti_bin/DV.Isbank/PriceAndRate/PriceAndRateService.svc/GetFxRates?Lang=tr&fxRateType=INTERACTIVE&date=2020-6-4&time='.time(), 
+    CURLOPT_RETURNTRANSFER => true
+  ]);
+  // Curl isteği...
+  $output = curl_exec($ch);
+  // Curl sonlandır...
+  curl_close($ch);
+  //echo $output;
+  $output = json_decode($output, true);
+
+  $dolar = $output['Data'][0];
+  $euro  = $output['Data'][1];
+
+  return [
+    'DOLAR'=> [
+      'adi'        => $dolar['code'],
+      'acikAdi'    => $dolar['description'],
+      'alis'       => $dolar['fxRateBuy'],
+      'satis'      => $dolar['fxRateSell']
+    ],
+    'EURO' => [
+      'adi'        => $euro['code'],
+      'acikAdi'    => $euro['description'],
+      'alis'       => $euro['fxRateBuy'],
+      'satis'      => $euro['fxRateSell']
+    ]
+  ];
+}
+
+$kurlar = isBankasiKur();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Döviz Kuru</title>
+</head>
+<body>
+  <table border="1">
+    <tbody>
+      <tr>
+        <th colspan="2"></th>
+        <th>Alış</th>
+        <th>Satış</th>
+      </tr>
+      <?php foreach ($kurlar as $key => $kur): ?>
+      <tr>
+        <td colspan="2"><?php echo $kur['acikAdi'].' ('.$kur['adi'].')'; ?></td>
+        <td><?php echo $kur['alis']; ?></td>
+        <td><?php echo $kur['satis']; ?></td>
+      </tr>
+    <?php endforeach; ?>
+    </tbody>
+  </table>
 </body>
 </html>
 ```
