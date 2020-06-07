@@ -36,7 +36,7 @@ curl_close($ch);
 ?>
 ```
 
-Ayarları satır satır ya da dizi şeklinde birdenfazla verebiliriz.
+Ayarları satır satır ya da dizi şeklinde birden fazla verebiliriz.
 
 ```php
 <?php

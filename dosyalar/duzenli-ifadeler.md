@@ -15,6 +15,7 @@ Düzenli ifadeleri deneme siteleri:
 | +         | Dahil                                                                                                                         |
 | ^         | Hariç                                                                                                                         |
 | ^         | Başlangıç karakteri                                                                                                           |
+| ?         | Önceki karakter yada ifade olsada olur olmasa da!                                                                             |
 | $         | Son karakter                                                                                                                  |
 | [abc]+    | a,b ya da c harfleri ile eşleştir.                                                                                            |
 | [^abc]+   | a,b ya da c harfleri hariç diğer karekterlerle eşleştir.                                                                      |
@@ -75,3 +76,11 @@ Açıklaması:
 5. ``` . ``` olacak,
 6. ```[a-z]{2,}``` en az 2, sadece harf olacak,
 7. (.tr kısmı!) ```(.[a-z]{2}|)$``` en az 2, harf olacak. Nokta ile başlayacak. Burası olada bilir, olmayabilir de!
+
+##### Kısa Kısa
+
+1. İfade içerisinde "olmayan" bir sınırlayıcı karakter kullan. Örneğin; bağlantı adresi alacaksan içerisinde geçeceği için "/" karakteri kullanamazsın. Kullanırsan kaçış karakteri kullanmalısın(Ters slash);
+2. (.\*)        // Harf, sayı ve karakter yani her şey olabilir.
+3. (Hasan)?     // Başında "Hasan" ifadesi olsada olur olmasa da,
+4. [A-z]?       // Başında küçük ya da büyük "Harf" olsada olur olmasa da.
+5. 
