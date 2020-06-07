@@ -6,6 +6,7 @@
 Düzenli ifadeleri deneme siteleri:
 
 - [regex101.com](https://regex101.com/)
+- [regexr.com](https://regexr.com)
 - [www.phpliveregex.com](https://www.phpliveregex.com/)
 
 #### DÜZENLİ İFADE KURALLARI
