@@ -5,6 +5,25 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 - [ ] Genel	
 	- [X] [Düzenli İfadeler (REGEX)](dosyalar/duzenli-ifadeler.md)
 	- [X] [İncelenecek Kodlar](dosyalar/incelenecekler.md)
+	- [ ] PDO
+		- [ ] Genel
+			- [X] [PDO Nedir?](dosyalar/pdo-nedir.md)
+			- [X] [PDO Metodları Nelerdir?](dosyalar/pdo-metodlari.md)
+			- [X] [PDO Kuralları](dosyalar/pdo-kurallar.md)
+			- [X] [PDO Kurulumu Kontrol Etmek](dosyalar/pdo-kontrol.md)
+		- [ ] PDO Ders Notları (Nesne Tabanlı Php)
+			- [X] [Kütüphane Sayfalarını Oluşturma](dosyalar/pdo-sayfalar.md)
+			- [X] [Sınıf Oluşturma](dosyalar/pdo-sinif-olusturma.md)
+			- [X] [Değişken Tanımlama](dosyalar/pdo-degisken-tanimlama.md)
+	- [ ] Laravel
+		- [X] [Hata Çözümleri](dosyalar/hata-cozumleri.md)
+		- [X] [Sınıf Oluşturma](dosyalar/pdo-sinif-olusturma.md)
+	- [ ] Örnek Çalışma Dosyaları
+		- [X] [Giriş İşlemi](ornekler/girisIslemi)
+		- [X] [Dosya Yükleme](ornekler/dosyaYukleme)
+		- [X] [Fonksiyonlu Dosya Yükleme](ornekler/fonksiyonluDosyaYukleme)
+		- [X] [Çoklu Dosya Yükleme](ornekler/cokluDosyaYukleme)
+		- [X] [Oturum Zaman Yönetimi](ornekler/oturumZamanYonetimi)
 - [ ] Linux
 	- [ ] Genel
 		- [X] [Ubuntu Kurulum Sonrası Yapılacaklar](dosyalar/kurulum-sonrasi-islemler.md)
@@ -75,25 +94,10 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [X] [Session Zaman Yönetimi](dosyalar/php-oturumda-zaman-ornegi.md)
 		- [X] [CRUD İşlemleri](dosyalar/crud-islemleri.md)
 		- [X] [Veritabanı Bağlantısı](dosyalar/veri-tabani-baglantisi.md)
-- [ ] PDO
+- [ ] MYSQL
 	- [ ] Genel
-		- [X] [PDO Nedir?](dosyalar/pdo-nedir.md)
-		- [X] [PDO Metodları Nelerdir?](dosyalar/pdo-metodlari.md)
-		- [X] [PDO Kuralları](dosyalar/pdo-kurallar.md)
-		- [X] [PDO Kurulumu Kontrol Etmek](dosyalar/pdo-kontrol.md)
-	- [ ] PDO Ders Notları (Nesne Tabanlı Php)
-		- [X] [Kütüphane Sayfalarını Oluşturma](dosyalar/pdo-sayfalar.md)
-		- [X] [Sınıf Oluşturma](dosyalar/pdo-sinif-olusturma.md)
-		- [X] [Değişken Tanımlama](dosyalar/pdo-degisken-tanimlama.md)
-- [ ] Laravel
-	- [X] [Hata Çözümleri](dosyalar/hata-cozumleri.md)
-	- [X] [Sınıf Oluşturma](dosyalar/pdo-sinif-olusturma.md)
-- [ ] Örnek Çalışma Dosyaları
-	- [X] [Giriş İşlemi](ornekler/girisIslemi)
-	- [X] [Dosya Yükleme](ornekler/dosyaYukleme)
-	- [X] [Fonksiyonlu Dosya Yükleme](ornekler/fonksiyonluDosyaYukleme)
-	- [X] [Çoklu Dosya Yükleme](ornekler/cokluDosyaYukleme)
-	- [X] [Oturum Zaman Yönetimi](ornekler/oturumZamanYonetimi)
+		- [X] [CRUD İşlemleri Temel](dosyalar/crud-islemleri-temel.md)
+
 
 ## İp Uçları
 
