@@ -82,6 +82,7 @@ Açıklaması:
 
 1. İfade içerisinde "olmayan" bir sınırlayıcı karakter kullan. Örneğin; bağlantı adresi alacaksan içerisinde geçeceği için "/" karakteri kullanamazsın. Kullanırsan kaçış karakteri kullanmalısın(Ters slash);
 2. (.\*)        // Harf, sayı ve karakter yani her şey olabilir.
-3. (Hasan)?     // Başında "Hasan" ifadesi olsada olur olmasa da,
-4. [A-z]?       // Başında küçük ya da büyük "Harf" olsada olur olmasa da.
-5. 
+3. https?       // https'nin sonunda "s" olsada olur olmasa da,
+4. (https)?     // Başında "https" ifadesi olsada olur olmasa da,
+5. [A-z]?       // Başında küçük ya da büyük "Harf" olsada olur olmasa da.
+6. 
