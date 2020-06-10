@@ -153,7 +153,7 @@ SELECT * FROM uyeler ORDER BY id DESC LIMIT 2,10
 
 #### VERİLERDE GRUPLAMA (GROUP BY ve HAVING)
 
-1. 
+1. Tablo adı: calisanlar
 
 | id  | ad      | soyad     | meslek    | sehir   | maas |
 | --- | ---     | ---       | ---       | ---     | ---  |
