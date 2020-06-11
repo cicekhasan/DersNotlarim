@@ -155,19 +155,27 @@ SELECT * FROM uyeler ORDER BY id DESC LIMIT 2,10
 
 1. Tablo adı: calisanlar
 
-| id  | ad      | soyad     | meslek    | sehir   | maas |
-| --- | ---     | ---       | ---       | ---     | ---  |
-| 1   | Hasan   | Çiçek     | Developer | Ankara  | 6300 |
-| 2   | Zeynep  | Yorgancı  | Usta      | Çankırı | 3000 |
-| 3   | Ahmet   | Yoksay    | Usta      | Çankırı | 3250 |
-| 4   | Metin   | Çelenk    | Developer | Ankara  | 6300 |
-| 5   | Ramazan | Karadoğan | Designer  | Ankara  | 5250 |
-| 6   | Çetin   | Bozyel    | Aşçı |      Çankırı | 2500 |
-| 7   | Meryem  | Uzel      | Asistan   | Ankara  | 2000 |
-| 8   | Aslı    | Gencer    | Developer | Ankara  | 6300 |
-| 9   | Sami    | Kalem     | Stajjer   | Çankırı | 2000 |
-| 10  | Kemal   | Cabbar    | Şoför     | Çankırı | 2700 |
+
+
+| id  | ad      | soyad     | meslek    | sehir   | maas    |
+| --- | ---     | ---       | ---       | ---     | ---     |
+| 1   | Hasan   | Çiçek     | Developer | Ankara  | 6300.00 |
+| 2   | Zeynep  | Yorgancı  | Usta      | Çankırı | 3000.00 |
+| 3   | Ahmet   | Yoksay    | Usta      | Çankırı | 3250.00 |
+| 4   | Metin   | Çelenk    | Developer | Ankara  | 6300.00 |
+| 5   | Ramazan | Karadoğan | Designer  | Ankara  | 5250.00 |
+| 6   | Çetin   | Bozyel    | Aşçı      | Çankırı | 2500.00 |
+| 7   | Meryem  | Uzel      | Asistan   | Ankara  | 2000.00 |
+| 8   | Aslı    | Gencer    | Developer | Ankara  | 6300.00 |
+| 9   | Sami    | Kalem     | Stajyer   | Çankırı | 2000.00 |
+| 10  | Kemal   | Yeşil     | Şöför     | Çankırı | 2700.00 |
 
 ```sql
 SELECT sehir, MIN(maas) as Minimum FROM calisanlar GROUP BY sehir
+# Sorgu çıktısı...
+| sehir   | Minimum |
+| Ankara  | 2000.00 |
+| Çankırı | 2000.00 |
 ```
+
+
