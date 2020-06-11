@@ -8,25 +8,37 @@ Aşağıdaki örneklerde "uyeler" isimli tablo örnek olarak verilmiştir...
 
 #### KOŞULDA KULLANILACAK OPERATÖRLER
 
-| Operatör | Açıklama |
-| --- | --- |
-| = | Eşit |
-| != | Eşit değil |
-| > | Büyük |
-| < | Küçük |
-| >= | Büyük ya da eşit |
-| <= | Küçük ya da eşit |
-| && | Ve |
-| \|\| | Ya da |
+| Operatör | Açıklama         |
+| ---      | ---              |
+| =        | Eşit             |
+| !=       | Eşit değil       |
+| >        | Büyük            |
+| <        | Küçük            |
+| >=       | Büyük ya da eşit |
+| <=       | Küçük ya da eşit |
+| &&       | Ve               |
+| \|\|     | Ya da            |
 
 1. Aşağıda sorgu ile; "uyeler" tablosundan "id" si "1" ya da "id" si "2" olan ve "parola" sı aynı "123456" kullanıcıları çekmeye çalışıyoruz. 
 
 Dikkat: Parantezi kullanmazsak "parola" sı 123456 ve "id" si "1" olan kullanıcı varsa çeker, yoksa "id" si "2" olan kullanıcıyı getirir. Ya da bölümünü parantez içerisine almadan kullanırsak sorgu hata verir.
 
-```sql
-SELECT * FROM uyeler WHERE parola = '123456' && ( id = '1' || id = '2' )
-```
+Örnek "uyeler" tablosu;
 
+| id  | uye_adi    | uye_tam_adi   | uye_eposta                | parola | yetki |
+| --- | ---        | ---           | ---                       | ---    | ---   |
+| 1   | hasancicek | Hasan Çiçek   | hasan.cicek@yandex.com.tr | 123456 | 1     |
+| 2   | zeytin     | Aleyne Çakır  | aleyna38@gmail.com        | 456789 | 2     |
+| 3   | karabela   | Ahmet Ayraç   | ayracahmet@gmail.com      | 852369 | 2     |
+| 4   | karbeyaz   | Nalan Firarda | firardanalan@hotmail.com  | 123456 | 2     |
+
+```sql
+SELECT * FROM uyeler WHERE parola = '123456' && ( id = '1' || id = '4' )
+# Sorgu çıktısı...
+| id  | uye_adi    | uye_tam_adi   | uye_eposta                | parola | yetki |
+| 1   | hasancicek | Hasan Çiçek   | hasan.cicek@yandex.com.tr | 123456 | 1     |
+| 4   | karbeyaz   | Nalan Firarda | firardanalan@hotmail.com  | 123456 | 2     |
+```
 
 #### VERİ EKLEME (INSERT)
 
@@ -57,24 +69,42 @@ INSERT INTO uyeler ( uye_adi, parola, eposta ) VALUES
 
 ```sql
 SELECT * FROM uyeler
+# Sorgu çıktısı...
+| id  | uye_adi    | uye_tam_adi   | uye_eposta                | parola | yetki |
+| 1   | hasancicek | Hasan Çiçek   | hasan.cicek@yandex.com.tr | 123456 | 1     |
+| 2   | zeytin     | Aleyne Çakır  | aleyna38@gmail.com        | 456789 | 2     |
+| 3   | karabela   | Ahmet Ayraç   | ayracahmet@gmail.com      | 852369 | 2     |
+| 4   | karbeyaz   | Nalan Firarda | firardanalan@hotmail.com  | 123456 | 2     |
 ```
 
-2. Tabloda, id'si '1' olan üyeye ait bütün sütun ve satırı getirir...
+2. Tabloda, id'si '2' olan üyeye ait bütün sütun ve satırı getirir...
 
 ```sql
-SELECT * FROM uyeler WHERE id = '1'
+SELECT * FROM uyeler WHERE id = '2'
+# Sorgu çıktısı...
+| id  | uye_adi    | uye_tam_adi   | uye_eposta                | parola | yetki |
+| 2   | zeytin     | Aleyne Çakır  | aleyna38@gmail.com        | 456789 | 2     |
 ```
 
 3. Belirtilen sütunlara ait verileri çekmek...
 
 ```sql
 SELECT uye_adi, parola FROM uyeler
+# Sorgu çıktısı...
+| uye_adi    | parola |
+| hasancicek | 123456 |
+| zeytin     | 456789 |
+| karabela   | 852369 |
+| karbeyaz   | 123456 |
 ```
 
 4. id'si '1' olan üyeye ait belirtilen sütunlara ait verileri çekmek. "id" belirttiğimiz ve "id" tek olacağı için bir satır veri gelir. Eğer koşul başka bir şey olursa ve o koşulu karşılayan birden fazla sonuç varsa o kadar satır veri çekilir.
 
 ```sql
-SELECT uye_adi, parola FROM uyeler WHERE id = '1'
+SELECT uye_adi, parola FROM uyeler WHERE id = '3'
+# Sorgu çıktısı...
+| uye_adi    | parola |
+| karbeyaz   | 123456 |
 ```
 
 5. Verileri çekerken kolon adını değiştirmek. Aşağıdaki örnekte id'si '1' olan kullanıcının verilerini çekerken "uye_adi" kolon adını "ad", "eposta" kolon adını da "posta" olarak değiştidik. Birden fazla tablodan aynı anda veri alıken ve sütun isimleri birse karışmaması için sutun adlarını değiştirmemiz gerekebilir.
@@ -158,25 +188,25 @@ SELECT * FROM uyeler ORDER BY id DESC LIMIT 2,10
 
 | id  | ad      | soyad     | meslek    | sehir   | maas    |
 | --- | ---     | ---       | ---       | ---     | ---     |
-| 1   | Hasan   | Çiçek     | Developer | Ankara  | 6300.00 |
-| 2   | Zeynep  | Yorgancı  | Usta      | Çankırı | 3000.00 |
-| 3   | Ahmet   | Yoksay    | Usta      | Çankırı | 3250.00 |
-| 4   | Metin   | Çelenk    | Developer | Ankara  | 6300.00 |
-| 5   | Ramazan | Karadoğan | Designer  | Ankara  | 5250.00 |
-| 6   | Çetin   | Bozyel    | Aşçı      | Çankırı | 2500.00 |
-| 7   | Meryem  | Uzel      | Asistan   | Ankara  | 2500.00 |
-| 8   | Aslı    | Gencer    | Developer | Ankara  | 6300.00 |
-| 9   | Sami    | Kalem     | Stajyer   | Çankırı | 2500.00 |
-| 10  | Kemal   | Yeşil     | Şöför     | Çankırı | 2700.00 |
+| 0   | Hasan   | Çiçek     | Developer | Ankara  | 6300.00 |
+| 1   | Zeynep  | Yorgancı  | Usta      | Çankırı | 3000.00 |
+| 2   | Ahmet   | Yoksay    | Usta      | Çankırı | 3250.00 |
+| 3   | Metin   | Çelenk    | Developer | Ankara  | 6300.00 |
+| 4   | Ramazan | Karadoğan | Designer  | Ankara  | 5250.00 |
+| 5   | Çetin   | Bozyel    | Aşçı      | Çankırı | 2500.00 |
+| 6   | Meryem  | Uzel      | Asistan   | Ankara  | 2500.00 |
+| 7   | Aslı    | Gencer    | Developer | Ankara  | 6300.00 |
+| 8   | Sami    | Kalem     | Stajyer   | Çankırı | 2200.00 |
+| 9  | Kemal   | Yeşil     | Şöför     | Çankırı | 2700.00 |
 
 1. Dikkat! Anlaşılır olması açısından sütun isimlerini değiştirdik...
 
 ```sql
-SELECT sehir, MIN(maas) as minimum_maas, FROM calisanlar GROUP BY sehir
+SELECT sehir, MIN(maas) as minimum_maas FROM calisanlar GROUP BY sehir
 # Sorgu çıktısı. Şehirlerde minimum maaşları listeliyelim...
 | sehir   | minimum_maas |
 | Ankara  | 2500.00 |
-| Çankırı | 2500.00 |
+| Çankırı | 2200.00 |
 ```
 
 2. Dikkat! Anlaşılır olması açısından sütun isimlerini değiştirdik...
@@ -186,7 +216,7 @@ SELECT sehir, MIN(maas) as minimum_maas, MAX(maas) as maximum_maas FROM calisanl
 # Sorgu çıktısı. Şehirlerde minimum ve maximum maaşları listeliyelim...
 | sehir   | minimum_maas | maximum_maas |
 | Ankara  | 2500.00      | 6300.00      |
-| Çankırı | 2500.00      | 3250.00      |
+| Çankırı | 2200.00      | 3250.00      |
 ```
 
 3. Dikkat! Anlaşılır olması açısından sütun isimlerini değiştirdik...
@@ -195,18 +225,17 @@ SELECT sehir, MIN(maas) as minimum_maas, MAX(maas) as maximum_maas FROM calisanl
 SELECT sehir, MIN(maas) as minimum_maas, MAX(maas) as maximum_maas, COUNT(id) as personel FROM calisanlar GROUP BY sehir
 # Sorgu çıktısı. Şehirlerde minimum, maximum maaşları ve personel sayılarını listeliyelim...
 | sehir   | minimum_maas  | maximum_maas  | personel |
-| Ankara  | 2000.00       | 6300.00       | 5        |
-| Çankırı | 2000.00       | 3250.00       | 5        |
+| Ankara  | 2500.00       | 6300.00       | 5        |
+| Çankırı | 2200.00       | 3250.00       | 5        |
 ```
 
 4. Dikkat! Değiştirmiş olduğumuz sütun isimleri koşulda kullanalım. WHERE koşulu ile bu isimler çalışmaz! Bunun yerine HAVING kullanıyoruz...
 
 ```sql
-SELECT sehir, MIN(maas) as minimum_maas, MAX(maas) as maximum_maas, COUNT(id) as personel FROM calisanlar GROUP BY sehir HAVING minimum_maas > 2000
+SELECT sehir, MIN(maas) as minimum_maas, MAX(maas) as maximum_maas, COUNT(id) as personel FROM calisanlar GROUP BY sehir HAVING minimum_maas > 2300
 # Sorgu çıktısı. Minumum maaş 2000.00'dan yüksek olan şehirleri listeliyelim...
 | sehir   | minimum_maas  | maximum_maas  | personel |
-| Ankara  | 2000.00       | 6300.00       | 5        |
-| Çankırı | 2000.00       | 3250.00       | 5        | 
+| Ankara  | 2500.00       | 6300.00       | 5        |
 ```
 
 
