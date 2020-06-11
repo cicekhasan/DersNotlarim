@@ -77,7 +77,7 @@ SELECT uye_adi, parola FROM uyeler
 SELECT uye_adi, parola FROM uyeler WHERE id = '1'
 ```
 
-5. Verileri çekerken kolon adını değiştirmek. Aşağıdaki örnekte id'si '1' olan kullanıcının verilerini çekerken "uye_adi" kolon adını "ad", "eposta" kolon adını da "posta" olarak değiştidik.
+5. Verileri çekerken kolon adını değiştirmek. Aşağıdaki örnekte id'si '1' olan kullanıcının verilerini çekerken "uye_adi" kolon adını "ad", "eposta" kolon adını da "posta" olarak değiştidik. Birden fazla tablodan aynı anda veri alıken ve sütun isimleri birse karışmaması için sutun adlarını değiştirmemiz gerekebilir.
 
 ```sql
 SELECT uye_adi as ad, eposta as posta FROM uyeler WHERE id = '1'
@@ -153,8 +153,7 @@ SELECT * FROM uyeler ORDER BY id DESC LIMIT 2,10
 
 #### VERİLERDE GRUPLAMA (GROUP BY ve HAVING)
 
-1. Tablo adı: calisanlar
-
+Örnek "calisanlar" tablosu;
 
 
 | id  | ad      | soyad     | meslek    | sehir   | maas    |
@@ -165,17 +164,29 @@ SELECT * FROM uyeler ORDER BY id DESC LIMIT 2,10
 | 4   | Metin   | Çelenk    | Developer | Ankara  | 6300.00 |
 | 5   | Ramazan | Karadoğan | Designer  | Ankara  | 5250.00 |
 | 6   | Çetin   | Bozyel    | Aşçı      | Çankırı | 2500.00 |
-| 7   | Meryem  | Uzel      | Asistan   | Ankara  | 2000.00 |
+| 7   | Meryem  | Uzel      | Asistan   | Ankara  | 2500.00 |
 | 8   | Aslı    | Gencer    | Developer | Ankara  | 6300.00 |
-| 9   | Sami    | Kalem     | Stajyer   | Çankırı | 2000.00 |
+| 9   | Sami    | Kalem     | Stajyer   | Çankırı | 2500.00 |
 | 10  | Kemal   | Yeşil     | Şöför     | Çankırı | 2700.00 |
 
+1.
+
 ```sql
-SELECT sehir, MIN(maas) as Minimum FROM calisanlar GROUP BY sehir
-# Sorgu çıktısı...
-| sehir   | Minimum |
-| Ankara  | 2000.00 |
-| Çankırı | 2000.00 |
+SELECT sehir, MIN(maas) as minumum_maas FROM calisanlar GROUP BY sehir
+# Sorgu çıktısı. Şehirlerde minumum maaşları listeliyelim...
+| sehir   | minumum_maas |
+| Ankara  | 2500.00 |
+| Çankırı | 2500.00 |
+```
+
+2.
+
+```sql
+SELECT sehir, MIN(maas) as minumum_maas MAX(maas) as maximum_maas FROM calisanlar GROUP BY sehir
+# Sorgu çıktısı. Şehirlerde minumum ve maximum maaşları listeliyelim...
+| sehir   | minumum_maas | maximum_maas |
+| Ankara  | 2500.00      | 6300.00      |
+| Çankırı | 2500.00      | 3250.00      |
 ```
 
 
