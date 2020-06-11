@@ -96,6 +96,11 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [X] [Veritabanı Bağlantısı](dosyalar/veri-tabani-baglantisi.md)
 - [ ] MYSQL
 	- [ ] Genel
+		- [X] [Veritabanı ve Tablolar](dosyalar/mysql-veritabani-tablolar.md)
+		- [X] [Veri Ekleme (INSERT)](dosyalar/mysql-insert.md)
+		- [X] [Veri Çekme (SELECT-ORDER BY-LIMIT)](dosyalar/mysql-select-orderby-limit.md)
+		- [X] [Veri Güncelleme (UPDATE)](dosyalar/mysql-update.md)
+		- [X] [Veri Silme (DELETE)](dosyalar/mysql-delete.md)
 		- [X] [CRUD İşlemleri Temel](dosyalar/crud-islemleri-temel.md)
 
 

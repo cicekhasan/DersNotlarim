@@ -1,0 +1,114 @@
+## VERİTABANI VE TABLO İŞLEMLERİ
+
+- [Önsöz](https://github.com/cicekhasan/DersNotlarim)
+
+
+*Not: Bu sayfadaki veritabanı ve tablolar CRUD örneklerinde kullanılacaktır.*
+
+#### KOŞULDA KULLANILACAK OPERATÖRLER
+
+| Operatör | Açıklama         |
+| ---      | ---              |
+| =        | Eşit             |
+| !=       | Eşit değil       |
+| >        | Büyük            |
+| <        | Küçük            |
+| >=       | Büyük ya da eşit |
+| <=       | Küçük ya da eşit |
+| &&       | Ve               |
+| \|\|     | Ya da            |
+
+
+#### VERİTABANI EKLEME
+
+```sql
+CREATE DATABASE `test` COLLATE 'utf8_turkish_ci';
+```
+
+
+#### TABLO EKLEME
+
+1. "uyeler" tablosu;
+
+| id  | uye_adi    | uye_tam_adi   | uye_eposta                | parola |
+| --- | ---        | ---           | ---                       | ---    |
+| 1   | hasancicek | Hasan Çiçek   | hasan.cicek@yandex.com.tr | 123456 |
+| 2   | zeytin     | Aleyne Çakır  | aleyna38@gmail.com        | 456789 |
+| 3   | karabela   | Ahmet Ayraç   | ayracahmet@gmail.com      | 852369 |
+| 4   | karbeyaz   | Nalan Firarda | firardanalan@hotmail.com  | 123456 |
+
+
+```sql
+CREATE TABLE `uyeler` (
+  `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `uye_adi` varchar(100) NOT NULL,
+  `uye_tam_adi` varchar(150) NOT NULL,
+  `uye_eposta` varchar(150) NOT NULL,
+  `parola` varchar(200) NOT NULL
+) COLLATE 'utf8_turkish_ci';
+```
+
+2. "calisanlar" tablosu;
+
+| id  | ad      | soyad     | meslek    | sehir   | maas    |
+| --- | ---     | ---       | ---       | ---     | ---     |
+| 0   | Hasan   | Çiçek     | Developer | Ankara  | 6300.00 |
+| 1   | Zeynep  | Yorgancı  | Usta      | Çankırı | 3000.00 |
+| 2   | Ahmet   | Yoksay    | Usta      | Çankırı | 3250.00 |
+| 3   | Metin   | Çelenk    | Developer | Ankara  | 6000.00 |
+| 4   | Ramazan | Karadoğan | Designer  | Ankara  | 5250.00 |
+| 5   | Çetin   | Bozyel    | Aşçı      | Çankırı | 2500.00 |
+| 6   | Meryem  | Uzel      | Asistan   | Ankara  | 2500.00 |
+| 7   | Aslı    | Gencer    | Developer | Ankara  | 5700.00 |
+| 8   | Sami    | Kalem     | Stajyer   | Çankırı | 2200.00 |
+| 9   | Kemal   | Yeşil     | Şöför     | Çankırı | 2700.00 |
+
+```sql
+CREATE TABLE `calisanlar` (
+  `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `ad` varchar(100) NOT NULL,
+  `soyad` varchar(100) NOT NULL,
+  `meslek` varchar(100) NOT NULL,
+  `sehir` varchar(100) NOT NULL,
+  `maas` float(10,2) NOT NULL
+) COLLATE 'utf8_turkish_ci';
+# calisanlar tablo içeriği
+INSERT INTO calisanlar (ad, soyad, meslek, sehir, maas) VALUES
+( 'Hasan',  'Çiçek',  'Developer',  'Ankara', 6300.00 ),
+( 'Zeynep', 'Yorgancı', 'Usta', 'Çankırı',  3000.00 ),
+( 'Ahmet',  'Yoksay', 'Usta', 'Çankırı',  3250.00 ),
+( 'Metin',  'Çelenk', 'Developer',  'Ankara', 6000.00 ),
+( 'Ramazan',  'Karadoğan',  'Designer', 'Ankara', 5250.00 ),
+( 'Çetin',  'Bozyel', 'Aşçı', 'Çankırı',  2500.00 ),
+( 'Meryem', 'Uzel', 'Asistan',  'Ankara', 2500.00 ),
+( 'Aslı', 'Gencer', 'Developer',  'Ankara', 5700.00 ),
+( 'Sami', 'Kalem',  'Stajyer',  'Çankırı',  2200.00 ),
+( 'Kemal',  'Yeşil',  'Şöför',  'Çankırı',  2700.00)
+```
+
+3. "meslekler" tablosu;
+
+| id  | ad        |
+| --- | ---       |
+| 1   | Developer |
+
+```sql
+CREATE TABLE `meslekler` (
+  `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `meslek` varchar(150) NOT NULL
+) COLLATE 'utf8_turkish_ci';
+```
+
+4. "dersler" 
+
+ | id  | baslik | icerik                            | kategori |
+ | --- | ---    | ---                               | ---      |
+ | 1   | Ders 1 | Aba vakti aba, yaba vakti yaba.   | 1,2,7    |
+ | 2   | Ders 2 | Abanın kadir yağmurda bilinir.    | 5,2      |
+ | 3   | Ders 3 | Acı patlıcanı kırağı çalmaz.      | 4,8      |
+ | 4   | Ders 4 | Ateş düştüğü yeri yakar.          | 1,7      |
+ | 5   | Ders 5 | Ateş olmayan yerden duman çıkmaz. | 7,5      |
+ | 6   | Ders 6 | Ayranım ekşidir diyen olmaz.      | 7,5      |
+ | 7   | Ders 7 | Babadan mal kalır, kemal kalmaz.  | 5,2      |
+ | 8   | Ders 8 | Besle kargayı oysun gözünü.       | 2,1      |
+ | 9   | Ders 9 | Büyük lokma ye büyük söz söyleme. | 5,2      |
