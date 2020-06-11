@@ -98,10 +98,11 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 	- [ ] Genel
 		- [X] [Veritabanı ve Tablolar](dosyalar/mysql-veritabani-tablolar.md)
 		- [X] [Veri Ekleme (INSERT)](dosyalar/mysql-insert.md)
-		- [X] [Veri Çekme (SELECT-ORDER BY-LIMIT)](dosyalar/mysql-select-orderby-limit.md)
+		- [X] [Veri Çekme (SELECT)](dosyalar/mysql-select.md)
 		- [X] [Veri Güncelleme (UPDATE)](dosyalar/mysql-update.md)
 		- [X] [Veri Silme (DELETE)](dosyalar/mysql-delete.md)
-		- [X] [CRUD İşlemleri Temel](dosyalar/crud-islemleri-temel.md)
+		- [X] [Sıralama ve Limit Koyma (ORDER BY-LIMIT)](dosyalar/mysql-orderby-limit.md)
+		- [X] [Gruplama (GROUP BY-HAVING)](dosyalar/mysql-groupby-having.md)
 
 
 ## İp Uçları
