@@ -169,7 +169,7 @@ SELECT * FROM uyeler ORDER BY id DESC LIMIT 2,10
 | 9   | Sami    | Kalem     | Stajyer   | Çankırı | 2500.00 |
 | 10  | Kemal   | Yeşil     | Şöför     | Çankırı | 2700.00 |
 
-1.
+1. Dikkat! Anlaşılır olması açısından sütun isimlerini değiştirdik...
 
 ```sql
 SELECT sehir, MIN(maas) as minimum_maas, FROM calisanlar GROUP BY sehir
@@ -179,7 +179,7 @@ SELECT sehir, MIN(maas) as minimum_maas, FROM calisanlar GROUP BY sehir
 | Çankırı | 2500.00 |
 ```
 
-2.
+2. Dikkat! Anlaşılır olması açısından sütun isimlerini değiştirdik...
 
 ```sql
 SELECT sehir, MIN(maas) as minimum_maas, MAX(maas) as maximum_maas FROM calisanlar GROUP BY sehir
@@ -189,14 +189,24 @@ SELECT sehir, MIN(maas) as minimum_maas, MAX(maas) as maximum_maas FROM calisanl
 | Çankırı | 2500.00      | 3250.00      |
 ```
 
-3.
+3. Dikkat! Anlaşılır olması açısından sütun isimlerini değiştirdik...
 
 ```sql
-SELECT sehir, MIN(maas) as minimum_maas, MAX(maas) as maximum_maas, COUNT(id) as kisiler FROM calisanlar GROUP BY sehir
-# Sorgu çıktısı. Şehirlerde minimum ve maximum maaşları listeliyelim...
-| sehir   | minimum_maas  | maximum_maas  | kisiler |
-| Ankara  | 2000.00       | 6300.00       | 5       |
-| Çankırı | 2000.00       | 3250.00       | 5       |
+SELECT sehir, MIN(maas) as minimum_maas, MAX(maas) as maximum_maas, COUNT(id) as personel FROM calisanlar GROUP BY sehir
+# Sorgu çıktısı. Şehirlerde minimum, maximum maaşları ve personel sayılarını listeliyelim...
+| sehir   | minimum_maas  | maximum_maas  | personel |
+| Ankara  | 2000.00       | 6300.00       | 5        |
+| Çankırı | 2000.00       | 3250.00       | 5        |
+```
+
+4. Dikkat! Değiştirmiş olduğumuz sütun isimleri koşulda kullanalım. WHERE koşulu ile bu isimler çalışmaz! Bunun yerine HAVING kullanıyoruz...
+
+```sql
+SELECT sehir, MIN(maas) as minimum_maas, MAX(maas) as maximum_maas, COUNT(id) as personel FROM calisanlar GROUP BY sehir HAVING minimum_maas > 2000
+# Sorgu çıktısı. Minumum maaş 2000.00'dan yüksek olan şehirleri listeliyelim...
+| sehir   | minimum_maas  | maximum_maas  | personel |
+| Ankara  | 2000.00       | 6300.00       | 5        |
+| Çankırı | 2000.00       | 3250.00       | 5        | 
 ```
 
 
