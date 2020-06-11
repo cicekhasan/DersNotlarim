@@ -210,7 +210,7 @@ DELETE FROM uyeler WHERE id = '4'
 
 ```sql
 SELECT * FROM uyeler ORDER BY uye_adi
-# Sorgu çıktısı...
+# Sorgu çıktısı. uye_adi'na göre sıralı listeler...
 | id | uye_adi    | uye_tam_adi   | uye_eposta                | parola |
 | 4  | cepdelik   | Nalan Firarda | altinkase@gmail.com       | 512648 |
 | 1  | hasancicek | Hasan Çiçek   | hasan.cicek@yandex.com.tr | 123456 |
@@ -222,7 +222,7 @@ SELECT * FROM uyeler ORDER BY uye_adi
 
 ```sql
 SELECT * FROM uyeler ORDER BY uye_adi DESC
-# Sorgu çıktısı...
+# Sorgu çıktısı. uye_adi'na göre sıralı listeler...
 | id | uye_adi    | uye_tam_adi   | uye_eposta                | parola |
 | 2  | zeytin     | Aleyne Çakır  | aleyna38@gmail.com        | 456789 |
 | 3  | karabela   | Ahmet Ayraç   | ayracahmet@gmail.com      | 852369 |
@@ -234,7 +234,7 @@ SELECT * FROM uyeler ORDER BY uye_adi DESC
 
 ```sql
 SELECT * FROM uyeler ORDER BY id, uye_adi ASC
-# Sorgu çıktısı...
+# Sorgu çıktısı. Önce id sonra uye_adi'na göre sıralı listeler...
 | id | uye_adi    | uye_tam_adi   | uye_eposta                | parola |
 | 1  | hasancicek | Hasan Çiçek   | hasan.cicek@yandex.com.tr | 123456 |
 | 2  | zeytin     | Aleyne Çakır  | aleyna38@gmail.com        | 456789 |
@@ -246,7 +246,7 @@ SELECT * FROM uyeler ORDER BY id, uye_adi ASC
 
 ```sql
 SELECT * FROM uyeler ORDER BY uye_adi, id DESC
-# Sorgu çıktısı...
+# Sorgu çıktısı. Önce uye_adi sonra id'ye göre sıralı listeler...
 | id | uye_adi    | uye_tam_adi   | uye_eposta                | parola |
 | 4  | cepdelik   | Nalan Firarda | altinkase@gmail.com       | 512648 |
 | 1  | hasancicek | Hasan Çiçek   | hasan.cicek@yandex.com.tr | 123456 |
@@ -260,7 +260,7 @@ SELECT * FROM uyeler ORDER BY uye_adi, id DESC
 
 ```sql
 SELECT * FROM uyeler LIMIT 2
-# Sorgu çıktısı...
+# Sorgu çıktısı. İlk iki satırı listeler...
 | id | uye_adi    | uye_tam_adi   | uye_eposta                | parola |
 | 1  | hasancicek | Hasan Çiçek   | hasan.cicek@yandex.com.tr | 123456 |
 | 2  | zeytin     | Aleyne Çakır  | aleyna38@gmail.com        | 456789 |
@@ -270,7 +270,7 @@ SELECT * FROM uyeler LIMIT 2
 
 ```sql
 SELECT * FROM uyeler ORDER BY id DESC LIMIT 3
-# Sorgu çıktısı...
+# Sorgu çıktısı. id'ye göre son 3 satırı listeler...
 | id | uye_adi    | uye_tam_adi   | uye_eposta                | parola |
 | 4  | cepdelik   | Nalan Firarda | altinkase@gmail.com       | 512648 |
 | 3  | karabela   | Ahmet Ayraç   | ayracahmet@gmail.com      | 852369 |
