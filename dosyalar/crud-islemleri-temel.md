@@ -52,6 +52,13 @@ CREATE DATABASE `test` COLLATE 'utf8_turkish_ci';
 | 8   | Sami    | Kalem     | Stajyer   | Çankırı | 2200.00 |
 | 9   | Kemal   | Yeşil     | Şöför     | Çankırı | 2700.00 |
 
+3. "meslekler" tablosu;
+
+| id  | ad        |
+| --- | ---       |
+| 1   | Developer |
+
+
 #### TABLO EKLEME
 
 1. "uyeler" tablosu
@@ -90,6 +97,14 @@ INSERT INTO calisanlar (ad, soyad, meslek, sehir, maas) VALUES
 ( 'Sami', 'Kalem',  'Stajyer',  'Çankırı',  2200.00 ),
 ( 'Kemal',  'Yeşil',  'Şöför',  'Çankırı',  2700.00)
 ```
+3. "meslekler" tablosu
+
+```sql
+CREATE TABLE `meslekler` (
+  `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `meslek` varchar(150) NOT NULL
+) COLLATE 'utf8_turkish_ci';
+```
 
 #### VERİ EKLEME (INSERT)
 
@@ -119,7 +134,7 @@ INSERT INTO uyeler ( uye_adi, uye_tam_adi, uye_eposta, parola ) VALUES
 
 #### VERİ ÇEKME (SELECT)
 
-1. Tablodaki bütün sütun ve satırları getirir...
+1. Tablodaki bütün sütun ve satırları çekmek...
 
 ```sql
 SELECT * FROM uyeler
@@ -131,7 +146,7 @@ SELECT * FROM uyeler
 | 4  | karbeyaz   | Nalan Firarda | firardanalan@hotmail.com  | 123456 |
 ```
 
-2. Tabloda, id'si '2' olan üyeye ait bütün sütun ve satırı getirir...
+2. Tabloda, id'si '2' olan üyeye ait bütün sütun ve satırı çekmek...
 
 ```sql
 SELECT * FROM uyeler WHERE id = '2'
@@ -166,8 +181,8 @@ SELECT uye_adi, parola FROM uyeler WHERE id = '4'
 ```sql
 SELECT uye_adi as AD, uye_eposta as POSTA FROM uyeler WHERE id = '1'
 # Sorgu çıktısı...
-| AD          | POSTA                    |
-| hasancicek  | hasan.cicek@yandex.com.tr|
+| AD         | POSTA                     |
+| hasancicek | hasan.cicek@yandex.com.tr |
 ```
 
 6. Aşağıda sorgu ile; "uyeler" tablosundan "id" si "1" ya da "id" si "4" olan ve "parola" sı aynı "123456" kullanıcıları çekmeye çalışıyoruz. 
@@ -177,9 +192,70 @@ Dikkat: Parantezi kullanmazsak "parola" sı 123456 ve "id" si "1" olan kullanıc
 ```sql
 SELECT * FROM uyeler WHERE parola = '123456' && ( id='1' || id='4' )
 # Sorgu çıktısı...
-| id  | uye_adi    | uye_tam_adi   | uye_eposta                | parola |
-| 1   | hasancicek | Hasan Çiçek   | hasan.cicek@yandex.com.tr | 123456 |
-| 4   | karbeyaz   | Nalan Firarda | firardanalan@hotmail.com  | 123456 |
+| id | uye_adi    | uye_tam_adi   | uye_eposta                | parola |
+| 1  | hasancicek | Hasan Çiçek   | hasan.cicek@yandex.com.tr | 123456 |
+| 4  | karbeyaz   | Nalan Firarda | firardanalan@hotmail.com  | 123456 |
+```
+
+7. "id" si 1 ya da 3 ya da 8 olan çalışanları çekmek...
+
+```sql
+SELECT * FROM calisanlar WHERE id = 1 || id = 3 || id = 8
+# Sorgu çıktısı...
+| id | ad    | soyad  | meslek    | sehir   | maas    |
+| 1  | Hasan | Çiçek  | Developer | Ankara  | 6300.00 |
+| 3  | Ahmet | Yoksay | Usta      | Çankırı | 3250.00 |
+| 8  | Aslı  | Gencer | Developer | Ankara  | 5700.00 |
+```
+
+8. "id" si 1,3,8 olan çalışanları çekmek...
+
+```sql
+SELECT * FROM calisanlar WHERE id IN (1,3,8)
+# Sorgu çıktısı. 7. örnekle aynı sonucu verir, yazımına dikkat edin...
+| id | ad    | soyad  | meslek    | sehir   | maas    |
+| 1  | Hasan | Çiçek  | Developer | Ankara  | 6300.00 |
+| 3  | Ahmet | Yoksay | Usta      | Çankırı | 3250.00 |
+| 8  | Aslı  | Gencer | Developer | Ankara  | 5700.00 |
+```
+
+9. "id" si 1,3,8 hariç olan çalışanları çekmek...
+
+```sql
+SELECT * FROM calisanlar WHERE id NOT IN (1,3,8)
+# Sorgu çıktısı...
+| id | ad      | soyad     | meslek    | sehir   | maas    |
+| 2  | Zeynep  | Yorgancı  | Usta      | Çankırı | 3000.00 |
+| 4  | Metin   | Çelenk    | Developer | Ankara  | 6000.00 |
+| 5  | Ramazan | Karadoğan | Designer  | Ankara  | 5250.00 |
+| 6  | Çetin   | Bozyel    | Aşçı      | Çankırı | 2500.00 |
+| 7  | Meryem  | Uzel      | Asistan   | Ankara  | 2500.00 |
+| 9  | Sami    | Kalem     | Stajyer   | Çankırı | 2200.00 |
+| 10 | Kemal   | Yeşil     | Şöför     | Çankırı | 2700.00 |
+```
+
+10. "meslek" sütunu "Developer ve Designer" olan çalışanları çekmek...
+
+```sql
+SELECT * FROM calisanlar WHERE meslek IN ('Developer', 'Designer')
+# Sorgu çıktısı...
+| id | ad      | soyad     | meslek    | sehir   | maas    |
+| 1  | Hasan   | Çiçek     | Developer | Ankara  | 6300.00 |
+| 4  | Metin   | Çelenk    | Developer | Ankara  | 6000.00 |
+| 5  | Ramazan | Karadoğan | Designer  | Ankara  | 5250.00 |
+| 8  | Aslı    | Gencer    | Developer | Ankara  | 5700.00 |
+```
+
+11. Farklı tablo verisine göre veri çekme...
+
+```sql
+SELECT * FROM calisanlar WHERE meslek IN ( SELECT meslek FROM meslekler )
+# Sorgu çıktısı... "meslekler" tablosundaki verilerin olduğu çalışanları çeker...
+# Bu tabloda sadece "Developer" olduğu için o meslek grubuna ait verileri çekecek...
+| id | ad      | soyad     | meslek    | sehir   | maas    |
+| 1  | Hasan   | Çiçek     | Developer | Ankara  | 6300.00 |
+| 4  | Metin   | Çelenk    | Developer | Ankara  | 6000.00 |
+| 8  | Aslı    | Gencer    | Developer | Ankara  | 5700.00 |
 ```
 
 #### VERİ GÜNCELLEME (UPDATE)
