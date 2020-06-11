@@ -172,9 +172,9 @@ SELECT * FROM uyeler ORDER BY id DESC LIMIT 2,10
 1.
 
 ```sql
-SELECT sehir, MIN(maas) as minumum_maas FROM calisanlar GROUP BY sehir
-# Sorgu çıktısı. Şehirlerde minumum maaşları listeliyelim...
-| sehir   | minumum_maas |
+SELECT sehir, MIN(maas) as minimum_maas, FROM calisanlar GROUP BY sehir
+# Sorgu çıktısı. Şehirlerde minimum maaşları listeliyelim...
+| sehir   | minimum_maas |
 | Ankara  | 2500.00 |
 | Çankırı | 2500.00 |
 ```
@@ -182,11 +182,21 @@ SELECT sehir, MIN(maas) as minumum_maas FROM calisanlar GROUP BY sehir
 2.
 
 ```sql
-SELECT sehir, MIN(maas) as minumum_maas MAX(maas) as maximum_maas FROM calisanlar GROUP BY sehir
-# Sorgu çıktısı. Şehirlerde minumum ve maximum maaşları listeliyelim...
-| sehir   | minumum_maas | maximum_maas |
+SELECT sehir, MIN(maas) as minimum_maas, MAX(maas) as maximum_maas FROM calisanlar GROUP BY sehir
+# Sorgu çıktısı. Şehirlerde minimum ve maximum maaşları listeliyelim...
+| sehir   | minimum_maas | maximum_maas |
 | Ankara  | 2500.00      | 6300.00      |
 | Çankırı | 2500.00      | 3250.00      |
+```
+
+3.
+
+```sql
+SELECT sehir, MIN(maas) as minimum_maas, MAX(maas) as maximum_maas, COUNT(id) as kisiler FROM calisanlar GROUP BY sehir
+# Sorgu çıktısı. Şehirlerde minimum ve maximum maaşları listeliyelim...
+| sehir   | minimum_maas  | maximum_maas  | kisiler |
+| Ankara  | 2000.00       | 6300.00       | 5       |
+| Çankırı | 2000.00       | 3250.00       | 5       |
 ```
 
 
