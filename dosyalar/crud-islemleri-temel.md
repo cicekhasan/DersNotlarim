@@ -373,3 +373,46 @@ SELECT meslek, count(id) as toplam FROM calisanlar as toplam GROUP BY meslek
 | Usta      | 2      | 
 ```
 
+#### VERİLERDE ARAMA (LIKE)
+
+1. Baş harfe göre listeleme ...
+
+```sql
+SELECT * FROM calisanlar WHERE ad LIKE 'a%'
+# Baş harfi "a" olan çalışanları listeliyelim...
+| id  | ad      | soyad     | meslek    | sehir   | maas    |
+| 3   | Ahmet   | Yoksay    | Usta      | Çankırı | 3250.00 |
+| 8   | Aslı    | Gencer    | Developer | Ankara  | 5700.00 |
+```
+
+2. Son harfe göre listeleme ...
+
+```sql
+SELECT * FROM calisanlar WHERE ad LIKE '%n'
+# İsmi "n" ile biten çalışanları listeliyelim...
+| id  | ad      | soyad     | meslek    | sehir   | maas    |
+| 1   | Hasan   | Çiçek     | Developer | Ankara  | 6300.00 |
+| 4   | Metin   | Çelenk    | Developer | Ankara  | 6000.00 |
+| 5   | Ramazan | Karadoğan | Designer  | Ankara  | 5250.00 |
+| 6   | Çetin   | Bozyel    | Aşçı      | Çankırı | 2500.00 |
+```
+
+3. Başlangıç ve bitiş karakterlerine göre listeleme ...
+
+```sql
+SELECT * FROM calisanlar WHERE ad LIKE 'z%p'
+# İsimlerde, baş harfi "z", son harfi ise "p" olan çalışanları listeliyelim...
+| id  | ad     | soyad   | meslek | sehir  | maas    |
+| 2   | Zeynep |Yorgancı | Usta   |Çankırı | 3000.00 |
+```
+
+4. Başlangıç ve bitiş karakterlerine göre listeleme ...
+
+```sql
+SELECT * FROM calisanlar WHERE ad LIKE '%et%'
+# İsimlerin her hangi bir yerinde "et" hecesi geçen çalışanları listeliyelim...
+| id  | ad     | soyad   | meslek    | sehir   | maas    |
+| 3   | Ahmet  | Yoksay  | Usta      | Çankırı | 3250.00 |
+| 4   | Metin  | Çelenk  | Developer | Ankara  | 6000.00 |
+| 6   | Çetin  | Bozyel  | Aşçı      | Çankırı | 2500.00 |
+```
