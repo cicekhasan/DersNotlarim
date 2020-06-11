@@ -44,11 +44,11 @@ CREATE DATABASE `test` COLLATE 'utf8_turkish_ci';
 | 0   | Hasan   | Çiçek     | Developer | Ankara  | 6300.00 |
 | 1   | Zeynep  | Yorgancı  | Usta      | Çankırı | 3000.00 |
 | 2   | Ahmet   | Yoksay    | Usta      | Çankırı | 3250.00 |
-| 3   | Metin   | Çelenk    | Developer | Ankara  | 6300.00 |
+| 3   | Metin   | Çelenk    | Developer | Ankara  | 6000.00 |
 | 4   | Ramazan | Karadoğan | Designer  | Ankara  | 5250.00 |
 | 5   | Çetin   | Bozyel    | Aşçı      | Çankırı | 2500.00 |
 | 6   | Meryem  | Uzel      | Asistan   | Ankara  | 2500.00 |
-| 7   | Aslı    | Gencer    | Developer | Ankara  | 6300.00 |
+| 7   | Aslı    | Gencer    | Developer | Ankara  | 5700.00 |
 | 8   | Sami    | Kalem     | Stajyer   | Çankırı | 2200.00 |
 | 9   | Kemal   | Yeşil     | Şöför     | Çankırı | 2700.00 |
 
@@ -82,11 +82,11 @@ INSERT INTO calisanlar (ad, soyad, meslek, sehir, maas) VALUES
 ( 'Hasan',  'Çiçek',  'Developer',  'Ankara', 6300.00 ),
 ( 'Zeynep', 'Yorgancı', 'Usta', 'Çankırı',  3000.00 ),
 ( 'Ahmet',  'Yoksay', 'Usta', 'Çankırı',  3250.00 ),
-( 'Metin',  'Çelenk', 'Developer',  'Ankara', 6300.00 ),
+( 'Metin',  'Çelenk', 'Developer',  'Ankara', 6000.00 ),
 ( 'Ramazan',  'Karadoğan',  'Designer', 'Ankara', 5250.00 ),
 ( 'Çetin',  'Bozyel', 'Aşçı', 'Çankırı',  2500.00 ),
 ( 'Meryem', 'Uzel', 'Asistan',  'Ankara', 2500.00 ),
-( 'Aslı', 'Gencer', 'Developer',  'Ankara', 6300.00 ),
+( 'Aslı', 'Gencer', 'Developer',  'Ankara', 5700.00 ),
 ( 'Sami', 'Kalem',  'Stajyer',  'Çankırı',  2200.00 ),
 ( 'Kemal',  'Yeşil',  'Şöför',  'Çankırı',  2700.00)
 ```
@@ -336,11 +336,40 @@ SELECT sehir, meslek, MIN(maas) as minimum_maas, MAX(maas) as maximum_maas, COUN
 | sehir   | meslek    | minimum_maas | maximum_maas | personel |
 | Ankara  | Asistan   | 2500.00      | 2500.00      | 1        |
 | Ankara  | Designer  | 5250.00      | 5250.00      | 1        |
-| Ankara  | Developer | 6300.00      | 6300.00      | 3        |
+| Ankara  | Developer | 5700.00      | 6300.00      | 3        |
 | Çankırı | Aşçı      | 2500.00      | 2500.00      | 1        |
 | Çankırı | Stajyer   | 2200.00      | 2200.00      | 1        |
 | Çankırı | Şöför     | 2700.00      | 2700.00      | 1        |
 | Çankırı | Usta      | 3000.00      | 3250.00      | 2        |
 ```
 
+6. Sadece meslekleri gruplayalım...
+
+```sql
+SELECT meslek, MIN(maas) as minimum_maas, MAX(maas) as maximum_maas, COUNT(id) as personel FROM calisanlar GROUP BY meslek
+# Sorgu çıktısı. Şehirlerde minimum, maximum maaşları, personel sayılarının meslek göre listeliyelim...
+| meslek    | minimum_maas | maximum_maas | personel |
+| Asistan   | 2500.00      | 2500.00      | 1        |
+| Aşçı      | 2500.00      | 2500.00      | 1        |
+| Designer  | 5250.00      | 5250.00      | 1        |
+| Developer | 5700.00      | 6300.00      | 3        |
+| Stajyer   | 2200.00      | 2200.00      | 1        |
+| Şöför     | 2700.00      | 2700.00      | 1        |
+| Usta      | 3000.00      | 3250.00      | 2        |
+```
+
+7. Hangi meslekten kaç personel var?
+
+```sql
+SELECT meslek, count(id) as toplam FROM calisanlar as toplam GROUP BY meslek
+# Sorgu çıktısı...
+| meslek    | toplam | 
+| Asistan   | 1      | 
+| Aşçı      | 1      | 
+| Designer  | 1      | 
+| Developer | 3      | 
+| Stajyer   | 1      | 
+| Şöför     | 1      | 
+| Usta      | 2      | 
+```
 
