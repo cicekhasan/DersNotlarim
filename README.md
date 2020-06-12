@@ -106,6 +106,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [X] [Verilerde Arama (LIKE-FIND_IN_SET)](dosyalar/mysql-arama-like.md)
 		- [X] [İki Değer Arasında Veri Seçmek (BETWEEN)](dosyalar/mysql-aralik-secmek.md)
 		- [X] [İlişkili Tablolar (JOIN)](dosyalar/mysql-iliskili-tablolar.md)
+		- [X] [Fonksiyonlar (COUNT-MIN-SUM-MAX)](dosyalar/mysql-fonksiyonlar.md)
 
 
 ## İp Uçları

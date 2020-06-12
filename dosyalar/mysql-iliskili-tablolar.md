@@ -75,3 +75,29 @@ SELECT dersler.id, baslik, icerik, uyeler.uye_tam_adi as yazar, uyeler.uye_epost
 | 3  | Ders 2 | Acı patlıcanı kırağı çalmaz.    | Ahmet Ayraç | ayracahmet@gmail.com      | Markdown     |
 | 2  | Ders 3 | Abanın kadir yağmurda bilinir.  | Ahmet Ayraç | ayracahmet@gmail.com      | Genel        |
 ```
+
+6. Sadece eşleşme olanları getirir! Kategorisi "Php" olanları çekelim...
+
+```sql
+SELECT dersler.id, baslik, icerik, uyeler.uye_tam_adi as yazar, uyeler.uye_eposta as eposta, kategori.ad as kategori_adi FROM dersler
+ INNER JOIN uyeler ON uyeler.id = dersler.yazar  
+ INNER JOIN kategori ON kategori.id =1
+# Sorgu çıktısı...
+# "dersler" tablosundaki "yazar" ile "uyeler" tablosundaki "id" ve kategoriler tablosundaki "id" si eşleşen sütunlarını eşleştirelim...
+| id | baslik | icerik                          | yazar       | eposta                    | kategori_adi |
+| 1  | Ders 1 | Aba vakti aba, yaba vakti yaba. | Hasan Çiçek | hasan.cicek@yandex.com.tr | Php          |
+| 3  | Ders 2 | Acı patlıcanı kırağı çalmaz.    | Ahmet Ayraç | ayracahmet@gmail.com      | Php          |
+| 2  | Ders 3 | Abanın kadir yağmurda bilinir.  | Ahmet Ayraç | ayracahmet@gmail.com      | Php          |
+```
+
+7. İçeriği olmayan yazarları bulalım...
+
+```sql
+# sol taraf LEFT JOIN sağ taraf
+SELECT uyeler.id, uyeler.uye_tam_adi as ad_soyad FROM dersler RIGHT JOIN uyeler ON uyeler.id = dersler.yazar WHERE dersler.yazar IS NULL
+# Sorgu çıktısı...
+| id | ad_soyad      |
+| 2  | Aleyne Çakır  |
+| 4  | Nalan Firarda |
+| 5  | Zeytin Kural  |
+```
