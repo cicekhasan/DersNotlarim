@@ -99,16 +99,64 @@ CREATE TABLE `meslekler` (
 ) COLLATE 'utf8_turkish_ci';
 ```
 
-4. "dersler" 
+4. "dersler" tablosu
 
- | id  | baslik | icerik                            | kategori |
- | --- | ---    | ---                               | ---      |
- | 1   | Ders 1 | Aba vakti aba, yaba vakti yaba.   | 1,2,7    |
- | 2   | Ders 2 | Abanın kadir yağmurda bilinir.    | 5,2      |
- | 3   | Ders 3 | Acı patlıcanı kırağı çalmaz.      | 4,8      |
- | 4   | Ders 4 | Ateş düştüğü yeri yakar.          | 1,7      |
- | 5   | Ders 5 | Ateş olmayan yerden duman çıkmaz. | 7,5      |
- | 6   | Ders 6 | Ayranım ekşidir diyen olmaz.      | 7,5      |
- | 7   | Ders 7 | Babadan mal kalır, kemal kalmaz.  | 5,2      |
- | 8   | Ders 8 | Besle kargayı oysun gözünü.       | 2,1      |
- | 9   | Ders 9 | Büyük lokma ye büyük söz söyleme. | 5,2      |
+ | id  | baslik | icerik                            | yazar | kategori |
+ | --- | ---    | ---                               | ---   | ---      |
+ | 1   | Ders 1 | Aba vakti aba, yaba vakti yaba.   | 1     | 1,2,7    |
+ | 2   | Ders 2 | Abanın kadir yağmurda bilinir.    | 3     | 5,2      |
+ | 3   | Ders 3 | Acı patlıcanı kırağı çalmaz.      | 3     | 4,8      |
+ | 4   | Ders 4 | Ateş düştüğü yeri yakar.          | 1     | 1,7      |
+ | 5   | Ders 5 | Ateş olmayan yerden duman çıkmaz. | 1     | 7,5      |
+ | 6   | Ders 6 | Ayranım ekşidir diyen olmaz.      | 4     | 7,5      |
+ | 7   | Ders 7 | Babadan mal kalır, kemal kalmaz.  | 2     | 5,2      |
+ | 8   | Ders 8 | Besle kargayı oysun gözünü.       | 4     | 2,1      |
+ | 9   | Ders 9 | Büyük lokma ye büyük söz söyleme. | 1     | 5,2      |
+
+
+```sql
+CREATE TABLE `dersler` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `baslik` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
+  `icerik` text COLLATE utf8_turkish_ci NOT NULL,
+  `yazar` int(11) NOT NULL,
+  `kategori` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci
+
+INSERT INTO `dersler` (`id`, `baslik`, `icerik`, `yazar`, `kategori`) VALUES
+(1, 'Ders 1', 'Aba vakti aba, yaba vakti yaba.',  1,  '1,2,7'),
+(2, 'Ders 2', 'Abanın kadir yağmurda bilinir.', 3,  '5,2'),
+(3, 'Ders 3', 'Acı patlıcanı kırağı çalmaz.', 3,  '4,8'),
+(4, 'Ders 4', 'Ateş düştüğü yeri yakar. ',  1,  '1,7'),
+(5, 'Ders 5', 'Ateş olmayan yerden duman çıkmaz.',  1,  '7,5'),
+(6, 'Ders 6', 'Ayranım ekşidir diyen olmaz. ',  4,  '7,5'),
+(7, 'Ders 7', 'Babadan mal kalır, kemal kalmaz.', 4,  '5,2'),
+(8, 'Ders 8', 'Besle kargayı oysun gözünü.',  4,  '2,1'),
+(9, 'Ders 9', 'Büyük lokma ye büyük söz söyleme.',  1,  '5,2')
+```
+
+5. "kategori" tablosu
+
+ | id  | ad       |
+ | --- | ---      |
+ | 1   | Php      |
+ | 2   | Linux    |
+ | 4   | Markdown |
+ | 5   | Genel    |
+ | 7   | Blog     |
+
+```sql
+CREATE TABLE `kategori` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ad` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+INSERT INTO `kategori` (`id`, `ad`) VALUES
+(1, 'Php'),
+(2, 'Linux'),
+(4, 'Markdown'),
+(5, 'Genel'),
+(7, 'Blog')
+```

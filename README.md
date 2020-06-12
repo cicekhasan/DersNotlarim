@@ -103,7 +103,9 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [X] [Veri Silme (DELETE)](dosyalar/mysql-delete.md)
 		- [X] [Sıralama ve Limit Koyma (ORDER BY-LIMIT)](dosyalar/mysql-orderby-limit.md)
 		- [X] [Gruplama (GROUP BY-HAVING)](dosyalar/mysql-groupby-having.md)
-		- [X] [Arama (LIKE)](dosyalar/mysql-arama-like.md)
+		- [X] [Verilerde Arama (LIKE-FIND_IN_SET)](dosyalar/mysql-arama-like.md)
+		- [X] [İki Değer Arasında Veri Seçmek (BETWEEN)](dosyalar/mysql-aralik-secmek.md)
+		- [X] [İlişkili Tablolar (JOIN)](dosyalar/mysql-iliskili-tablolar.md)
 
 
 ## İp Uçları
