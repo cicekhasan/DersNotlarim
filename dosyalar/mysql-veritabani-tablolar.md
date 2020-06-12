@@ -21,8 +21,12 @@
 
 #### VERİTABANI EKLEME
 
+1. "test" adında bir veritabanı oluşturalım...
+
 ```sql
-CREATE DATABASE `test` COLLATE 'utf8_turkish_ci';
+CREATE DATABASE test COLLATE 'utf8_turkish_ci'
+# Sorgu çıktısı...
+Sorgu başarıyla çalıştırıldı, 1 adet kayıt etkilendi. (0.000 s) Düzenle
 ```
 
 
@@ -39,13 +43,15 @@ CREATE DATABASE `test` COLLATE 'utf8_turkish_ci';
 
 
 ```sql
-CREATE TABLE `uyeler` (
-  `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `uye_adi` varchar(100) NOT NULL,
-  `uye_tam_adi` varchar(150) NOT NULL,
-  `uye_eposta` varchar(150) NOT NULL,
-  `parola` varchar(200) NOT NULL
-) COLLATE 'utf8_turkish_ci';
+CREATE TABLE test.uyeler (
+  id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  uye_adi varchar(100) NOT NULL,
+  uye_tam_adi varchar(150) NOT NULL,
+  uye_eposta varchar(150) NOT NULL,
+  parola varchar(200) NOT NULL
+) COLLATE 'utf8_turkish_ci'
+# Sorgu çıktısı...
+Sorgu başarıyla çalıştırıldı, 0 adet kayıt etkilendi. (0.011 s) Düzenle
 ```
 
 2. "calisanlar" tablosu;
@@ -64,16 +70,19 @@ CREATE TABLE `uyeler` (
 | 9   | Kemal   | Yeşil     | Şöför     | Çankırı | 2700.00 |
 
 ```sql
-CREATE TABLE `calisanlar` (
-  `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `ad` varchar(100) NOT NULL,
-  `soyad` varchar(100) NOT NULL,
-  `meslek` varchar(100) NOT NULL,
-  `sehir` varchar(100) NOT NULL,
-  `maas` float(10,2) NOT NULL
-) COLLATE 'utf8_turkish_ci';
-# calisanlar tablo içeriği
-INSERT INTO calisanlar (ad, soyad, meslek, sehir, maas) VALUES
+CREATE TABLE test.calisanlar (
+  id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  ad varchar(100) NOT NULL,
+  soyad varchar(100) NOT NULL,
+  meslek varchar(100) NOT NULL,
+  sehir varchar(100) NOT NULL,
+  maas float(10,2) NOT NULL
+) COLLATE 'utf8_turkish_ci'
+```
+
+```sql
+# calisanlar tablosuna içerik ekleyelim...
+INSERT INTO test.calisanlar (ad, soyad, meslek, sehir, maas) VALUES
 ( 'Hasan',  'Çiçek',  'Developer',  'Ankara', 6300.00 ),
 ( 'Zeynep', 'Yorgancı', 'Usta', 'Çankırı',  3000.00 ),
 ( 'Ahmet',  'Yoksay', 'Usta', 'Çankırı',  3250.00 ),
@@ -93,10 +102,10 @@ INSERT INTO calisanlar (ad, soyad, meslek, sehir, maas) VALUES
 | 1   | Developer |
 
 ```sql
-CREATE TABLE `meslekler` (
-  `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `meslek` varchar(150) NOT NULL
-) COLLATE 'utf8_turkish_ci';
+CREATE TABLE test.meslekler (
+  id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  meslek varchar(150) NOT NULL
+) COLLATE 'utf8_turkish_ci'
 ```
 
 4. "dersler" tablosu
@@ -115,25 +124,28 @@ CREATE TABLE `meslekler` (
 
 
 ```sql
-CREATE TABLE `dersler` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `baslik` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
-  `icerik` text COLLATE utf8_turkish_ci NOT NULL,
-  `yazar` int(11) NOT NULL,
-  `kategori` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
+CREATE TABLE test.dersler (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  baslik varchar(255) COLLATE utf8_turkish_ci NOT NULL,
+  icerik text COLLATE utf8_turkish_ci NOT NULL,
+  yazar int(11) NOT NULL,
+  kategori varchar(255) COLLATE utf8_turkish_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci
+```
 
-INSERT INTO `dersler` (`id`, `baslik`, `icerik`, `yazar`, `kategori`) VALUES
+```sql
+# dersler tablosuna içerik ekleyelim...
+INSERT INTO test.dersler (id, baslik, icerik, yazar, kategori) VALUES
 (1, 'Ders 1', 'Aba vakti aba, yaba vakti yaba.',  1,  '1,2,7'),
 (2, 'Ders 2', 'Abanın kadir yağmurda bilinir.', 3,  '5,2'),
 (3, 'Ders 3', 'Acı patlıcanı kırağı çalmaz.', 3,  '4,8'),
-(4, 'Ders 4', 'Ateş düştüğü yeri yakar. ',  1,  '1,7'),
-(5, 'Ders 5', 'Ateş olmayan yerden duman çıkmaz.',  1,  '7,5'),
-(6, 'Ders 6', 'Ayranım ekşidir diyen olmaz. ',  4,  '7,5'),
-(7, 'Ders 7', 'Babadan mal kalır, kemal kalmaz.', 4,  '5,2'),
-(8, 'Ders 8', 'Besle kargayı oysun gözünü.',  4,  '2,1'),
-(9, 'Ders 9', 'Büyük lokma ye büyük söz söyleme.',  1,  '5,2')
+(4, 'Ders 4', 'Ateş düştüğü yeri yakar. ',  0,  '1,7'),
+(5, 'Ders 5', 'Ateş olmayan yerden duman çıkmaz.',  0,  '7,5'),
+(6, 'Ders 6', 'Ayranım ekşidir diyen olmaz. ',  0,  '7,5'),
+(7, 'Ders 7', 'Babadan mal kalır, kemal kalmaz.', 0,  '5,2'),
+(8, 'Ders 8', 'Besle kargayı oysun gözünü.',  0,  '2,1'),
+(9, 'Ders 9', 'Büyük lokma ye büyük söz söyleme.',  0,  '5,2')
 ```
 
 5. "kategori" tablosu
@@ -147,13 +159,16 @@ INSERT INTO `dersler` (`id`, `baslik`, `icerik`, `yazar`, `kategori`) VALUES
  | 7   | Blog     |
 
 ```sql
-CREATE TABLE `kategori` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `ad` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
+CREATE TABLE test.kategori (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  ad varchar(255) COLLATE utf8_turkish_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci
+```
 
-INSERT INTO `kategori` (`id`, `ad`) VALUES
+```sql
+# kategori tablosuna içerik ekleyelim...
+INSERT INTO test.kategori (id, ad) VALUES
 (1, 'Php'),
 (2, 'Linux'),
 (4, 'Markdown'),
