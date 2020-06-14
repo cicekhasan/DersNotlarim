@@ -30,7 +30,7 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 	- [ ] Genel
 		- [X] [Ubuntu Kurulum Sonrası Yapılacaklar](dosyalar/linux-kurulum-sonrasi-islemler.md)
 		- [X] [Linux Dosya Yapısı](dosyalar/linux-dosya-yapisi.md)
-		- [X] [Log Dosyaları Yapısı](dosyalar/linux-log-dosya-yapisi.md)
+		- [X] [Log Dosyaları](dosyalar/linux-log-dosyalari.md)
 		- [X] [Joker Karakterler](dosyalar/linux-joker-karakterler.md)
 		- [X] [Ön Yüklemeli USB Oluşturma](dosyalar/usb-olusturma.md)
 		- [X] [Lamp Yeniden Kurulum Temizliği](dosyalar/linux-lamp-temizlik.md)
@@ -63,7 +63,6 @@ Linux ve PHP genel komutları, çözümleri ve ip uçları için oluşturulmuşt
 		- [X] [Hızlandırma](dosyalar/linux-hizlandirma.md)
 		- [X] [İndirme İşlemleri](dosyalar/linux-indirme-islemleri.md)
 		- [X] [Link İşlemleri](dosyalar/linux-link-islemleri.md)
-		- [X] [Log Dosyaları](dosyalar/linux-log-dosyalari.md)
 		- [X] [Metin İşleme (Dosyadan veri oluşturma.)](dosyalar/metin-isleme.md)
 		- [X] [Paket İşlemleri](dosyalar/paketler.md)
 		- [X] [PDF İşlemleri](dosyalar/pdf-islemleri.md)
