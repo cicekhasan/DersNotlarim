@@ -29,7 +29,8 @@ wget -P /home/kaptan/Masaüstü/yeniDosyaAdi dosyaIndirmeLinki
 curl -O dosyaIndirmeLinki
 ```
 #### AXEL
+Dosya indirme işlemini birden fazla koldan yapmamızı sağlar. -n kol sayısını belirtir.
 
 ```bash
-
+axel -n 10 indirilecek_dosya_adresi
 ```
