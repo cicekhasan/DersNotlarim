@@ -72,6 +72,8 @@ Buradaki komutları tek tek mariadb ekranından gönderin!
 show databases;
 use mysql;
 update user set plugin='' where User='root';
+YADA
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'hasancicek';
 flush privileges;
 exit;
 ```
