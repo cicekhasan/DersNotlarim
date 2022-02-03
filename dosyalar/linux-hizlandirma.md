@@ -38,7 +38,7 @@ sudo apt-get install inxi -y
 # Çalıştırılması
 inxi -G
 ```
-Not: "*driver:*" bölümünde yazıyorsa sürücü çalışıyor demektir. Hiç bir işle yapmanıza gerek yok!
+Not: "*driver:*" bölümünde ekran kartınızla ilgilibilgiler yazıyorsa (Boş değilse.) sürücü çalışıyor demektir. Hiç bir işle yapmanıza gerek yok!
 
 **NVIDIA Ekran Kartını Kurmak**
 
